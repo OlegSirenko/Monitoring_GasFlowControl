@@ -53,6 +53,9 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
+    io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
+
+
 
     // Setup Dear ImGui style
     ImGui::StyleColorsDark();
@@ -84,6 +87,8 @@ int main(int, char**)
             "Logging started...",
     };
 
+    std::vector<std::string> logs_data = {};
+    std::vector<std::string> logs_time = {};
 
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
@@ -94,8 +99,9 @@ int main(int, char**)
     std::vector<double> times; // This will store the time values
     std::vector<double> framerates; // This will store the framerate values
 
-    while (!done)
-    {
+    auto start = std::chrono::system_clock::now();
+
+    while (!done){
         SDL_Event event;
         while (SDL_PollEvent(&event))
         {
@@ -114,12 +120,11 @@ int main(int, char**)
         //ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 
 
-        // Get the current time in seconds since epoch
         auto now = std::chrono::system_clock::now();
-        auto now_sec = std::chrono::time_point_cast<std::chrono::seconds>(now);
-        auto epoch = now_sec.time_since_epoch();
-        auto seconds = std::chrono::duration_cast<std::chrono::seconds>(epoch);
-        long double current_time = seconds.count();
+        // Calculate the time elapsed since the start of the application in seconds
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
+        auto current_time = elapsed.count();
+
 
         double current_framerate = io.Framerate;
 
@@ -141,8 +146,7 @@ int main(int, char**)
             }
             ImGui::Separator();
             if(ImGui::BeginChild("Logs")){
-                for (const std::string& log : logs)
-                {
+                for (const std::string& log : logs){
                     ImGui::TextUnformatted(log.c_str());
                 }
                 // Auto scroll to the bottom when a new log is added
@@ -159,24 +163,36 @@ int main(int, char**)
         ImGui::SetNextWindowSize(ImVec2(window_width * 2 / 3, window_height)); // Set "Test Plot" size to 2/3 of SDL window width and full height
         ImGui::SetNextWindowPos(ImVec2(window_position_x + window_width * 1 / 3, window_position_y)); // Set "Test Plot" position to right of "New Window"
 
+        // Add the current time and framerate to your data
+        times.push_back(current_time);
+        framerates.push_back(current_framerate);
+//        logs_data.push_back(std::to_string(io.Framerate));
+
         // Show Plot window if enabled
         if(show_plot_window){
             if(ImGui::Begin("Plot", &show_plot_window)){
-
-
-
-                // Add the current time and framerate to your data
-                times.push_back(current_time);
-                framerates.push_back(current_framerate);
-
                 // Plot the framerate over time
-
-
                 if(ImPlot::BeginPlot("Data from Sensor") ){
                     ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
                 }
                 ImPlot::EndPlot();
             }
+
+            ImGui::Separator();
+
+            if(ImGui::BeginChild("Data")){
+//            for (int i=0; i<std::size(logs_data); i++){
+//                std::string output = logs_data[i] + " " + std::to_string(times[i] / 1000);
+//                ImGui::TextUnformatted(output.c_str());
+//            }
+            // Auto scroll to the bottom when a new log is added
+            std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
+            ImGui::Text(output.c_str());
+//            if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
+//                ImGui::SetScrollHereY(1.0f);
+            }
+            ImGui::EndChild();
+
             ImGui::End();
         }
 
