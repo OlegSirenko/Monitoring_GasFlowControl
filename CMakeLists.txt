@@ -7,5 +7,6 @@ add_subdirectory(imgui)
 
 add_executable(ImGUI_GasFlowControll main.cpp)
 
-target_link_libraries(ImGUI_GasFlowControll PUBLIC imgui imgui-dx9 imgui-win32 d3dcompiler dwmapi)
+set(CMAKE_EXE_LINKER_FLAGS " -static")
+target_link_libraries(ImGUI_GasFlowControll PUBLIC imgui imgui-win32 imgui-dx9 d3dcompiler dwmapi -static-libgcc -static-libstdc++)
 

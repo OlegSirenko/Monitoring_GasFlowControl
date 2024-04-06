@@ -105,17 +105,17 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cp
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\misc\freetype
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx9.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_dx9.cpp.obj.d
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_win32.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx9.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_win32.cpp.obj.d
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_dx9.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
@@ -129,9 +129,10 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.o
 #############################################
 # Link the executable ImGUI_GasFlowControll.exe
 
-build ImGUI_GasFlowControll.exe: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build ImGUI_GasFlowControll.exe: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
-  LINK_LIBRARIES = -ld3dcompiler  -ldwmapi  C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d9  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_FLAGS = -static
+  LINK_LIBRARIES = -ld3dcompiler  -ldwmapi  -static-libgcc  -static-libstdc++  C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d9  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   POST_BUILD = cmd.exe /C "cd /D D:\Code\ImGUI_GasFlowControll\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/TehnokraT/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Code/ImGUI_GasFlowControll/cmake-build-debug/ImGUI_GasFlowControll.exe -installedDir C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
