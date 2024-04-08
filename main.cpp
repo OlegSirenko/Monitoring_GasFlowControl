@@ -94,6 +94,7 @@ int main(int, char**)
 
     // Main loop
     bool done = false;
+    bool connection_emitted = false;
     int window_height, window_width, window_position_x, window_position_y;
 
     std::vector<double> times; // This will store the time values
@@ -111,17 +112,12 @@ int main(int, char**)
             if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
                 done = true;
         }
-
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
 
-        //ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
-
-
-        auto now = std::chrono::system_clock::now();
-        // Calculate the time elapsed since the start of the application in seconds
+        auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
 
@@ -141,6 +137,7 @@ int main(int, char**)
             {
                 connection_button_label = (connection_button_label == "Connect") ? "Disconnect" : "Connect";
                 logs.emplace_back("Connection emitted...");
+                connection_emitted = !connection_emitted;
                 //TODO: Add connection to socket of esp
 
             }
@@ -158,41 +155,30 @@ int main(int, char**)
         }
         ImGui::End(); // Control Window
 
-
-        // Making the plot window placement to the right and size of 2/3 of main window.
         ImGui::SetNextWindowSize(ImVec2(window_width * 2 / 3, window_height)); // Set "Test Plot" size to 2/3 of SDL window width and full height
         ImGui::SetNextWindowPos(ImVec2(window_position_x + window_width * 1 / 3, window_position_y)); // Set "Test Plot" position to right of "New Window"
 
         // Add the current time and framerate to your data
         times.push_back(current_time);
         framerates.push_back(current_framerate);
-//        logs_data.push_back(std::to_string(io.Framerate));
+
 
         // Show Plot window if enabled
         if(show_plot_window){
             if(ImGui::Begin("Plot", &show_plot_window)){
-                // Plot the framerate over time
                 if(ImPlot::BeginPlot("Data from Sensor") ){
-                    ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
+
+                    if (connection_emitted)
+                        ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
                 }
                 ImPlot::EndPlot();
             }
-
             ImGui::Separator();
-
             if(ImGui::BeginChild("Data")){
-//            for (int i=0; i<std::size(logs_data); i++){
-//                std::string output = logs_data[i] + " " + std::to_string(times[i] / 1000);
-//                ImGui::TextUnformatted(output.c_str());
-//            }
-            // Auto scroll to the bottom when a new log is added
-            std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
-            ImGui::Text(output.c_str());
-//            if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
-//                ImGui::SetScrollHereY(1.0f);
+                std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
+                ImGui::Text("%s", output.c_str());
             }
             ImGui::EndChild();
-
             ImGui::End();
         }
 
