@@ -97,6 +97,30 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj: CXX_COMP
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
 
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
+  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot_demo.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
+  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot_items.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
+  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+
 build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\misc\freetype\imgui_freetype.cpp.obj.d
@@ -113,9 +137,9 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.o
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx9.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_dx9.cpp.obj.d
+  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_dx11.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
@@ -129,10 +153,10 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj
 #############################################
 # Link the executable ImGUI_GasFlowControll.exe
 
-build ImGUI_GasFlowControll.exe: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx9.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build ImGUI_GasFlowControll.exe: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx11.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
-  LINK_FLAGS = -static
-  LINK_LIBRARIES = -ld3dcompiler  -ldwmapi  -static-libgcc  -static-libstdc++  C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d9  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_FLAGS = -static    -mwindows
+  LINK_LIBRARIES = -ld3dcompiler  -ldwmapi  C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d11  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
   POST_BUILD = cmd.exe /C "cd /D D:\Code\ImGUI_GasFlowControll\cmake-build-debug && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/TehnokraT/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Code/ImGUI_GasFlowControll/cmake-build-debug/ImGUI_GasFlowControll.exe -installedDir C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/bin -OutVariable out"
   PRE_LINK = cd .
@@ -225,6 +249,30 @@ build imgui/CMakeFiles/example_win32_directx9.dir/imgui_widgets.cpp.obj: CXX_COM
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx9.dir
   OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx9.dir
 
+build imgui/CMakeFiles/example_win32_directx9.dir/implot.cpp.obj: CXX_COMPILER__example_win32_directx9_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_example_win32_directx9
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx9.dir\implot.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+
+build imgui/CMakeFiles/example_win32_directx9.dir/implot_demo.cpp.obj: CXX_COMPILER__example_win32_directx9_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_example_win32_directx9
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx9.dir\implot_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+
+build imgui/CMakeFiles/example_win32_directx9.dir/implot_items.cpp.obj: CXX_COMPILER__example_win32_directx9_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_example_win32_directx9
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx9.dir\implot_items.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx9.dir
+
 build imgui/CMakeFiles/example_win32_directx9.dir/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__example_win32_directx9_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_win32_directx9
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = imgui\CMakeFiles\example_win32_directx9.dir\misc\freetype\imgui_freetype.cpp.obj.d
@@ -257,7 +305,7 @@ build imgui/CMakeFiles/example_win32_directx9.dir/backends/imgui_impl_dx9.cpp.ob
 #############################################
 # Link the executable bin\example_win32_directx9.exe
 
-build bin/example_win32_directx9.exe: CXX_EXECUTABLE_LINKER__example_win32_directx9_Debug imgui/CMakeFiles/example_win32_directx9.dir/examples/example_win32_directx9/main.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/backends/imgui_impl_dx9.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build bin/example_win32_directx9.exe: CXX_EXECUTABLE_LINKER__example_win32_directx9_Debug imgui/CMakeFiles/example_win32_directx9.dir/examples/example_win32_directx9/main.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/implot.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/implot_demo.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/implot_items.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx9.dir/backends/imgui_impl_dx9.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d9  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx9.dir
@@ -324,6 +372,30 @@ build imgui/CMakeFiles/example_win32_directx10.dir/imgui_widgets.cpp.obj: CXX_CO
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx10.dir
   OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx10.dir
 
+build imgui/CMakeFiles/example_win32_directx10.dir/implot.cpp.obj: CXX_COMPILER__example_win32_directx10_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_example_win32_directx10
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx10.dir\implot.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+
+build imgui/CMakeFiles/example_win32_directx10.dir/implot_demo.cpp.obj: CXX_COMPILER__example_win32_directx10_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_example_win32_directx10
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx10.dir\implot_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+
+build imgui/CMakeFiles/example_win32_directx10.dir/implot_items.cpp.obj: CXX_COMPILER__example_win32_directx10_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_example_win32_directx10
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx10.dir\implot_items.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx10.dir
+
 build imgui/CMakeFiles/example_win32_directx10.dir/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__example_win32_directx10_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_win32_directx10
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = imgui\CMakeFiles\example_win32_directx10.dir\misc\freetype\imgui_freetype.cpp.obj.d
@@ -356,7 +428,7 @@ build imgui/CMakeFiles/example_win32_directx10.dir/backends/imgui_impl_dx10.cpp.
 #############################################
 # Link the executable bin\example_win32_directx10.exe
 
-build bin/example_win32_directx10.exe: CXX_EXECUTABLE_LINKER__example_win32_directx10_Debug imgui/CMakeFiles/example_win32_directx10.dir/examples/example_win32_directx10/main.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/backends/imgui_impl_dx10.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build bin/example_win32_directx10.exe: CXX_EXECUTABLE_LINKER__example_win32_directx10_Debug imgui/CMakeFiles/example_win32_directx10.dir/examples/example_win32_directx10/main.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/implot.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/implot_demo.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/implot_items.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx10.dir/backends/imgui_impl_dx10.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d10  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx10.dir
@@ -423,6 +495,30 @@ build imgui/CMakeFiles/example_win32_directx11.dir/imgui_widgets.cpp.obj: CXX_CO
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx11.dir
   OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx11.dir
 
+build imgui/CMakeFiles/example_win32_directx11.dir/implot.cpp.obj: CXX_COMPILER__example_win32_directx11_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_example_win32_directx11
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx11.dir\implot.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+
+build imgui/CMakeFiles/example_win32_directx11.dir/implot_demo.cpp.obj: CXX_COMPILER__example_win32_directx11_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_example_win32_directx11
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx11.dir\implot_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+
+build imgui/CMakeFiles/example_win32_directx11.dir/implot_items.cpp.obj: CXX_COMPILER__example_win32_directx11_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_example_win32_directx11
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx11.dir\implot_items.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx11.dir
+
 build imgui/CMakeFiles/example_win32_directx11.dir/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__example_win32_directx11_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_win32_directx11
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = imgui\CMakeFiles\example_win32_directx11.dir\misc\freetype\imgui_freetype.cpp.obj.d
@@ -455,7 +551,7 @@ build imgui/CMakeFiles/example_win32_directx11.dir/backends/imgui_impl_dx11.cpp.
 #############################################
 # Link the executable bin\example_win32_directx11.exe
 
-build bin/example_win32_directx11.exe: CXX_EXECUTABLE_LINKER__example_win32_directx11_Debug imgui/CMakeFiles/example_win32_directx11.dir/examples/example_win32_directx11/main.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/backends/imgui_impl_dx11.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build bin/example_win32_directx11.exe: CXX_EXECUTABLE_LINKER__example_win32_directx11_Debug imgui/CMakeFiles/example_win32_directx11.dir/examples/example_win32_directx11/main.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/implot.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/implot_demo.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/implot_items.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx11.dir/backends/imgui_impl_dx11.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d11  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx11.dir
@@ -522,6 +618,30 @@ build imgui/CMakeFiles/example_win32_directx12.dir/imgui_widgets.cpp.obj: CXX_CO
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx12.dir
   OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx12.dir
 
+build imgui/CMakeFiles/example_win32_directx12.dir/implot.cpp.obj: CXX_COMPILER__example_win32_directx12_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_example_win32_directx12
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx12.dir\implot.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+
+build imgui/CMakeFiles/example_win32_directx12.dir/implot_demo.cpp.obj: CXX_COMPILER__example_win32_directx12_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_example_win32_directx12
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx12.dir\implot_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+
+build imgui/CMakeFiles/example_win32_directx12.dir/implot_items.cpp.obj: CXX_COMPILER__example_win32_directx12_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_example_win32_directx12
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_directx12.dir\implot_items.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_directx12.dir
+
 build imgui/CMakeFiles/example_win32_directx12.dir/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__example_win32_directx12_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_win32_directx12
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = imgui\CMakeFiles\example_win32_directx12.dir\misc\freetype\imgui_freetype.cpp.obj.d
@@ -554,7 +674,7 @@ build imgui/CMakeFiles/example_win32_directx12.dir/backends/imgui_impl_dx12.cpp.
 #############################################
 # Link the executable bin\example_win32_directx12.exe
 
-build bin/example_win32_directx12.exe: CXX_EXECUTABLE_LINKER__example_win32_directx12_Debug imgui/CMakeFiles/example_win32_directx12.dir/examples/example_win32_directx12/main.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/backends/imgui_impl_dx12.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build bin/example_win32_directx12.exe: CXX_EXECUTABLE_LINKER__example_win32_directx12_Debug imgui/CMakeFiles/example_win32_directx12.dir/examples/example_win32_directx12/main.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/implot.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/implot_demo.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/implot_items.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_directx12.dir/backends/imgui_impl_dx12.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -ld3d12  -ldxgi  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = imgui\CMakeFiles\example_win32_directx12.dir
@@ -621,6 +741,30 @@ build imgui/CMakeFiles/example_win32_opengl3.dir/imgui_widgets.cpp.obj: CXX_COMP
   OBJECT_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
   OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
 
+build imgui/CMakeFiles/example_win32_opengl3.dir/implot.cpp.obj: CXX_COMPILER__example_win32_opengl3_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_example_win32_opengl3
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_opengl3.dir\implot.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+
+build imgui/CMakeFiles/example_win32_opengl3.dir/implot_demo.cpp.obj: CXX_COMPILER__example_win32_opengl3_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_example_win32_opengl3
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_opengl3.dir\implot_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+
+build imgui/CMakeFiles/example_win32_opengl3.dir/implot_items.cpp.obj: CXX_COMPILER__example_win32_opengl3_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_example_win32_opengl3
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = imgui\CMakeFiles\example_win32_opengl3.dir\implot_items.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
+  INCLUDES = -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+  OBJECT_FILE_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
+
 build imgui/CMakeFiles/example_win32_opengl3.dir/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__example_win32_opengl3_unscanned_Debug D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_win32_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = imgui\CMakeFiles\example_win32_opengl3.dir\misc\freetype\imgui_freetype.cpp.obj.d
@@ -653,7 +797,7 @@ build imgui/CMakeFiles/example_win32_opengl3.dir/backends/imgui_impl_opengl3.cpp
 #############################################
 # Link the executable bin\example_win32_opengl3.exe
 
-build bin/example_win32_opengl3.exe: CXX_EXECUTABLE_LINKER__example_win32_opengl3_Debug imgui/CMakeFiles/example_win32_opengl3.dir/examples/example_win32_opengl3/main.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/backends/imgui_impl_opengl3.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
+build bin/example_win32_opengl3.exe: CXX_EXECUTABLE_LINKER__example_win32_opengl3_Debug imgui/CMakeFiles/example_win32_opengl3.dir/examples/example_win32_opengl3/main.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_demo.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_draw.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_tables.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/imgui_widgets.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/implot.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/implot_demo.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/implot_items.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/misc/freetype/imgui_freetype.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/backends/imgui_impl_win32.cpp.obj imgui/CMakeFiles/example_win32_opengl3.dir/backends/imgui_impl_opengl3.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/debug/lib/freetyped.lib  -lopengl32  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = imgui\CMakeFiles\example_win32_opengl3.dir
