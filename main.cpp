@@ -5,10 +5,12 @@
 #include <cstdio>
 #include <SDL.h>
 #include <SDL_opengl.h>
-#include <array>
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include "ControllPanel.h"
+#include "PlotWindow.h"
+#include "pid.h"
 
 
 // Main code
@@ -74,33 +76,35 @@ int main(int, char**)
     ImGui_ImplOpenGL2_Init();
 
     //IM_ASSERT(font != nullptr);
-    io.Fonts->AddFontFromFileTTF("/home/tehnokrat/Downloads/BruceForeverRegular-X3jd2.ttf", 15.0f);
+    io.Fonts->AddFontFromFileTTF("../resources/BruceForeverRegular-X3jd2.ttf", 15.0f);
 
     bool show_demo_window = false;
     bool show_another_window = false;
     bool show_plot_window = true;
 
-    std::string connection_button_label = "Connect";
 
-    std::vector<std::string> logs = {
-            "Application opened successfully",
-            "Logging started...",
-    };
-
-    std::vector<std::string> logs_data = {};
-    std::vector<std::string> logs_time = {};
-
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    ImVec4 clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
 
     // Main loop
     bool done = false;
     bool connection_emitted = false;
     int window_height, window_width, window_position_x, window_position_y;
-
-    std::vector<double> times; // This will store the time values
-    std::vector<double> framerates; // This will store the framerate values
-
+    bool attach_window= false;
     auto start = std::chrono::system_clock::now();
+
+    double setpoint = 60.0;
+    double kp = 2;
+    double ki = 1;
+    double kd = 1;
+
+
+    ControllPanel controllPanel(window_width, window_height, window_position_x, window_position_y);
+    PlotWindow plotWindow(window_width, window_height, window_position_x, window_position_y, attach_window);
+
+//    pidController.setOutputMin(0);
+//    pidController.setOutputMax(1023);
+
+    //pidController.init(io.Framerate/2);
 
     while (!done){
         SDL_Event event;
@@ -127,61 +131,8 @@ int main(int, char**)
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
 
-
-        ImGui::SetNextWindowSize(ImVec2(window_width * 1 / 3, window_height)); // Set "New Window" size to 1/3 of SDL window width and full height
-        ImGui::SetNextWindowPos(ImVec2(window_position_x, window_position_y)); // Set "New Window" position to top left corner
-
-        if (ImGui::Begin("Control panel")) // begin window
-        {
-            if (ImGui::Button(connection_button_label.c_str())) // Buttons return true when clicked.
-            {
-                connection_button_label = (connection_button_label == "Connect") ? "Disconnect" : "Connect";
-                logs.emplace_back("Connection emitted...");
-                connection_emitted = !connection_emitted;
-                //TODO: Add connection to socket of esp
-
-            }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Logs")){
-                for (const std::string& log : logs){
-                    ImGui::TextUnformatted(log.c_str());
-                }
-                // Auto scroll to the bottom when a new log is added
-                if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
-                    ImGui::SetScrollHereY(1.0f);
-
-                ImGui::EndChild(); // end child window
-            }
-        }
-        ImGui::End(); // Control Window
-
-        ImGui::SetNextWindowSize(ImVec2(window_width * 2 / 3, window_height)); // Set "Test Plot" size to 2/3 of SDL window width and full height
-        ImGui::SetNextWindowPos(ImVec2(window_position_x + window_width * 1 / 3, window_position_y)); // Set "Test Plot" position to right of "New Window"
-
-        // Add the current time and framerate to your data
-        times.push_back(current_time);
-        framerates.push_back(current_framerate);
-
-
-        // Show Plot window if enabled
-        if(show_plot_window){
-            if(ImGui::Begin("Plot", &show_plot_window)){
-                if(ImPlot::BeginPlot("Data from Sensor") ){
-
-                    if (connection_emitted)
-                        ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
-                }
-                ImPlot::EndPlot();
-            }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Data")){
-                std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
-                ImGui::Text("%s", output.c_str());
-            }
-            ImGui::EndChild();
-            ImGui::End();
-        }
-
+        controllPanel.Render(connection_emitted);
+        plotWindow.Render(connection_emitted, current_time, current_framerate, io.Framerate);
 
         // Rendering
         ImGui::Render();

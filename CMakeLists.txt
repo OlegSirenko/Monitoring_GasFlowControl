@@ -10,8 +10,11 @@ find_package(SDL2 REQUIRED)
 include_directories(${SDL2_INCLUDE_DIRS})
 
 add_subdirectory(imgui)
-
-add_executable(ImGUI_GasFlowControll main.cpp)
+include_directories(modules)
+add_executable(ImGUI_GasFlowControll main.cpp
+        modules/PlotWindow.cpp
+        modules/ControllPanel.cpp
+        modules/pid.cpp)
 
 # Set the linker flags
 set(CMAKE_EXE_LINKER_FLAGS " -static")
@@ -28,17 +31,17 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 target_link_libraries(ImGUI_GasFlowControll PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES} )
 
 
-include(appimage.cmake)
-
-# Create the AppImage
-make_appimage(
-        EXE "cmake-build-release/ImGUI_GasFlowControll"  # Path to your built executable
-        NAME "ImGUI_GasFlowControll"  # Name of your application
-        ICON "./resources/GasFlowControlIcon.svg"  # Path to your application icon (optional)
-        OUTPUT_NAME "ImGUI_GasFlowControll.AppImage"  # Output AppImage filename
-        DIR_ICON "./resources/GasFlowControlIcon_png.png"
-        ASSETS "LICENSE"  # List of extra files to include in the AppDir (optional)
-)
-
-# Print a success message
-message("AppImage created successfully!")
+#include(appimage.cmake)
+#
+## Create the AppImage
+#make_appimage(
+#        EXE "cmake-build-release/ImGUI_GasFlowControll"  # Path to your built executable
+#        NAME "ImGUI_GasFlowControll"  # Name of your application
+#        ICON "./resources/GasFlowControlIcon.svg"  # Path to your application icon (optional)
+#        OUTPUT_NAME "ImGUI_GasFlowControll.AppImage"  # Output AppImage filename
+#        DIR_ICON "./resources/GasFlowControlIcon_png.png"
+#        ASSETS "LICENSE"  # List of extra files to include in the AppDir (optional)
+#)
+#
+## Print a success message
+#message("AppImage created successfully!")
