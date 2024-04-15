@@ -53,7 +53,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.o: CXX_COMPILER__ImGUI_GasFl
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
 
@@ -61,7 +61,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.o: CXX_COMPILE
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/modules
 
@@ -69,7 +69,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControllPanel.cpp.o: CXX_COMP
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControllPanel.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/modules
 
@@ -77,7 +77,23 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/modules/pid.cpp.o: CXX_COMPILER__ImGU
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/modules/pid.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
+  OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/modules
+
+build CMakeFiles/ImGUI_GasFlowControll.dir/modules/PID.cpp.o: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/PID.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/modules/PID.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
+  OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/modules
+
+build CMakeFiles/ImGUI_GasFlowControll.dir/modules/SocketModule.cpp.o: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Debug /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/SocketModule.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/modules/SocketModule.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/modules
 
@@ -85,7 +101,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.o: CXX_COMPILER__ImGU
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -93,7 +109,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.o: CXX_COMPILER_
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -101,7 +117,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.o: CXX_COMPILER_
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -109,7 +125,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.o: CXX_COMPILE
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -117,7 +133,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.o: CXX_COMPIL
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -125,7 +141,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.o: CXX_COMPILER__ImG
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -133,7 +149,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.o: CXX_COMPILER
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -141,7 +157,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.o: CXX_COMPILE
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui
 
@@ -149,7 +165,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype
 
@@ -157,7 +173,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_sdl2.cpp.o:
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends
 
@@ -165,7 +181,7 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_opengl2.cpp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_opengl2.cpp.o.d
   FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
+  INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/imgui/backends
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   OBJECT_FILE_DIR = CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends
 
@@ -177,10 +193,10 @@ build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_opengl2.cpp
 #############################################
 # Link the executable ImGUI_GasFlowControll
 
-build ImGUI_GasFlowControll: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControllPanel.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/pid.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_sdl2.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_opengl2.cpp.o | /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so
+build ImGUI_GasFlowControll: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Debug CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControllPanel.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/pid.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/PID.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/modules/SocketModule.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_sdl2.cpp.o CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_opengl2.cpp.o | /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/libGameNetworkingSockets.so /usr/lib/x86_64-linux-gnu/libSDL2.so /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so
   FLAGS = -g
   LINK_FLAGS = -static-libgcc -static-libstdc++
-  LINK_LIBRARIES = -L/usr/lib/x86_64-linux-gnu  -lSDL2  -Wl,-Bdynamic  /usr/lib/x86_64-linux-gnu/libSDL2.so  -Wl,-Bstatic  -ldl  -Wl,-Bdynamic  /usr/lib/x86_64-linux-gnu/libfreetype.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  -Wl,-Bstatic
+  LINK_LIBRARIES = -Wl,-rpath,/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs  -L/usr/lib/x86_64-linux-gnu  -lSDL2  -Wl,-Bdynamic  /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/libGameNetworkingSockets.so  /usr/lib/x86_64-linux-gnu/libSDL2.so  -Wl,-Bstatic  -ldl  -Wl,-Bdynamic  /usr/lib/x86_64-linux-gnu/libfreetype.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so  -Wl,-Bstatic
   OBJECT_DIR = CMakeFiles/ImGUI_GasFlowControll.dir
   POST_BUILD = :
   PRE_LINK = :

@@ -10,7 +10,9 @@
 #include <chrono>
 #include "ControllPanel.h"
 #include "PlotWindow.h"
-#include "pid.h"
+#include "PID.h"
+#include <cmath>
+#include <deque>
 
 
 // Main code
@@ -92,19 +94,24 @@ int main(int, char**)
     bool attach_window= false;
     auto start = std::chrono::system_clock::now();
 
-    double setpoint = 60.0;
-    double kp = 2;
-    double ki = 1;
-    double kd = 1;
+    double setpoint = 0.0;
+    double kp = 0.3;
+    double ki = 0.005;
+    double kd = 0.1;
 
 
     ControllPanel controllPanel(window_width, window_height, window_position_x, window_position_y);
     PlotWindow plotWindow(window_width, window_height, window_position_x, window_position_y, attach_window);
+    PID pid;
+    pid.Init(kp, ki, kd);
 
-//    pidController.setOutputMin(0);
-//    pidController.setOutputMax(1023);
+    std::deque<double> recent_errors;
+    double sum_errors = 0.0;
+    const std::size_t max_errors_size = 100;
 
-    //pidController.init(io.Framerate/2);
+
+    long x_sin = 0;
+
 
     while (!done){
         SDL_Event event;
@@ -125,21 +132,36 @@ int main(int, char**)
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
 
+        double current_data = sin(x_sin);
+        x_sin = current_time;
 
-        double current_framerate = io.Framerate;
+        double error = setpoint - current_data;
+        pid.UpdateError(error);
+
+        recent_errors.push_back(error);
+        sum_errors += error;
+        if (recent_errors.size() > max_errors_size) {
+            sum_errors -= recent_errors.front();
+            recent_errors.pop_front();
+        }
+
+        double average_error = sum_errors / recent_errors.size();
+        if (abs(average_error) > 0.5) {
+            pid.AutoTuneController(setpoint - pid.GetSteerValue());
+
+        }
 
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
 
         controllPanel.Render(connection_emitted);
-        plotWindow.Render(connection_emitted, current_time, current_framerate, io.Framerate);
+        plotWindow.Render(connection_emitted, current_time, current_data, pid.GetSteerValue()); //  with PID Output data
 
         // Rendering
         ImGui::Render();
         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
         glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
         glClear(GL_COLOR_BUFFER_BIT);
-        //glUseProgram(0); // You may want this if using this code in an OpenGL 3+ context where shaders may be bound
         ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
 
 
@@ -153,6 +175,7 @@ int main(int, char**)
         }
 
         SDL_GL_SwapWindow(window);
+
     }
 
     // Cleanup

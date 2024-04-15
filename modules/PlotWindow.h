@@ -19,6 +19,7 @@ public:
                     window_width(window_width), window_height(window_height),
                     window_position_x(window_position_x), window_position_y(window_position_y), attach_window(attach_window){}
     void Render(bool, long, double, double);
+    void Render(bool, long, double);
 private:
     bool show_plot_window = true;
     std::vector<double> times;

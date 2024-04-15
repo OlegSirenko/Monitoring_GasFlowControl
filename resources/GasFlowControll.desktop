@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Gas Flow Contol
+Comment=Control Panel for Gas Flow System
+Exec=ImGUI_GasFlowControll
+Icon=GasFlowControlIcon_png
+GenericName=MyProgram
+Categories=Utility
+Terminal=false
