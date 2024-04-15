@@ -19,7 +19,7 @@ public:
                     window_width(window_width), window_height(window_height),
                     window_position_x(window_position_x), window_position_y(window_position_y){}
 
-    void Render(bool&);
+    void Render(bool&, std::vector<std::string>&);
 
 private:
     int& window_width;
@@ -28,11 +28,6 @@ private:
     int& window_position_y;
 
     std::string connection_button_label = "Connect";
-
-    std::vector<std::string> logs = {
-            "Application opened successfully",
-            "Logging started...",
-    };
 };
 
 

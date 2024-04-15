@@ -19,7 +19,6 @@ find_library(GAMENETWORKING_LIB NAMES GameNetworkingSockets PATHS ${PROJECT_SOUR
 add_executable(ImGUI_GasFlowControll main.cpp
         modules/PlotWindow.cpp
         modules/ControllPanel.cpp
-        modules/pid.cpp
         modules/PID.cpp
         modules/SocketModule.cpp
 )

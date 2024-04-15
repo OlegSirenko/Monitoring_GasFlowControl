@@ -5,7 +5,7 @@
 #include "ControllPanel.h"
 
 
-void ControllPanel::Render(bool& connection_emitted) {
+void ControllPanel::Render(bool& connection_emitted, std::vector<std::string>& logs) {
     ImGui::SetNextWindowSize(ImVec2(window_width * 1 / 3, window_height)); // Set "New Window" size to 1/3 of SDL window width and full height
     ImGui::SetNextWindowPos(ImVec2(window_position_x, window_position_y)); // Set "New Window" position to top left corner
 

@@ -95,9 +95,9 @@ int main(int, char**)
     auto start = std::chrono::system_clock::now();
 
     double setpoint = 0.0;
-    double kp = 0.3;
-    double ki = 0.005;
-    double kd = 0.1;
+    double kp = 0.1;
+    double ki = 0.06;
+    double kd = 0.25;
 
 
     ControllPanel controllPanel(window_width, window_height, window_position_x, window_position_y);
@@ -109,10 +109,12 @@ int main(int, char**)
     double sum_errors = 0.0;
     const std::size_t max_errors_size = 100;
 
+    std::vector<std::string> logs = {
+            "Application opened successfully",
+            "Logging started...",
+    };
 
-    long x_sin = 0;
-
-
+    unsigned int x = 0;
     while (!done){
         SDL_Event event;
         while (SDL_PollEvent(&event))
@@ -132,30 +134,34 @@ int main(int, char**)
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
 
-        double current_data = sin(x_sin);
-        x_sin = current_time;
+        if(connection_emitted){
+            double current_data = sin(x);
+            x +=1;
 
-        double error = setpoint - current_data;
-        pid.UpdateError(error);
+            double error = setpoint - current_data;
+            pid.UpdateError(error);
 
-        recent_errors.push_back(error);
-        sum_errors += error;
-        if (recent_errors.size() > max_errors_size) {
-            sum_errors -= recent_errors.front();
-            recent_errors.pop_front();
+            recent_errors.push_back(error);
+            sum_errors += error;
+            if (recent_errors.size() > max_errors_size) {
+                sum_errors -= recent_errors.front();
+                recent_errors.pop_front();
+            }
+
+            double average_error = sum_errors / recent_errors.size();
+            if (abs(average_error) > 0.45) {
+                logs.push_back("Started autotuning");
+                pid.AutoTuneController(setpoint - pid.GetSteerValue());
+
+            }
+
+            plotWindow.Render(connection_emitted, current_time, current_data, pid.GetSteerValue()); //  with PID Output data
         }
-
-        double average_error = sum_errors / recent_errors.size();
-        if (abs(average_error) > 0.5) {
-            pid.AutoTuneController(setpoint - pid.GetSteerValue());
-
-        }
-
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
 
-        controllPanel.Render(connection_emitted);
-        plotWindow.Render(connection_emitted, current_time, current_data, pid.GetSteerValue()); //  with PID Output data
+        controllPanel.Render(connection_emitted, logs);
+
 
         // Rendering
         ImGui::Render();

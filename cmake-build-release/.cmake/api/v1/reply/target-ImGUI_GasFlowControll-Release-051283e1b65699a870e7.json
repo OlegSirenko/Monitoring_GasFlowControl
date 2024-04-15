@@ -37,7 +37,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 40,
+				"line" : 39,
 				"parent" : 0
 			},
 			{
@@ -182,18 +182,17 @@
 				2,
 				3,
 				4,
-				5,
-				7,
+				6,
+				8,
 				9,
-				10,
+				11,
 				12,
 				13,
-				14,
-				16,
-				18,
-				23,
-				25,
-				26
+				15,
+				17,
+				22,
+				24,
+				25
 			]
 		}
 	],
@@ -286,34 +285,33 @@
 				2,
 				3,
 				4,
-				5,
-				7,
+				6,
+				8,
 				9,
-				10,
+				11,
 				12,
 				13,
-				14,
-				16,
-				18,
-				23,
-				25,
-				26
+				15,
+				17,
+				22,
+				24,
+				25
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				6,
-				8,
-				11,
-				15,
-				17,
+				5,
+				7,
+				10,
+				14,
+				16,
+				18,
 				19,
 				20,
 				21,
-				22,
-				24
+				23
 			]
 		}
 	],
@@ -335,12 +333,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "modules/ControllPanel.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "modules/pid.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
