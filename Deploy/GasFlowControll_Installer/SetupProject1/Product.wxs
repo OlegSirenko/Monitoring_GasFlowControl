@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include Include1.wxi ?>
+	<Product Id="*" Name="GasFlowControl" Language="1033" Version="1.0.0.0" Manufacturer="OlegSirenko" UpgradeCode="4fd9d2e2-ca64-4170-8f78-7809d269f6da">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+		<PropertyRef Id="UIReferences"/>
+
+		<FeatureRef Id="ftr_files" />
+	</Product>
+</Wix>

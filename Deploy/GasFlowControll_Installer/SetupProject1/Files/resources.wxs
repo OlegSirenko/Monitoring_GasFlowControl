@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include ../Include1.wxi ?>
+	<Fragment>
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.source_path)\License.rtf"/>
+		<ComponentGroup Id="cmp_resources" Directory="INSTALLFOLDER">
+			<Component Id="cmp_ini" Guid="faac34eb-5698-4273-8ab7-abadcf3ec60b">
+				<File Id="file_inofile" Checksum="yes" KeyPath="yes" Source="$(var.source_path)/imgui.ini"/>
+			</Component>
+			<Component Id="cmp_license" Guid="8a86e2f0-c62c-4096-ad59-2e6222767cb2">
+				<File Id="file_license" Checksum="yes" KeyPath="yes" Source="$(var.source_path)/License.rtf"/>
+			</Component>
+			<Component Id="cmp_icon" Guid="7d2e7562-65ef-4c3c-92b1-6c822aa1d323">
+				<File Id="file_icon" Checksum="yes" KeyPath="yes" Source="$(var.source_path)/GasFlowControlIcon.ico"/>
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>

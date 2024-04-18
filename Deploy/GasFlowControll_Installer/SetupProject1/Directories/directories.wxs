@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include ../Include1.wxi ?>
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="INSTALLFOLDER" Name="$(var.product_name)"/>
+
+		</Directory>
+	</Fragment>
+</Wix>

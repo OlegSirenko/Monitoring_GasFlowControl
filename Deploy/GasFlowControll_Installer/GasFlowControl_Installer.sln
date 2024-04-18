@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "GasFlowControl_installer", "SetupProject1\GasFlowControl_installer.wixproj", "{AD0E963F-F0CA-4EDF-A02A-A1B2F3CAABC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AD0E963F-F0CA-4EDF-A02A-A1B2F3CAABC8}.Debug|x86.ActiveCfg = Debug|x86
+		{AD0E963F-F0CA-4EDF-A02A-A1B2F3CAABC8}.Debug|x86.Build.0 = Debug|x86
+		{AD0E963F-F0CA-4EDF-A02A-A1B2F3CAABC8}.Release|x86.ActiveCfg = Release|x86
+		{AD0E963F-F0CA-4EDF-A02A-A1B2F3CAABC8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3C664AAD-03F6-44F7-8240-3C3A0C5DBD75}
+	EndGlobalSection
+EndGlobal

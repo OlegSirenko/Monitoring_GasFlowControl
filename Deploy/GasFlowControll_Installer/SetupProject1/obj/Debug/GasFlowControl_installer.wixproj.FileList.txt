@@ -1,0 +1,12 @@
+D:\Code\ImGUI_GasFlowControll\Deploy\GasFlowControll_Installer\SetupProject1\bin\Debug\GasFlowControl.msi
+D:\Code\ImGUI_GasFlowControll\Deploy\GasFlowControll_Installer\SetupProject1\bin\Debug\GasFlowControl.wixpdb
+obj\Debug\pth3A7E174ECDA4830592F33879D03EB028\directories.wixobj
+obj\Debug\pthB4255F565AA3F12C9865E8E26816E057\resources.wixobj
+obj\Debug\pthB4255F565AA3F12C9865E8E26816E057\dlls.wixobj
+obj\Debug\pthB4255F565AA3F12C9865E8E26816E057\main_file.wixobj
+obj\Debug\Product.wixobj
+obj\Debug\GasFlowControl_installer.wixproj.BindContentsFileListnull.txt
+obj\Debug\GasFlowControl_installer.wixproj.BindOutputsFileListnull.txt
+obj\Debug\GasFlowControl_installer.wixproj.BindBuiltOutputsFileListnull.txt
+obj\Debug\pthD4243C9BC242555F7FFC68E3B78274AA\Feature_files.wixobj
+obj\Debug\pthC5FB79AEBB3B86B6C499B63DA94EE8B7\UI.wixobj

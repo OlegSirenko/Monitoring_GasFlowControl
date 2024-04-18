@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include ../Include1.wxi ?>
+	<Fragment>
+		<Component Id="cmp_application_exe" Guid="013bfc44-accb-488c-a082-f0c26ab523be" Directory="INSTALLFOLDER">
+			<File Id="file_application_exe" KeyPath="yes" Checksum="yes" Source="$(var.source_path)/ImGUI_GasFlowControll.exe"/>
+		</Component>
+	</Fragment>
+</Wix>

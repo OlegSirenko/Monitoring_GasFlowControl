@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Include>
+	<?define product_name = "GasFlowControll"?>
+	<?define source_path = "../../source"?>
+	<?define resources_dir = "../../../resources"?>
+</Include>

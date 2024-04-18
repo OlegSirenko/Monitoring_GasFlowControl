@@ -16,7 +16,11 @@
 #include <vector>
 #include <chrono>
 #include "implot.h"
-
+#include "ControlPanel.h"
+#include "PlotWindow.h"
+#include "PID.h"
+#include <cmath>
+#include <deque>
 
 // Data
 static ID3D11Device*            g_pd3dDevice = nullptr;
@@ -37,9 +41,20 @@ int main(int, char**)
 {
     // Create application window
     //ImGui_ImplWin32_EnableDpiAwareness();
-    WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr), nullptr, nullptr, nullptr, nullptr, L"Monitoring for Gas FLow control system", nullptr };
+
+    WNDCLASSEXW wc = { sizeof(wc), CS_CLASSDC, WndProc, 0L, 0L, GetModuleHandle(nullptr),
+                       static_cast<HICON>(LoadImage(nullptr, _T("GasFlowControlIcon.ico"), IMAGE_ICON, 0, 0,
+                                                    LR_DEFAULTSIZE | LR_LOADFROMFILE)),
+                       nullptr, nullptr, nullptr, L"Monitoring for Gas FLow control system",
+                       static_cast<HICON>(LoadImage(nullptr, _T("GasFlowControlIcon.ico"), IMAGE_ICON, 0, 0,
+                                                    LR_DEFAULTSIZE | LR_LOADFROMFILE)) };
     ::RegisterClassExW(&wc);
+
+
     HWND hwnd = ::CreateWindowW(wc.lpszClassName, L"Monitoring for Gas FLow control system", WS_OVERLAPPEDWINDOW, 100, 100, 1280, 800, nullptr, nullptr, wc.hInstance, nullptr);
+
+
+
 
     // Initialize Direct3D
     if (!CreateDeviceD3D(hwnd))
@@ -48,6 +63,7 @@ int main(int, char**)
         ::UnregisterClassW(wc.lpszClassName, wc.hInstance);
         return 1;
     }
+
 
     // Show the window
     ::ShowWindow(hwnd, SW_SHOWDEFAULT);
@@ -63,7 +79,7 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
     //io.ConfigViewportsNoAutoMerge = true;
-    //io.ConfigViewportsNoTaskBarIcon = true;
+    io.ConfigViewportsNoTaskBarIcon = true;
     //io.ConfigViewportsNoDefaultParent = true;
     //io.ConfigDockingAlwaysTabBar = true;
     //io.ConfigDockingTransparentPayload = true;
@@ -103,35 +119,45 @@ int main(int, char**)
     //IM_ASSERT(font != nullptr);
 
     io.Fonts->AddFontFromFileTTF(R"(c:\Windows\Fonts\impact.ttf)", 15.0f);
+
+
     // Our state
     bool show_demo_window = false;
     bool show_another_window = false;
     bool show_plot_window = true;
     ImVec4 clear_color = ImVec4(0.0f, 0.0f, 0.0f, 0.90f);
+
+
+    // Main loop
+    bool done = false;
+    bool connection_emitted = false;
+    bool autotune_enabled = false;
+    int window_height = 1080, window_width=720, window_position_x = 0, window_position_y = 0;
+    bool attach_window= false;
     auto start = std::chrono::system_clock::now();
 
-    std::string connection_button_label = "Connect";
+    double setpoint = 0.0;
+    double kp = 0.025;
+    double ki = 0.064;
+    double kd = 0.28;
+
+
+    ControlPanel controlPanel(window_width, window_height, window_position_x, window_position_y);
+    PlotWindow plotWindow(window_width, window_height, window_position_x, window_position_y, attach_window);
+    PID pid;
+    pid.Init(kp, ki, kd);
+
+    std::deque<double> recent_errors;
+    double sum_errors = 0.0;
+    const std::size_t max_errors_size = 50;
 
     std::vector<std::string> logs = {
             "Application opened successfully",
             "Logging started...",
     };
 
-    std::vector<std::string> logs_data = {};
-    std::vector<std::string> logs_time = {};
-
-    // Main loop
-    bool done = false;
-    bool connection_emitted = false;
-
-
-    std::vector<double> times; // This will store the time values
-    std::vector<double> framerates; // This will store the framerate values
-
-    while (!done)
-    {
-        // Poll and handle messages (inputs, window resize, etc.)
-        // See the WndProc() function below for our to dispatch events to the Win32 backend.
+    double x = 0;
+    while (!done){
         MSG msg;
         while (::PeekMessage(&msg, nullptr, 0U, 0U, PM_REMOVE))
         {
@@ -161,76 +187,42 @@ int main(int, char**)
         // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
+//        std::cout<<current_time<<std::endl;
+        //ImPlot::ShowDemoWindow();
+        if(connection_emitted){
 
+            double periodic = sin(x);
+            double current_data = periodic ;
+            x += 1;
 
-        double current_framerate = io.Framerate;
+            double error = setpoint - current_data;
+            pid.UpdateError(error);
 
-
-        RECT rect;
-        GetWindowRect(hwnd, &rect);
-
-        int titleBarHeight = GetSystemMetrics(SM_CYCAPTION);
-
-        int window_width = (rect.right - rect.left) * 0.99;
-        int window_height = (rect.bottom - rect.top) * 0.99;
-        int window_position_x = rect.left + 5;
-        int window_position_y = rect.top;
-
-//
-//        ImGui::SetNextWindowSize(ImVec2(window_width * 1 / 3, window_height-titleBarHeight)); // Set "New Window" size to 1/3 of SDL window width and full height
-//        ImGui::SetNextWindowPos(ImVec2(window_position_x, window_position_y + titleBarHeight)); // Set "New Window" position to top left corner
-
-        if (ImGui::Begin("Control panel")) // begin window
-        {
-            if (ImGui::Button(connection_button_label.c_str())) // Buttons return true when clicked.
-            {
-                connection_button_label = (connection_button_label == "Connect") ? "Disconnect" : "Connect";
-                logs.emplace_back(connection_emitted ? "Connection lost" : "Connection emitted...");
-                connection_emitted = !connection_emitted;
-                //TODO: Add connection to socket of esp
-
+            recent_errors.push_back(error);
+            sum_errors += error;
+            if (recent_errors.size() > max_errors_size) {
+                sum_errors -= recent_errors.front();
+                recent_errors.pop_front();
             }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Logs")){
-                for (const std::string& log : logs){
-                    ImGui::TextUnformatted(log.c_str());
+
+            double average_error = sum_errors / recent_errors.size();
+            if (autotune_enabled) {
+                std::string output_autotune = "Started autotuning " +
+                        std::to_string(pid.Kp ) + " " +
+                        std::to_string(pid.Ki) + " " +
+                        std::to_string(pid.Kd );
+                logs.push_back(output_autotune);
+                if(abs(average_error) < 0.2){
+                    autotune_enabled= false;
                 }
-                // Auto scroll to the bottom when a new log is added
-                if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
-                    ImGui::SetScrollHereY(1.0f);
+                pid.AutoTuneController(average_error);
 
-                ImGui::EndChild(); // end child window
             }
-        }
-        ImGui::End(); // Control Window
-
-//        ImGui::SetNextWindowSize(ImVec2(window_width * 2 / 3, window_height)); // Set "Test Plot" size to 2/3 of SDL window width and full height
-//        ImGui::SetNextWindowPos(ImVec2(window_position_x + window_width * 1 / 3, window_position_y)); // Set "Test Plot" position to right of "New Window"
-
-        // Add the current time and framerate to your data
-        times.push_back(current_time);
-        framerates.push_back(current_framerate);
-
-
-        // Show Plot window if enabled
-        if(show_plot_window){
-            if(ImGui::Begin("Plot", &show_plot_window)){
-                if(ImPlot::BeginPlot("Data from Sensor") ){
-
-                    if (connection_emitted)
-                        ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
-                }
-                ImPlot::EndPlot();
-            }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Data")){
-                std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
-                ImGui::Text("%s", output.c_str());
-            }
-            ImGui::EndChild();
-            ImGui::End();
+            //static double now = (double)time(nullptr);
+            plotWindow.Render(connection_emitted, current_time, current_data, current_data-pid.GetSteerValue()); //  with PID Output data
         }
 
+        controlPanel.Render(connection_emitted, autotune_enabled, logs);
 
         // Rendering
         ImGui::Render();
@@ -246,8 +238,8 @@ int main(int, char**)
             ImGui::RenderPlatformWindowsDefault();
         }
 
-        g_pSwapChain->Present(1, 0); // Present with vsync
-        //g_pSwapChain->Present(0, 0); // Present without vsync
+        //g_pSwapChain->Present(1, 0); // Present with vsync
+        g_pSwapChain->Present(0, 0); // Present without vsync
     }
 
     // Cleanup

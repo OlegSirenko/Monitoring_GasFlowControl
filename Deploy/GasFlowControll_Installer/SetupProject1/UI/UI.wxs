@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<?include ../Include1.wxi ?>
+	<Fragment>
+		<Property Id="UIReferences" Value="1"/>
+		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
+		<UIRef Id="WixUI_InstallDir" />
+
+		<Icon Id="icon.ico" SourceFile="$(var.source_path)/GasFlowControlIcon.ico"/>
+		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
+
+		<WixVariable Id="WixUINewIco" Value="$(var.source_path)/GasFlowControlIcon_png_32.bmp" />
+		
+	</Fragment>
+</Wix>

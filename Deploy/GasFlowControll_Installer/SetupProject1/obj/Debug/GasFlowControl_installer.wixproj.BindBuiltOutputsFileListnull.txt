@@ -1,0 +1,2 @@
+D:\Code\ImGUI_GasFlowControll\Deploy\GasFlowControll_Installer\SetupProject1\bin\Debug\GasFlowControl.msi
+D:\Code\ImGUI_GasFlowControll\Deploy\GasFlowControll_Installer\SetupProject1\bin\Debug\GasFlowControl.wixpdb

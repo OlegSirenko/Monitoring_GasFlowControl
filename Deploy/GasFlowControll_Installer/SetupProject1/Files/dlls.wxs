@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+		<?include ../Include1.wxi ?>
+		<ComponentGroup Id="cmp_dlls" Directory="INSTALLFOLDER">
+			
+			<Component Id="cmp_libbrotlicommon" Guid="10e8dc36-f12f-4f97-969f-586811155ba7">
+				<File Id="file_libbrotlicommon" Source="$(var.source_path)/brotlicommon.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="cmp_libbrotlidec" Guid="1f2204fe-e8cd-4593-8c0f-6bdda56dc18e">
+				<File Id="file_libbrotlidec" Source="$(var.source_path)/brotlidec.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="cmp_libbz2" Guid="a77d74bd-8dfa-4644-bda0-1cd380071098">
+				<File Id="file_libbz2" Source="$(var.source_path)/bz2.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="cmp_libfreetype" Guid="8eaabd98-394e-4b88-9fe2-e3c245430624">
+				<File Id="file_libfreetype" Source="$(var.source_path)/freetype.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+			
+			<Component Id="cmp_libpng16" Guid="8dcd9f34-1e70-4bd7-9afa-915d5b286d54">
+				<File Id="file_libpng16" Source="$(var.source_path)/libpng16.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+
+			<Component Id="cmp_zlib1" Guid="196997dd-e3cd-4f14-9ff9-6fe57ab32a61">
+				<File Id="file_zlib1" Source="$(var.source_path)/zlib1.dll" Checksum="yes" KeyPath="yes"/>
+			</Component>
+		</ComponentGroup>
+	</Fragment>
+</Wix>
