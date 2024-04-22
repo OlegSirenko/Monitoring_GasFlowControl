@@ -3,7 +3,7 @@
 	<?include ../Include1.wxi ?>
 	<Fragment>
 		<Component Id="cmp_application_exe" Guid="013bfc44-accb-488c-a082-f0c26ab523be" Directory="INSTALLFOLDER">
-			<File Id="file_application_exe" KeyPath="yes" Checksum="yes" Source="$(var.source_path)/ImGUI_GasFlowControll.exe"/>
+			<File Id="file_application_exe" KeyPath="yes" Checksum="yes" Source="$(var.source_path)/GasFlowControlMonitoringApp.exe"/>
 		</Component>
 	</Fragment>
 </Wix>

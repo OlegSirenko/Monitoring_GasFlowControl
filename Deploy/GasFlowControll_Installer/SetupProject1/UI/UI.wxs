@@ -6,10 +6,13 @@
 		<Property Id="WIXUI_INSTALLDIR" Value="INSTALLFOLDER" />
 		<UIRef Id="WixUI_InstallDir" />
 
-		<Icon Id="icon.ico" SourceFile="$(var.source_path)/GasFlowControlIcon.ico"/>
+		<Icon Id="icon.ico" SourceFile="$(var.add_source_path)/GasFlowControlIcon.ico"/>
 		<Property Id="ARPPRODUCTICON" Value="icon.ico" />
-
-		<WixVariable Id="WixUINewIco" Value="$(var.source_path)/GasFlowControlIcon_png_32.bmp" />
+	
+		
+		<WixVariable Id="WixUILicenseRtf" Value="$(var.add_source_path)/License.rtf"/>
+		
+		<!--<WixVariable Id="WixUINewIco" Value="$(var.source_path)/GasFlowControlIcon_png_32.bmp" />-->
 		
 	</Fragment>
 </Wix>

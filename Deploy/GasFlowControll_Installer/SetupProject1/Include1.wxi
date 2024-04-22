@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
 	<?define product_name = "GasFlowControll"?>
-	<?define source_path = "../../source"?>
+	<?define add_source_path = "../../Source"?>
+	<?define source_path = "../../../cmake-build-release"?>
 	<?define resources_dir = "../../../resources"?>
 </Include>

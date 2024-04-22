@@ -11,13 +11,17 @@ include_directories(modules)
 
 #find_library(GAMENETWORKING_LIB NAMES GameNetworkingSockets PATHS ${PROJECT_SOURCE_DIR}/libs/)
 
+set(app_icon_resource_windows "${CMAKE_CURRENT_SOURCE_DIR}/resources/icon_preporation/favimage.rc")
 
 add_executable(GasFlowControlMonitoringApp main.cpp
         modules/PlotWindow.cpp
         modules/ControlPanel.cpp
         modules/PID.cpp
 #        modules/SocketModule.cpp
+        ${app_icon_resource_windows}
 )
+
+
 
 set(CMAKE_EXE_LINKER_FLAGS " -static")
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-win32 imgui-dx11 d3dcompiler dwmapi
