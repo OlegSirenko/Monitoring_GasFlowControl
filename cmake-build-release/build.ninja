@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: ImGUI_GasFlowControll
+# Project: GasFlowControlMonitoringApp
 # Configurations: Release
 # =============================================================================
 
@@ -41,152 +41,152 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = D$:/Code/ImGUI_GasFlowControll/cmake-build-release/
 # =============================================================================
-# Object build statements for EXECUTABLE target ImGUI_GasFlowControll
+# Object build statements for EXECUTABLE target GasFlowControlMonitoringApp
 
 
 #############################################
-# Order-only phony target for ImGUI_GasFlowControll
+# Order-only phony target for GasFlowControlMonitoringApp
 
-build cmake_object_order_depends_target_ImGUI_GasFlowControll: phony || CMakeFiles/ImGUI_GasFlowControll.dir
+build cmake_object_order_depends_target_GasFlowControlMonitoringApp: phony || CMakeFiles/GasFlowControlMonitoringApp.dir
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/main.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/main.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\main.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\main.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/PlotWindow.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/PlotWindow.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\modules\PlotWindow.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\modules\PlotWindow.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\modules
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\modules
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControlPanel.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/ControlPanel.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/ControlPanel.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\modules\ControlPanel.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\modules\ControlPanel.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\modules
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\modules
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/modules/PID.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/PID.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/modules/PID.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\modules\PID.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\modules\PID.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\modules
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\modules
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\imgui.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\imgui.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_demo.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_demo.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_demo.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\imgui_demo.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\imgui_demo.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_draw.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_draw.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_draw.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\imgui_draw.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\imgui_draw.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_tables.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_tables.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_tables.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\imgui_tables.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\imgui_tables.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\imgui_widgets.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\imgui_widgets.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\implot.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot_demo.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot_demo.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot_demo.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\implot_demo.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot_items.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/implot_items.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\implot_items.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\implot_items.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/misc/freetype/imgui_freetype.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\misc\freetype\imgui_freetype.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\misc\freetype\imgui_freetype.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\misc\freetype
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\misc\freetype
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/backends/imgui_impl_win32.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_win32.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_win32.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\backends\imgui_impl_win32.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\backends
 
-build CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__ImGUI_GasFlowControll_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_ImGUI_GasFlowControll
+build CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/backends/imgui_impl_dx11.cpp.obj: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release D$:/Code/ImGUI_GasFlowControll/imgui/backends/imgui_impl_dx11.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
-  DEP_FILE = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends\imgui_impl_dx11.cpp.obj.d
+  DEP_FILE = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\backends\imgui_impl_dx11.cpp.obj.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -ID:/Code/ImGUI_GasFlowControll/modules -ID:/Code/ImGUI_GasFlowControll/imgui -IC:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/include -isystem D:/Code/ImGUI_GasFlowControll/imgui/backends
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  OBJECT_FILE_DIR = CMakeFiles\ImGUI_GasFlowControll.dir\imgui\backends
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  OBJECT_FILE_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir\imgui\backends
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target ImGUI_GasFlowControll
+# Link build statements for EXECUTABLE target GasFlowControlMonitoringApp
 
 
 #############################################
-# Link the executable ImGUI_GasFlowControll.exe
+# Link the executable GasFlowControlMonitoringApp.exe
 
-build ImGUI_GasFlowControll.exe: CXX_EXECUTABLE_LINKER__ImGUI_GasFlowControll_Release CMakeFiles/ImGUI_GasFlowControll.dir/main.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/modules/PlotWindow.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/modules/ControlPanel.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/modules/PID.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_draw.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_tables.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_demo.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/implot_items.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/ImGUI_GasFlowControll.dir/imgui/backends/imgui_impl_dx11.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/lib/freetype.lib
+build GasFlowControlMonitoringApp.exe: CXX_EXECUTABLE_LINKER__GasFlowControlMonitoringApp_Release CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_demo.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_draw.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_tables.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/imgui_widgets.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot_demo.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/implot_items.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/misc/freetype/imgui_freetype.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/backends/imgui_impl_win32.cpp.obj CMakeFiles/GasFlowControlMonitoringApp.dir/imgui/backends/imgui_impl_dx11.cpp.obj | C$:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/lib/freetype.lib
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -static    -mwindows
   LINK_LIBRARIES = -ld3dcompiler  -ldwmapi  C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/lib/freetype.lib  -ld3d11  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\ImGUI_GasFlowControll.dir
-  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Code\ImGUI_GasFlowControll\cmake-build-release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/TehnokraT/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Code/ImGUI_GasFlowControll/cmake-build-release/ImGUI_GasFlowControll.exe -installedDir C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/bin -OutVariable out"
+  OBJECT_DIR = CMakeFiles\GasFlowControlMonitoringApp.dir
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D D:\Code\ImGUI_GasFlowControll\cmake-build-release && C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/TehnokraT/.vcpkg-clion/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary D:/Code/ImGUI_GasFlowControll/cmake-build-release/GasFlowControlMonitoringApp.exe -installedDir C:/Users/TehnokraT/.vcpkg-clion/vcpkg/installed/x64-windows/bin -OutVariable out"
   PRE_LINK = cd .
-  TARGET_FILE = ImGUI_GasFlowControll.exe
-  TARGET_IMPLIB = libImGUI_GasFlowControll.dll.a
-  TARGET_PDB = ImGUI_GasFlowControll.exe.dbg
+  TARGET_FILE = GasFlowControlMonitoringApp.exe
+  TARGET_IMPLIB = libGasFlowControlMonitoringApp.dll.a
+  TARGET_PDB = GasFlowControlMonitoringApp.exe.dbg
 
 
 #############################################
@@ -857,7 +857,7 @@ build imgui/rebuild_cache: phony imgui/CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build ImGUI_GasFlowControll: phony ImGUI_GasFlowControll.exe
+build GasFlowControlMonitoringApp: phony GasFlowControlMonitoringApp.exe
 
 build example_win32_directx10: phony bin/example_win32_directx10.exe
 
@@ -887,7 +887,7 @@ build example_win32_opengl3.exe: phony bin/example_win32_opengl3.exe
 #############################################
 # Folder: D:/Code/ImGUI_GasFlowControll/cmake-build-release
 
-build all: phony ImGUI_GasFlowControll.exe imgui/all
+build all: phony GasFlowControlMonitoringApp.exe imgui/all
 
 # =============================================================================
 
