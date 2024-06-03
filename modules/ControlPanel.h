@@ -36,6 +36,7 @@ public:
     float slider_error = 0.0004;
     std::string ip_preset = "255.255.255.255";
     int port_preset = 5050;
+    int num_connections = 1;
 };
 
 

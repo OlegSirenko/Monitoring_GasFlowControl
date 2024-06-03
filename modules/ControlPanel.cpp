@@ -21,6 +21,7 @@ void ControlPanel::Render(bool& connection_emitted, bool& autotune_enable, std::
         ImGui::InputText("IP address", const_cast<char *>((ip_preset).c_str()), ip_preset.size()+1);
 
         ImGui::InputInt("PORT", &port_preset, 1, 10);
+        ImGui::SliderInt("Num of connections", &num_connections,1, 5);
         ImGui::SeparatorText("PID regulator configuration");
         if(ImGui::Button(autotune_button_label.c_str())){
             autotune_button_label = autotune_enable ? "Disable" : "Enable";

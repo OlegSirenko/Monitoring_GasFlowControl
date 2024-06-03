@@ -15,12 +15,16 @@ include_directories(libs)
 include_directories(libs/include)
 
 #find_library(GAMENETWORKING_LIB NAMES GameNetworkingSockets PATHS ${PROJECT_SOURCE_DIR})
+set(Boost_USE_STATIC_LIBS   ON)
+
+#find_package(Boost COMPONENTS ASIO REQUIRED)
+
 
 add_executable(GasFlowControlMonitoringApp main.cpp
         modules/PlotWindow.cpp
         modules/ControlPanel.cpp
         modules/PID.cpp
-#        modules/SocketModule.cpp
+        modules/ServerModule.cpp
         modules/mainMenu.cpp
         resources/ExoFontEmbedded_utf8.cpp
 )
@@ -38,5 +42,5 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 
 
 # Link SDL2
-target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES})
+target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES} )
 

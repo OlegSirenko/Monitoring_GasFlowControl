@@ -2,6 +2,7 @@
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl2.h"
 #include "implot.h"
+#include <memory>
 #include <cstdio>
 #include <SDL.h>
 #include <SDL_opengl.h>
@@ -15,6 +16,10 @@
 #include <deque>
 #include "resources/ExoFontEmbedded_utf8.cpp"
 #include "mainMenu.h"
+#include "ServerModule.h"
+#include <boost/asio.hpp>
+#include <thread>
+
 
 
 void embraceTheDarkness();
@@ -99,11 +104,22 @@ int main(int, char**)
 
     double setpoint = 0.0;
 
+    auto io_context = std::make_shared<boost::asio::io_context>();
+    auto server = std::make_shared<tcp_server>(*io_context);
+    std::thread server_thread([&io_context] {
+        std::cout<<"Waiting for data... "<<std::endl;
+        io_context->run();
+        std::cout<<"Server started."<<std::endl;
+    });;
 
-    ControlPanel controlPanel(window_width, window_height, window_position_x, window_position_y);
-    PlotWindow plotWindow(window_width, window_height, window_position_x, window_position_y, attach_window);
+
+    std::unique_ptr<ControlPanel> controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
+
+    // Create a vector of unique_ptr to PlotWindow
+    std::vector<std::unique_ptr<PlotWindow>> plotWindows;
+
     PID pid;
-    pid.Init(controlPanel.slider_kp, controlPanel.slider_ki, controlPanel.slider_kd);
+    pid.Init(controlPanel->slider_kp, controlPanel->slider_ki, controlPanel->slider_kd);
 
     std::deque<double> recent_errors;
     double sum_errors = 0.0;
@@ -139,6 +155,15 @@ int main(int, char**)
 
 
         if(connection_emitted){
+            if (controlPanel->num_connections > plotWindows.size()) {
+                // If there are more connections, create new PlotWindows
+                for (int i = plotWindows.size(); i < controlPanel->num_connections; ++i) {
+                    plotWindows.push_back(std::make_unique<PlotWindow>(window_width, window_height, window_position_x, window_position_y, attach_window));
+                }
+            } else if (controlPanel->num_connections < plotWindows.size()) {
+                // If there are fewer connections, remove extra PlotWindows
+                plotWindows.resize(controlPanel->num_connections);
+            }
 
             double periodic = sin(x);
             double current_data = periodic ;
@@ -161,7 +186,7 @@ int main(int, char**)
                                               std::to_string(pid.Ki) + " " +
                                               std::to_string(pid.Kd );
                 logs.push_back(output_autotune);
-                if(abs(average_error) < controlPanel.slider_error){
+                if(abs(average_error) < controlPanel->slider_error){
                     autotune_enabled= false;
                     output_autotune = "Autotuning ended with " +
                                       std::to_string(pid.Kp ) + " " +
@@ -169,21 +194,24 @@ int main(int, char**)
                                       std::to_string(pid.Kd )+
                                       "\n Average Error == " + std::to_string(average_error);
                     logs.push_back(output_autotune);
-                    controlPanel.slider_kp = pid.Kp;
-                    controlPanel.slider_ki = pid.Ki;
-                    controlPanel.slider_kd = pid.Kd;
+                    controlPanel->slider_kp = pid.Kp;
+                    controlPanel->slider_ki = pid.Ki;
+                    controlPanel->slider_kd = pid.Kd;
                 }
                 pid.AutoTuneController(average_error);
 
             }
             else{
-                pid.Kp = controlPanel.slider_kp;
-                pid.Ki = controlPanel.slider_ki;
-                pid.Kd = controlPanel.slider_kd;
+                pid.Kp = controlPanel->slider_kp;
+                pid.Ki = controlPanel->slider_ki;
+                pid.Kd = controlPanel->slider_kd;
             }
-            plotWindow.Render(connection_emitted, current_time, current_data, pid.GetSteerValue()); //  with PID Output data
+            // Render each PlotWindow
+            for (auto& plotWindow : plotWindows) {
+                plotWindow->Render(connection_emitted, current_time, current_data, pid.GetSteerValue());
+            }
         }
-        controlPanel.Render(connection_emitted, autotune_enabled, logs);
+        controlPanel->Render(connection_emitted, autotune_enabled, logs);
 
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
@@ -209,8 +237,12 @@ int main(int, char**)
 
         SDL_GL_SwapWindow(window);
 
-    }
 
+
+    }
+    // When you're done with the server, you can stop it by stopping the io_context and joining the server thread:
+    io_context->stop();
+    server_thread.join();
     // Cleanup
     ImGui_ImplOpenGL2_Shutdown();
     ImGui_ImplSDL2_Shutdown();
