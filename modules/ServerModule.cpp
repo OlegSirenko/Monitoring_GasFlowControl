@@ -22,10 +22,23 @@ void tcp_server::start_accept() {
 void tcp_server::handle_accept(const tcp_connection::pointer &new_connection, const boost::system::error_code &error) {
     if (!error)
     {
+        connection_count_++;
+        connections_.push_back(new_connection);
         std::cout << "New connection from: " << new_connection->get_ip() << std::endl;
+        std::cout << "Total connections count: " << connection_count_ << std::endl;
         new_connection->start();
+
+        new_connection->set_close_callback([this, new_connection] {
+            connection_count_--;
+            connections_.erase(std::remove(connections_.begin(), connections_.end(), new_connection), connections_.end());
+            std::cout << "Connection closed. Total active connections: " << connection_count_ << std::endl;
+        });
     }
     start_accept();
+}
+
+int tcp_server::get_connections_count() const {
+    return connection_count_;
 }
 //--------------------------------------------------------------------------------------------------------------------//
 
@@ -52,9 +65,9 @@ void tcp_connection::start() {
     message_ = make_daytime_string();
 
     boost::asio::async_write(socket_, boost::asio::buffer(message_),
-                             boost::bind(&tcp_connection::handle_write, shared_from_this(),
-                                         boost::asio::placeholders::error,
-                                         boost::asio::placeholders::bytes_transferred));
+                                          boost::bind(&tcp_connection::handle_write, shared_from_this(),
+                                                        boost::asio::placeholders::error,
+                                                        boost::asio::placeholders::bytes_transferred));
 
     start_read();
 }
@@ -82,6 +95,13 @@ void tcp_connection::handle_read(const boost::system::error_code &error, size_t 
         // Continue reading from the socket
         start_read();
     }
+    else {
+        // If there's an error, it could mean the connection was closed
+        std::cout << "Connection closed or error in reading: " << error.message() << std::endl;
+        if (close_callback_) {
+            close_callback_();
+        }
+    }
 }
 
 std::string tcp_connection::get_ip() {
@@ -90,6 +110,15 @@ std::string tcp_connection::get_ip() {
 
 int tcp_connection::get_port() {
     return socket_.remote_endpoint().port();
+}
+
+void tcp_connection::set_close_callback(const tcp_connection::CloseCallback &callback) {
+    close_callback_ = callback;
+}
+
+std::string tcp_connection::get_latest_data() {
+    std::string actual_data(data_);
+    return actual_data;
 }
 //--------------------------------------------------------------------------------------------------------------------//
 

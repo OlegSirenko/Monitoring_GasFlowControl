@@ -43,8 +43,8 @@ void PlotWindow::Render(bool connection_emitted, long times_delta, double curren
         times.push_back(times_delta);
         framerates.push_back(current_data);
     }
-
-    if(ImGui::Begin("Plot")){
+    //std::cout<<framerates<<std::endl;
+    if(ImGui::Begin(window_name.c_str())){
         if(ImPlot::BeginPlot("Data from Sensor") ){
             ImPlot::SetupAxes("Time, ms", "Data from sensor", ImPlotAxisFlags_AutoFit, ImPlotAxisFlags_AutoFit);
             ImPlot::PlotLine("Sensor input", times.data(), framerates.data(), framerates.size());
@@ -53,7 +53,7 @@ void PlotWindow::Render(bool connection_emitted, long times_delta, double curren
     }
     ImGui::Separator();
     if(ImGui::BeginChild("Data")){
-        std::string output = "Framerate " + std::to_string(current_data) + " At " + std::to_string(times_delta / 1000) + " seconds from started application";
+        std::string output = "Accepted data from client: " + std::to_string(current_data) + " At " + std::to_string(times_delta / 1000) + " seconds from started application";
         ImGui::Text("%s", output.c_str());
     }
     ImGui::EndChild();

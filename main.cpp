@@ -147,12 +147,19 @@ int main(int, char**)
         ImGui::NewFrame();
         ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 
+        controlPanel->num_connections = server->get_connections_count();
+
+//        for( auto& connection : server->get_connections()){
+//            logs.push_back(connection->get_ip()+":"+std::to_string(connection->get_port()));
+//        }
+
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
 
         mainMenu::Render();
 
+        connection_emitted = server->get_connections_count() > 0;
 
         if(connection_emitted){
             if (controlPanel->num_connections > plotWindows.size()) {
@@ -207,8 +214,15 @@ int main(int, char**)
                 pid.Kd = controlPanel->slider_kd;
             }
             // Render each PlotWindow
-            for (auto& plotWindow : plotWindows) {
-                plotWindow->Render(connection_emitted, current_time, current_data, pid.GetSteerValue());
+            auto connections = server->get_connections();
+            for (std::size_t i = 0; i < connections.size(); ++i) {
+                auto& connection = connections[i];
+                auto& plotWindow = plotWindows[i];
+                std::string data(connection->get_latest_data());
+                if(!data.empty()){
+                    double current_data_from_connection = std::stod(data);
+                    plotWindow->Render(connection_emitted, current_time, current_data_from_connection);
+                }
             }
         }
         controlPanel->Render(connection_emitted, autotune_enabled, logs);
@@ -240,7 +254,6 @@ int main(int, char**)
 
 
     }
-    // When you're done with the server, you can stop it by stopping the io_context and joining the server thread:
     io_context->stop();
     server_thread.join();
     // Cleanup
