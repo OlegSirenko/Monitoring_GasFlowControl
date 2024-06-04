@@ -10,15 +10,15 @@ void ControlPanel::Render(bool& connection_emitted, bool& autotune_enable, std::
 
     if (ImGui::Begin("Control panel")) // begin window
     {
-        ImGui::SeparatorText("Connection to socket");
-        if (ImGui::Button(connection_button_label.c_str())) // Buttons return true when clicked.
-        {
-            connection_button_label = (connection_button_label == "Connect") ? "Disconnect" : "Connect";
-            logs.emplace_back(!connection_emitted ? "Connection emitted..." : "Connection lost");
-            connection_emitted = !connection_emitted;
-        }
+        ImGui::SeparatorText("Server options");
+//        if (ImGui::Button(connection_button_label.c_str())) // Buttons return true when clicked.
+//        {
+//            connection_button_label = (connection_button_label == "Start server") ? "Stop server" : "Start server";
+//            logs.emplace_back(!connection_emitted ? "Server started..." : "Server closed");
+//            connection_emitted = !connection_emitted;
+//        }
 
-        ImGui::InputText("IP address", const_cast<char *>((ip_preset).c_str()), ip_preset.size()+1);
+        //ImGui::InputText("IP address", const_cast<char *>((ip_preset).c_str()), ip_preset.size()+1);
 
         ImGui::InputInt("PORT", &port_preset, 1, 10);
         ImGui::SliderInt("Num of connections", &num_connections,1, 5);
@@ -41,8 +41,9 @@ void ControlPanel::Render(bool& connection_emitted, bool& autotune_enable, std::
             if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
                 ImGui::SetScrollHereY(1.0f);
 
-            ImGui::EndChild(); // end child window
+
         }
+        ImGui::EndChild(); // end child window
     }
     ImGui::End(); // Control Window
 }

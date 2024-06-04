@@ -19,11 +19,12 @@ public:
                     window_width(window_width), window_height(window_height),
                     window_position_x(window_position_x), window_position_y(window_position_y), attach_window(attach_window){
         id = instance_count++;
-        window_name = "Plot" + std::to_string(id);
+//        window_name = "Plot" + std::to_string(id);
+//        std::cout<<"ID: "<<id<<"Window name:"<< window_name<<std::endl;
     }
 
-    void Render(bool, long, double, double);
-    void Render(bool, long, double);
+    void Render(bool, long, double, double, std::string);
+    void Render(long, double, std::string);
     ~PlotWindow(){
         instance_count--;
     }
@@ -41,7 +42,13 @@ private:
 
     static int instance_count;  // This is the instance_count variable
     int id;  // This is the unique ID for each instance
-    std::string window_name;
+//    std::string window_name;
+
+    float slider_kp = 0.025;
+    float slider_ki = 0.064;
+    float slider_kd = 0.28;
+    float slider_error = 0.0004;
+
 };
 
 

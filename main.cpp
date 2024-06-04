@@ -20,6 +20,18 @@
 #include <boost/asio.hpp>
 #include <thread>
 
+void handle_events(bool&, SDL_Window*);
+void update_plot_windows(std::shared_ptr<tcp_server>& server,
+                         std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
+                         int window_width, int window_height, int window_position_x,
+                         int window_position_y, bool attach_window);
+void update_pid(PID& pid, std::unique_ptr<ControlPanel>& controlPanel, std::vector<std::string>& logs,
+                std::deque<double>& recent_errors, double& sum_errors,
+                std::size_t max_errors_size,
+                double& input_data, double set_point,
+                bool& autotune_enabled);
+
+void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time, PID& pid);
 
 
 void embraceTheDarkness();
@@ -104,19 +116,24 @@ int main(int, char**)
 
     double setpoint = 0.0;
 
+    // Init server context and thread
     auto io_context = std::make_shared<boost::asio::io_context>();
     auto server = std::make_shared<tcp_server>(*io_context);
+
+    // Start server
     std::thread server_thread([&io_context] {
         std::cout<<"Waiting for data... "<<std::endl;
         io_context->run();
-        std::cout<<"Server started."<<std::endl;
-    });;
+        std::cout<<"Server closed."<<std::endl;
+    });
 
 
     std::unique_ptr<ControlPanel> controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
 
     // Create a vector of unique_ptr to PlotWindow
-    std::vector<std::unique_ptr<PlotWindow>> plotWindows;
+    //std::vector<std::unique_ptr<PlotWindow>> plotWindows;
+
+    std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>> plotWindowsMap;
 
     PID pid;
     pid.Init(controlPanel->slider_kp, controlPanel->slider_ki, controlPanel->slider_kd);
@@ -132,26 +149,14 @@ int main(int, char**)
 
     double x = 0;
     while (!done){
-        SDL_Event event;
-        while (SDL_PollEvent(&event))
-        {
-            ImGui_ImplSDL2_ProcessEvent(&event);
-            if (event.type == SDL_QUIT)
-                done = true;
-            if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
-                done = true;
-        }
+        handle_events(done, window);
+
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
         ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 
-        controlPanel->num_connections = server->get_connections_count();
-
-//        for( auto& connection : server->get_connections()){
-//            logs.push_back(connection->get_ip()+":"+std::to_string(connection->get_port()));
-//        }
 
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
@@ -162,74 +167,17 @@ int main(int, char**)
         connection_emitted = server->get_connections_count() > 0;
 
         if(connection_emitted){
-            if (controlPanel->num_connections > plotWindows.size()) {
-                // If there are more connections, create new PlotWindows
-                for (int i = plotWindows.size(); i < controlPanel->num_connections; ++i) {
-                    plotWindows.push_back(std::make_unique<PlotWindow>(window_width, window_height, window_position_x, window_position_y, attach_window));
-                }
-            } else if (controlPanel->num_connections < plotWindows.size()) {
-                // If there are fewer connections, remove extra PlotWindows
-                plotWindows.resize(controlPanel->num_connections);
-            }
+            update_plot_windows(server, plotWindowsMap, window_width, window_height, window_position_x, window_position_y, true);
 
-            double periodic = sin(x);
-            double current_data = periodic ;
-            x += 0.5;
-
-            double error = setpoint - current_data;
-            pid.UpdateError(error);
-
-            recent_errors.push_back(error);
-            sum_errors += error;
-            if (recent_errors.size() > max_errors_size) {
-                sum_errors -= recent_errors.front();
-                recent_errors.pop_front();
-            }
-
-            double average_error = sum_errors / recent_errors.size();
-            if (autotune_enabled) {
-                std::string output_autotune = "Started autotuning " +
-                                              std::to_string(pid.Kp ) + " " +
-                                              std::to_string(pid.Ki) + " " +
-                                              std::to_string(pid.Kd );
-                logs.push_back(output_autotune);
-                if(abs(average_error) < controlPanel->slider_error){
-                    autotune_enabled= false;
-                    output_autotune = "Autotuning ended with " +
-                                      std::to_string(pid.Kp ) + " " +
-                                      std::to_string(pid.Ki) + " " +
-                                      std::to_string(pid.Kd )+
-                                      "\n Average Error == " + std::to_string(average_error);
-                    logs.push_back(output_autotune);
-                    controlPanel->slider_kp = pid.Kp;
-                    controlPanel->slider_ki = pid.Ki;
-                    controlPanel->slider_kd = pid.Kd;
-                }
-                pid.AutoTuneController(average_error);
-
-            }
-            else{
-                pid.Kp = controlPanel->slider_kp;
-                pid.Ki = controlPanel->slider_ki;
-                pid.Kd = controlPanel->slider_kd;
-            }
+            controlPanel->num_connections = server->get_connections_count();
             // Render each PlotWindow
             auto connections = server->get_connections();
-            for (std::size_t i = 0; i < connections.size(); ++i) {
-                auto& connection = connections[i];
-                auto& plotWindow = plotWindows[i];
-                std::string data(connection->get_latest_data());
-                if(!data.empty()){
-                    double current_data_from_connection = std::stod(data);
-                    plotWindow->Render(connection_emitted, current_time, current_data_from_connection);
-                }
-            }
+            render_windows(server, plotWindowsMap, current_time, pid);
         }
         controlPanel->Render(connection_emitted, autotune_enabled, logs);
 
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
-
 
 
         // Rendering
@@ -250,13 +198,12 @@ int main(int, char**)
         }
 
         SDL_GL_SwapWindow(window);
-
-
-
     }
+
+    // Cleanup
     io_context->stop();
     server_thread.join();
-    // Cleanup
+
     ImGui_ImplOpenGL2_Shutdown();
     ImGui_ImplSDL2_Shutdown();
     ImPlot::DestroyContext();
@@ -353,3 +300,94 @@ void embraceTheDarkness()
     style.LogSliderDeadzone                 = 4;
     style.TabRounding                       = 4;
 }
+
+
+void handle_events(bool& done, SDL_Window* window) {
+    SDL_Event event;
+    while (SDL_PollEvent(&event))
+    {
+        ImGui_ImplSDL2_ProcessEvent(&event);
+        if (event.type == SDL_QUIT)
+            done = true;
+        if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
+            done = true;
+    }
+}
+
+
+void update_plot_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, int window_width, int window_height, int window_position_x, int window_position_y, bool attach_window) {
+    auto connections = server->get_connections();
+
+    // Remove any PlotWindows that don't have an associated connection
+    for (auto it = plotWindowsMap.begin(); it != plotWindowsMap.end(); ) {
+        if (std::find(connections.begin(), connections.end(), it->first) == connections.end()) {
+            it = plotWindowsMap.erase(it);
+        } else {
+            ++it;
+        }
+    }
+
+    // Add a PlotWindow for any new connections
+    for (const auto& connection : connections) {
+        if (plotWindowsMap.find(connection) == plotWindowsMap.end()) {
+            plotWindowsMap[connection] = std::make_unique<PlotWindow>(window_width, window_height, window_position_x, window_position_y, attach_window);
+        }
+    }
+}
+
+
+void update_pid(PID& pid, std::unique_ptr<ControlPanel>& controlPanel, std::vector<std::string>& logs,  std::deque<double>& recent_errors, double& sum_errors, const std::size_t max_errors_size, double& input_data, double set_point, bool& autotune_enabled) {
+    double error = set_point - input_data;
+    pid.UpdateError(error);
+
+    recent_errors.push_back(error);
+    sum_errors += error;
+    if (recent_errors.size() > max_errors_size) {
+        sum_errors -= recent_errors.front();
+        recent_errors.pop_front();
+    }
+
+    double average_error = sum_errors / recent_errors.size();
+    if (autotune_enabled) {
+        std::string output_autotune = "Started autotuning " +
+                                      std::to_string(pid.Kp ) + " " +
+                                      std::to_string(pid.Ki) + " " +
+                                      std::to_string(pid.Kd );
+        logs.push_back(output_autotune);
+        if(abs(average_error) < controlPanel->slider_error){
+            autotune_enabled= false;
+            output_autotune = "Autotuning ended with " +
+                              std::to_string(pid.Kp ) + " " +
+                              std::to_string(pid.Ki) + " " +
+                              std::to_string(pid.Kd )+
+                              "\n Average Error == " + std::to_string(average_error);
+            logs.push_back(output_autotune);
+            controlPanel->slider_kp = pid.Kp;
+            controlPanel->slider_ki = pid.Ki;
+            controlPanel->slider_kd = pid.Kd;
+        }
+        pid.AutoTuneController(average_error);
+
+    }
+    else{
+        pid.Kp = controlPanel->slider_kp;
+        pid.Ki = controlPanel->slider_ki;
+        pid.Kd = controlPanel->slider_kd;
+    }
+}
+
+
+void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time, PID& pid) {
+    auto connections = server->get_connections();
+    for (auto & connection : connections) {
+        auto& plotWindow = plotWindowsMap[connection];
+        std::string data(connection->get_latest_data());
+        if(!data.empty()){
+            double current_data_from_connection = std::stod(data);
+            std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
+            plotWindow->Render(current_time, current_data_from_connection, plot_window_name);
+        }
+    }
+}
+
+

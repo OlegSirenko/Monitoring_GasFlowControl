@@ -24,7 +24,7 @@ void tcp_server::handle_accept(const tcp_connection::pointer &new_connection, co
     {
         connection_count_++;
         connections_.push_back(new_connection);
-        std::cout << "New connection from: " << new_connection->get_ip() << std::endl;
+        std::cout << "New connection from: " << new_connection->get_ip() <<":"<<new_connection->get_port()<< std::endl;
         std::cout << "Total connections count: " << connection_count_ << std::endl;
         new_connection->start();
 
@@ -89,8 +89,8 @@ void tcp_connection::handle_read(const boost::system::error_code &error, size_t 
         // Handle the data...
         data_[bytes_transferred] = '\0';
 
-        std::string received_data(data_);
-        std::cout << "Received data: " << received_data << "From IP: "<< get_ip() <<":"<< get_port() <<"  "<< std::endl;
+        //std::string received_data(data_);
+        //std::cout << "Received data: " << received_data << "From IP: "<< get_ip() <<":"<< get_port() <<"  "<< std::endl;
 
         // Continue reading from the socket
         start_read();
