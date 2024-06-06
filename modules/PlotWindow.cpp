@@ -45,7 +45,6 @@ void PlotWindow::Render(bool connection_emitted, long times_delta, double curren
 
 
 void PlotWindow::Render(long times_delta, double current_data, std::string window_name) {
-    update_pid(0, current_data);
     times.push_back(times_delta);
     framerates.push_back(current_data);
     pid_outs.push_back(pid.GetSteerValue());
@@ -70,17 +69,28 @@ void PlotWindow::Render(long times_delta, double current_data, std::string windo
 
     if(ImGui::BeginChild("PID Control child widget")){
         ImGui::SeparatorText("PID control");
+
         if(ImGui::Button(enable_pid_button_label.c_str())){
-                enable_pid_button_label = pid_enable ? "Enable PID configuration" : "Disable PID control" ;
-                pid_enable = !pid_enable;
+            enable_pid_button_label = pid_enable ? "Enable PID configuration" : "Disable PID control" ;
+            pid_enable = !pid_enable;
         }
 
         if(pid_enable){
+            ImGui::SameLine();
+            enable_autotune_button_label = autotune_enabled ? "Disable autotune" : "Enable autotune";
+            if(ImGui::Button(enable_autotune_button_label.c_str())){
+                autotune_enabled = !autotune_enabled;
+                std::cout<<"Button autotune clocked: "<<autotune_enabled<<std::endl;
+            }
+
+            update_pid(0, current_data);
+
             ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
             ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
             ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
             ImGui::SliderFloat("max average error", &slider_error, 0.0005, 0.00001, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
         }
+
     }
     ImGui::EndChild();
 
@@ -90,7 +100,7 @@ void PlotWindow::Render(long times_delta, double current_data, std::string windo
 void PlotWindow::update_pid(double set_point, double input_data) {
         double error = set_point - input_data;
         pid.UpdateError(error);
-
+        //std::cout<<"KD: "<<pid.Kd<<" KP: "<<pid.Kp<<" KI: "<<pid.Ki<<std::endl;
         recent_errors.push_back(error);
         sum_errors += error;
         if (recent_errors.size() > max_errors_size) {
@@ -99,26 +109,32 @@ void PlotWindow::update_pid(double set_point, double input_data) {
         }
 
         double average_error = sum_errors / recent_errors.size();
+
         if (autotune_enabled) {
             std::string output_autotune = "Started autotuning " +
                                           std::to_string(pid.Kp ) + " " +
                                           std::to_string(pid.Ki) + " " +
                                           std::to_string(pid.Kd );
+            std::cout<<output_autotune<<std::endl;
+            std::cout << "Before checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
 
-            if(abs(average_error) < slider_error){
-                autotune_enabled= false;
+            pid.AutoTuneController(average_error);
+
+            if(std::abs(average_error) < this->slider_error){
+                autotune_enabled = false;
                 output_autotune = "Autotuning ended with " +
                                   std::to_string(pid.Kp ) + " " +
                                   std::to_string(pid.Ki) + " " +
-                                  std::to_string(pid.Kd )+
+                                  std::to_string(pid.Kd ) +
                                   "\n Average Error == " + std::to_string(average_error);
                 std::cout<<output_autotune<<std::endl;
                 slider_kp = pid.Kp;
                 slider_ki = pid.Ki;
                 slider_kd = pid.Kd;
-            }
-            pid.AutoTuneController(average_error);
 
+            }
+            std::cout << "After checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
+            std::cout<<"ENDED"<<std::endl;
         }
         else{
             pid.Kp = slider_kp;

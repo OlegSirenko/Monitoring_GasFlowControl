@@ -107,7 +107,7 @@ int main(int, char**)
     // Main loop
     bool done = false;
     bool connection_emitted = false;
-    bool autotune_enabled = false;
+
     int window_height, window_width, window_position_x, window_position_y;
 
     auto start = std::chrono::system_clock::now();
@@ -118,12 +118,6 @@ int main(int, char**)
     auto io_context = std::make_shared<boost::asio::io_context>();
     auto server = std::make_shared<tcp_server>(*io_context);
 
-    // Start server
-    std::thread server_thread([&io_context] {
-        std::cout<<"Waiting for data... "<<std::endl;
-        io_context->run();
-        std::cout<<"Server closed."<<std::endl;
-    });
 
 
     std::unique_ptr<ControlPanel> controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
@@ -135,7 +129,16 @@ int main(int, char**)
             "Logging started...",
     };
 
-    double x = 0;
+
+    // Start server
+    std::thread server_thread([&io_context, &logs] {
+//        std::cout<<"Waiting for data... "<<std::endl;
+        logs.emplace_back("Server started");
+        io_context->run();
+        logs.emplace_back("Server closed");
+    });
+
+
     while (!done){
         handle_events(done, window);
 
@@ -145,7 +148,7 @@ int main(int, char**)
         ImGui::NewFrame();
         ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 
-        ImGui::ShowDemoWindow();
+        //ImGui::ShowDemoWindow();
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
@@ -162,7 +165,7 @@ int main(int, char**)
 
             render_windows(server, plotWindowsMap, current_time);
         }
-        controlPanel->Render(connection_emitted, autotune_enabled, logs);
+        controlPanel->Render(connection_emitted, logs);
 
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
@@ -222,7 +225,6 @@ void handle_events(bool& done, SDL_Window* window) {
 
 void update_plot_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, int window_width, int window_height, int window_position_x, int window_position_y, bool attach_window) {
     auto connections = server->get_connections();
-
     // Remove any PlotWindows that don't have an associated connection
     for (auto it = plotWindowsMap.begin(); it != plotWindowsMap.end(); ) {
         if (std::find(connections.begin(), connections.end(), it->first) == connections.end()) {

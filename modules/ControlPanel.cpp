@@ -5,7 +5,7 @@
 #include "ControlPanel.h"
 
 
-void ControlPanel::Render(bool& connection_emitted, bool& autotune_enable, std::vector<std::string>& logs) {
+void ControlPanel::Render(bool& connection_emitted, std::vector<std::string>& logs) {
 
 
     if (ImGui::Begin("Control panel")) // begin window

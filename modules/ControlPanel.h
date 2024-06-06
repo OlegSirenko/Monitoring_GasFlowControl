@@ -19,7 +19,7 @@ public:
                     window_width(window_width), window_height(window_height),
                     window_position_x(window_position_x), window_position_y(window_position_y){}
 
-    void Render(bool&, bool&, std::vector<std::string>&);
+    void Render(bool&, std::vector<std::string>&);
 private:
     int& window_width;
     int& window_height;
