@@ -6,9 +6,9 @@ set(CMAKE_CXX_STANDARD 17)
 # Find SDL2
 find_package(SDL2 REQUIRED)
 find_package(Boost REQUIRED)
-if (Boost_FOUND)
-    include_directories (SYSTEM ${Boost_INCLUDE_DIR}) # подключаем заголовочные файлы
-endif ()
+
+include_directories(SYSTEM ${Boost_INCLUDE_DIR}) # подключаем заголовочные файлы
+ADD_DEFINITIONS( "-DHAS_BOOST" )
 
 # Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
@@ -47,5 +47,5 @@ set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
 
 
 # Link SDL2
-target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES} )
+target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES} ${Boost_LIBRARIES})
 

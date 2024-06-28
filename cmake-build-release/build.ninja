@@ -50,7 +50,7 @@ cmake_ninja_workdir = /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/cmake-
 build cmake_object_order_depends_target_GasFlowControlMonitoringApp: phony || CMakeFiles/GasFlowControlMonitoringApp.dir
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/main.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -58,7 +58,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.o: CXX_COMPILER__GasFl
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/PlotWindow.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -66,7 +66,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.o: CXX_C
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/ControlPanel.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -74,7 +74,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.o: CXX
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/PID.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -82,7 +82,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.o: CXX_COMPILER
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/ServerModule.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -90,7 +90,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.o: CXX
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/mainMenu.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/mainMenu.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/modules/mainMenu.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -98,7 +98,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/mainMenu.cpp.o: CXX_COM
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/resources/ExoFontEmbedded_utf8.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/resources/ExoFontEmbedded_utf8.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/resources/ExoFontEmbedded_utf8.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -106,7 +106,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/resources/ExoFontEmbedded_utf8.
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/resources
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/implot/implot.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -114,7 +114,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot.cpp.o: CXX_C
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/implot/implot_items.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -122,7 +122,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.o:
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_demo.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/implot/implot_demo.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -130,7 +130,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_demo.cpp.o: 
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -138,7 +138,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui.cpp.o: CXX_COM
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_demo.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -146,7 +146,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_demo.cpp.o: CX
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_draw.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -154,7 +154,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_draw.cpp.o: CX
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_tables.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -162,7 +162,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_tables.cpp.o: 
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_widgets.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -170,7 +170,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_widgets.cpp.o:
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -178,7 +178,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype/imgui_
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -186,7 +186,7 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_opengl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/include -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -249,7 +249,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 build cmake_object_order_depends_target_example_glfw_opengl2: phony || libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_opengl2/main.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_glfw_opengl2/main.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_opengl2/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -257,7 +257,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_openg
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_opengl2
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -265,7 +265,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o: CXX_COMPILER__
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -273,7 +273,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -281,7 +281,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -289,7 +289,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -297,7 +297,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o: CXX_CO
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -305,7 +305,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetyp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -313,7 +313,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_example_glfw_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_opengl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -347,7 +347,7 @@ build bin/example_glfw_opengl2: CXX_EXECUTABLE_LINKER__example_glfw_opengl2_Rele
 build cmake_object_order_depends_target_example_glfw_opengl3: phony || libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_opengl3/main.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_glfw_opengl3/main.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_opengl3/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -355,7 +355,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_openg
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_opengl3
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -363,7 +363,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o: CXX_COMPILER__
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -371,7 +371,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -379,7 +379,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -387,7 +387,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -395,7 +395,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o: CXX_CO
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -403,7 +403,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetyp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -411,7 +411,7 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_example_glfw_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_opengl3.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -445,7 +445,7 @@ build bin/example_glfw_opengl3: CXX_EXECUTABLE_LINKER__example_glfw_opengl3_Rele
 build cmake_object_order_depends_target_example_glfw_vulkan: phony || libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan/main.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_glfw_vulkan/main.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -453,7 +453,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -461,7 +461,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o: CXX_COMPILER__e
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -469,7 +469,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o: CXX_COMPIL
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -477,7 +477,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o: CXX_COMPIL
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -485,7 +485,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o: CXX_COMP
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -493,7 +493,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -501,7 +501,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -509,7 +509,7 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_vulkan.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_vulkan.cpp || cmake_object_order_depends_target_example_glfw_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_vulkan.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy -I/usr/include
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -543,7 +543,7 @@ build bin/example_glfw_vulkan: CXX_EXECUTABLE_LINKER__example_glfw_vulkan_Releas
 build cmake_object_order_depends_target_example_sdl2_opengl2: phony || libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_opengl2/main.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_sdl2_opengl2/main.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_opengl2/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -551,7 +551,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_openg
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_opengl2
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -559,7 +559,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui.cpp.o: CXX_COMPILER__
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -567,7 +567,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_demo.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -575,7 +575,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_draw.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -583,7 +583,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_tables.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -591,7 +591,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_widgets.cpp.o: CXX_CO
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -599,7 +599,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype/imgui_freetyp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -607,7 +607,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_sdl2.cp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_opengl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -641,7 +641,7 @@ build bin/example_sdl2_opengl2: CXX_EXECUTABLE_LINKER__example_sdl2_opengl2_Rele
 build cmake_object_order_depends_target_example_sdl2_opengl3: phony || libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_opengl3/main.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_sdl2_opengl3/main.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_opengl3/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -649,7 +649,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_openg
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_opengl3
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -657,7 +657,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui.cpp.o: CXX_COMPILER__
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -665,7 +665,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_demo.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -673,7 +673,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_draw.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -681,7 +681,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_tables.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -689,7 +689,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_widgets.cpp.o: CXX_CO
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -697,7 +697,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype/imgui_freetyp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -705,7 +705,7 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_sdl2.cp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_opengl3.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -739,7 +739,7 @@ build bin/example_sdl2_opengl3: CXX_EXECUTABLE_LINKER__example_sdl2_opengl3_Rele
 build cmake_object_order_depends_target_example_sdl2_vulkan: phony || libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan/main.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_sdl2_vulkan/main.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -747,7 +747,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -755,7 +755,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui.cpp.o: CXX_COMPILER__e
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -763,7 +763,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_demo.cpp.o: CXX_COMPIL
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -771,7 +771,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_draw.cpp.o: CXX_COMPIL
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -779,7 +779,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_tables.cpp.o: CXX_COMP
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -787,7 +787,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_widgets.cpp.o: CXX_COM
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -795,7 +795,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype/imgui_freetype
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -803,7 +803,7 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_sdl2.cpp
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_vulkan.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_vulkan.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_vulkan.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -837,7 +837,7 @@ build bin/example_sdl2_vulkan: CXX_EXECUTABLE_LINKER__example_sdl2_vulkan_Releas
 build cmake_object_order_depends_target_example_sdl2_sdlrenderer2: phony || libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_sdlrenderer2/main.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/examples/example_sdl2_sdlrenderer2/main.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_sdlrenderer2/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -845,7 +845,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_sdlrenderer2
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -853,7 +853,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui.cpp.o: CXX_COMPI
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_demo.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -861,7 +861,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_demo.cpp.o: CXX_
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_draw.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -869,7 +869,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_draw.cpp.o: CXX_
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_tables.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -877,7 +877,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_tables.cpp.o: CX
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_widgets.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -885,7 +885,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_widgets.cpp.o: C
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype/imgui_freetype.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -893,7 +893,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype/imgui_fr
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdl2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
@@ -901,7 +901,7 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sd
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdlrenderer2.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_Release /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdlrenderer2.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
-  DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
+  DEFINES = -DHAS_BOOST -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
   DEP_FILE = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdlrenderer2.cpp.o.d
   FLAGS = -O3 -DNDEBUG -std=gnu++17 -fdiagnostics-color=always -Wall -Wextra -Wunused-parameter -Wformat -Wnarrowing -Wno-sign-conversion -Wno-error=declaration-after-statement -Wno-deprecated-copy
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
