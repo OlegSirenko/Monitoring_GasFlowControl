@@ -3653,7 +3653,7 @@ void SetAxis(ImAxis axis) {
         gp.CurrentPlot->CurrentY = axis;
 }
 
-void SetAxes(ImAxis x_idx, ImAxis y_idx, ImPlotAxisFlags_ flags, ImPlotAxisFlags_ axisFlags) {
+void SetAxes(ImAxis x_idx, ImAxis y_idx) {
     ImPlotContext& gp = *GImPlot;
     IM_ASSERT_USER_ERROR(gp.CurrentPlot != nullptr, "SetAxes() needs to be called between BeginPlot() and EndPlot()!");
     IM_ASSERT_USER_ERROR(x_idx >= ImAxis_X1 && x_idx < ImAxis_Y1, "X-Axis index out of bounds!");

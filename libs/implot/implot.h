@@ -960,7 +960,7 @@ IMPLOT_API void TagYV(double y, const ImVec4& col, const char* fmt, va_list args
 
 // Select which axis/axes will be used for subsequent plot elements.
 IMPLOT_API void SetAxis(ImAxis axis);
-IMPLOT_API void SetAxes(ImAxis x_axis, ImAxis y_axis, ImPlotAxisFlags_ flags, ImPlotAxisFlags_ axisFlags);
+IMPLOT_API void SetAxes(ImAxis x_axis, ImAxis y_axis);
 
 // Convert pixels to a position in the current plot's coordinate system. Passing IMPLOT_AUTO uses the current axes.
 IMPLOT_API ImPlotPoint PixelsToPlot(const ImVec2& pix, ImAxis x_axis = IMPLOT_AUTO, ImAxis y_axis = IMPLOT_AUTO);

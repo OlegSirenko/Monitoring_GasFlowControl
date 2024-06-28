@@ -1138,15 +1138,15 @@ void Demo_MultipleAxes() {
 
         ImPlot::PlotLine("f(x) = x", xs, xs, 1001);
         if (x2_axis) {
-            ImPlot::SetAxes(ImAxis_X2, ImAxis_Y1, ImPlotAxisFlags_NoTickLabels, ImPlotAxisFlags_NoTickLabels);
+            ImPlot::SetAxes(ImAxis_X2, ImAxis_Y1);
             ImPlot::PlotLine("f(x) = sin(x)*3+1", xs2, ys1, 1001);
         }
         if (y2_axis) {
-            ImPlot::SetAxes(ImAxis_X1, ImAxis_Y2, ImPlotAxisFlags_NoTickLabels, ImPlotAxisFlags_NoTickLabels);
+            ImPlot::SetAxes(ImAxis_X1, ImAxis_Y2);
             ImPlot::PlotLine("f(x) = cos(x)*.2+.5", xs, ys2, 1001);
         }
         if (x2_axis && y3_axis) {
-            ImPlot::SetAxes(ImAxis_X2, ImAxis_Y3, ImPlotAxisFlags_NoTickLabels, ImPlotAxisFlags_NoTickLabels);
+            ImPlot::SetAxes(ImAxis_X2, ImAxis_Y3);
             ImPlot::PlotLine("f(x) = sin(x+.5)*100+200 ", xs2, ys3, 1001);
         }
         ImPlot::EndPlot();
@@ -1216,7 +1216,7 @@ void Demo_EqualAxes() {
         ImPlot::SetupAxis(ImAxis_X2, nullptr, ImPlotAxisFlags_AuxDefault);
         ImPlot::SetupAxis(ImAxis_Y2, nullptr, ImPlotAxisFlags_AuxDefault);
         ImPlot::PlotLine("Circle",xs1,ys1,360);
-        ImPlot::SetAxes(ImAxis_X2, ImAxis_Y2, ImPlotAxisFlags_NoTickLabels, ImPlotAxisFlags_NoTickLabels);
+        ImPlot::SetAxes(ImAxis_X2, ImAxis_Y2);
         ImPlot::PlotLine("Diamond",xs2,ys2,5);
         ImPlot::EndPlot();
     }
@@ -1661,7 +1661,7 @@ void Demo_Tags() {
             static double drag_tag = 0.25;
             ImPlot::DragLineY(0,&drag_tag,ImVec4(1,0,0,1),1,ImPlotDragToolFlags_NoFit);
             ImPlot::TagY(drag_tag, ImVec4(1,0,0,1), "Drag");
-            SetAxes(ImAxis_X2, ImAxis_Y2, ImPlotAxisFlags_NoTickLabels, ImPlotAxisFlags_NoTickLabels);
+            SetAxes(ImAxis_X2, ImAxis_Y2);
             ImPlot::TagX(0.5, ImVec4(0,1,1,1), "%s", "MyTag");
             ImPlot::TagY(0.5, ImVec4(0,1,1,1), "Tag: %d", 42);
         }
