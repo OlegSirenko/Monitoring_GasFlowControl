@@ -28,7 +28,7 @@ jobs:
       uses: egor-tensin/build-boost@v1
       with:
         version: 1.82.0
-        libraries: filesystem program_options system asio 
+        libraries: filesystem program_options system
         platform: x64
         configuration: Release
     
