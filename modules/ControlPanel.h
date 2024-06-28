@@ -8,7 +8,7 @@
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl2.h"
-#include "implot.h"
+#include "implot/implot.h"
 #include <iostream>
 #include <vector>
 #include <chrono>

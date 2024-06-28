@@ -6,7 +6,7 @@
 #define IMGUI_GASFLOWCONTROLL_PLOTWINDOW_H
 
 #include "imgui.h"
-#include "implot.h"
+#include "implot/implot.h"
 #include <iostream>
 #include <vector>
 #include <chrono>
