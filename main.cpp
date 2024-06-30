@@ -1,14 +1,39 @@
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl2.h"
-#include "implot.h"
+#include "implot/implot.h"
+#include <memory>
 #include <cstdio>
 #include <SDL.h>
 #include <SDL_opengl.h>
-#include <array>
 #include <iostream>
 #include <vector>
 #include <chrono>
+#include "ControlPanel.h"
+#include "PlotWindow.h"
+#include "PID.h"
+#include <cmath>
+#include <deque>
+#include "resources/ExoFontEmbedded_utf8.cpp"
+#include "mainMenu.h"
+#include "ServerModule.h"
+#include <boost/asio.hpp>
+#include <thread>
+
+void handle_events(bool&, SDL_Window*);
+void update_plot_windows(std::shared_ptr<tcp_server>& server,
+                         std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
+                         int window_width, int window_height, int window_position_x,
+                         int window_position_y, bool attach_window);
+//void update_pid(PID& pid, std::unique_ptr<ControlPanel>& controlPanel, std::vector<std::string>& logs,
+//                std::deque<double>& recent_errors, double& sum_errors,
+//                std::size_t max_errors_size,
+//                double& input_data, double set_point,
+//                bool& autotune_enabled);
+
+void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time);
+
+void embraceTheDarkness();
 
 
 // Main code
@@ -55,11 +80,8 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
     io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
 
-
-
     // Setup Dear ImGui style
-    ImGui::StyleColorsDark();
-    //ImGui::StyleColorsLight();
+    ImGui::StyleColorsLight();
 
     // When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
     ImGuiStyle& style = ImGui::GetStyle();
@@ -73,114 +95,80 @@ int main(int, char**)
     ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
     ImGui_ImplOpenGL2_Init();
 
-    //IM_ASSERT(font != nullptr);
-    io.Fonts->AddFontFromFileTTF("/home/tehnokrat/Downloads/BruceForeverRegular-X3jd2.ttf", 15.0f);
+    io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, 17);
 
     bool show_demo_window = false;
     bool show_another_window = false;
     bool show_plot_window = true;
 
-    std::string connection_button_label = "Connect";
+
+    ImVec4 clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
+
+    // Main loop
+    bool done = false;
+    bool connection_emitted = false;
+
+    int window_height, window_width, window_position_x, window_position_y;
+
+    auto start = std::chrono::system_clock::now();
+
+    double setpoint = 0.0;
+
+    // Init server context and thread
+    auto io_context = std::make_shared<boost::asio::io_context>();
+    auto server = std::make_shared<tcp_server>(*io_context);
+
+
+
+    std::unique_ptr<ControlPanel> controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
+
+    std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>> plotWindowsMap;
 
     std::vector<std::string> logs = {
             "Application opened successfully",
             "Logging started...",
     };
 
-    std::vector<std::string> logs_data = {};
-    std::vector<std::string> logs_time = {};
 
-    ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    // Start server
+    std::thread server_thread([&io_context, &logs] {
+//        std::cout<<"Waiting for data... "<<std::endl;
+        logs.emplace_back("Server started");
+        io_context->run();
+        logs.emplace_back("Server closed");
+    });
 
-    // Main loop
-    bool done = false;
-    bool connection_emitted = false;
-    int window_height, window_width, window_position_x, window_position_y;
-
-    std::vector<double> times; // This will store the time values
-    std::vector<double> framerates; // This will store the framerate values
-
-    auto start = std::chrono::system_clock::now();
 
     while (!done){
-        SDL_Event event;
-        while (SDL_PollEvent(&event))
-        {
-            ImGui_ImplSDL2_ProcessEvent(&event);
-            if (event.type == SDL_QUIT)
-                done = true;
-            if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
-                done = true;
-        }
+        handle_events(done, window);
+
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
+        ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
 
+        //ImGui::ShowDemoWindow();
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
         auto current_time = elapsed.count();
 
+        mainMenu::Render();
 
-        double current_framerate = io.Framerate;
+        connection_emitted = server->get_connections_count() > 0;
+
+        if(connection_emitted){
+            update_plot_windows(server, plotWindowsMap, window_width, window_height, window_position_x, window_position_y, true);
+            controlPanel->num_connections = server->get_connections_count();
+            // Render each PlotWindow
+            auto connections = server->get_connections();
+
+            render_windows(server, plotWindowsMap, current_time);
+        }
+        controlPanel->Render(connection_emitted, logs);
 
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
-
-
-        ImGui::SetNextWindowSize(ImVec2(window_width * 1 / 3, window_height)); // Set "New Window" size to 1/3 of SDL window width and full height
-        ImGui::SetNextWindowPos(ImVec2(window_position_x, window_position_y)); // Set "New Window" position to top left corner
-
-        if (ImGui::Begin("Control panel")) // begin window
-        {
-            if (ImGui::Button(connection_button_label.c_str())) // Buttons return true when clicked.
-            {
-                connection_button_label = (connection_button_label == "Connect") ? "Disconnect" : "Connect";
-                logs.emplace_back("Connection emitted...");
-                connection_emitted = !connection_emitted;
-                //TODO: Add connection to socket of esp
-
-            }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Logs")){
-                for (const std::string& log : logs){
-                    ImGui::TextUnformatted(log.c_str());
-                }
-                // Auto scroll to the bottom when a new log is added
-                if (ImGui::GetScrollY() >= ImGui::GetScrollMaxY())
-                    ImGui::SetScrollHereY(1.0f);
-
-                ImGui::EndChild(); // end child window
-            }
-        }
-        ImGui::End(); // Control Window
-
-        ImGui::SetNextWindowSize(ImVec2(window_width * 2 / 3, window_height)); // Set "Test Plot" size to 2/3 of SDL window width and full height
-        ImGui::SetNextWindowPos(ImVec2(window_position_x + window_width * 1 / 3, window_position_y)); // Set "Test Plot" position to right of "New Window"
-
-        // Add the current time and framerate to your data
-        times.push_back(current_time);
-        framerates.push_back(current_framerate);
-
-
-        // Show Plot window if enabled
-        if(show_plot_window){
-            if(ImGui::Begin("Plot", &show_plot_window)){
-                if(ImPlot::BeginPlot("Data from Sensor") ){
-
-                    if (connection_emitted)
-                        ImPlot::PlotLine("Framerate", times.data(), framerates.data(), framerates.size());
-                }
-                ImPlot::EndPlot();
-            }
-            ImGui::Separator();
-            if(ImGui::BeginChild("Data")){
-                std::string output = "Framerate " + std::to_string(io.Framerate) + " At " + std::to_string(current_time / 1000) + " seconds from started application";
-                ImGui::Text("%s", output.c_str());
-            }
-            ImGui::EndChild();
-            ImGui::End();
-        }
 
 
         // Rendering
@@ -188,7 +176,6 @@ int main(int, char**)
         glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
         glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
         glClear(GL_COLOR_BUFFER_BIT);
-        //glUseProgram(0); // You may want this if using this code in an OpenGL 3+ context where shaders may be bound
         ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
 
 
@@ -205,6 +192,9 @@ int main(int, char**)
     }
 
     // Cleanup
+    io_context->stop();
+    server_thread.join();
+
     ImGui_ImplOpenGL2_Shutdown();
     ImGui_ImplSDL2_Shutdown();
     ImPlot::DestroyContext();
@@ -215,6 +205,55 @@ int main(int, char**)
     SDL_Quit();
 
     return 0;
+}
+
+
+
+
+void handle_events(bool& done, SDL_Window* window) {
+    SDL_Event event;
+    while (SDL_PollEvent(&event))
+    {
+        ImGui_ImplSDL2_ProcessEvent(&event);
+        if (event.type == SDL_QUIT)
+            done = true;
+        if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
+            done = true;
+    }
+}
+
+
+void update_plot_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, int window_width, int window_height, int window_position_x, int window_position_y, bool attach_window) {
+    auto connections = server->get_connections();
+    // Remove any PlotWindows that don't have an associated connection
+    for (auto it = plotWindowsMap.begin(); it != plotWindowsMap.end(); ) {
+        if (std::find(connections.begin(), connections.end(), it->first) == connections.end()) {
+            it = plotWindowsMap.erase(it);
+        } else {
+            ++it;
+        }
+    }
+
+    // Add a PlotWindow for any new connections
+    for (const auto& connection : connections) {
+        if (plotWindowsMap.find(connection) == plotWindowsMap.end()) {
+            plotWindowsMap[connection] = std::make_unique<PlotWindow>(window_width, window_height, window_position_x, window_position_y, attach_window);
+        }
+    }
+}
+
+
+void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time) {
+    auto connections = server->get_connections();
+    for (auto & connection : connections) {
+        auto& plotWindow = plotWindowsMap[connection];
+        std::string data(connection->get_latest_data());
+        if(!data.empty()){
+            double current_data_from_connection = std::stod(data);
+            std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
+            plotWindow->Render(current_time, current_data_from_connection, plot_window_name);
+        }
+    }
 }
 
 
