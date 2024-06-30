@@ -11,8 +11,6 @@
 #include <chrono>
 #include "ControlPanel.h"
 #include "PlotWindow.h"
-#include "PID.h"
-#include <cmath>
 #include <deque>
 #include "resources/ExoFontEmbedded_utf8.cpp"
 #include "mainMenu.h"
@@ -25,11 +23,7 @@ void update_plot_windows(std::shared_ptr<tcp_server>& server,
                          std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
                          int window_width, int window_height, int window_position_x,
                          int window_position_y, bool attach_window);
-//void update_pid(PID& pid, std::unique_ptr<ControlPanel>& controlPanel, std::vector<std::string>& logs,
-//                std::deque<double>& recent_errors, double& sum_errors,
-//                std::size_t max_errors_size,
-//                double& input_data, double set_point,
-//                bool& autotune_enabled);
+
 
 void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time);
 

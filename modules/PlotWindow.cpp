@@ -57,8 +57,9 @@ void PlotWindow::Render(long times_delta, double current_data, std::string windo
             ImPlot::PlotLine("Sensor input", times.data(), framerates.data(), framerates.size());
             if(pid_enable)
                 ImPlot::PlotLine("PID output", times.data(), pid_outs.data(), pid_outs.size());
+            ImPlot::EndPlot();
         }
-        ImPlot::EndPlot();
+
     }
     ImGui::Separator();
     if(ImGui::BeginChild("Data", ImVec2(640, 20))){

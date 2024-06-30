@@ -4,21 +4,26 @@ project(GasFlowControlMonitoringApp)
 set(CMAKE_CXX_STANDARD 17)
 
 # Find SDL2
-find_package(SDL2 REQUIRED)
-find_package(Boost REQUIRED)
+find_package(SDL2 CONFIG REQUIRED)
 
-include_directories(SYSTEM ${Boost_INCLUDE_DIR}) # подключаем заголовочные файлы
-ADD_DEFINITIONS( "-DHAS_BOOST" )
+
+find_package(Freetype CONFIG REQUIRED)
+
+set (Boost_NO_SYSTEM_PATHS ON)
+set (Boost_USE_MULTITHREADED ON)
+set (Boost_USE_STATIC_LIBS ON)
+set (Boost_USE_STATIC_RUNTIME OFF)
+set (BOOST_ALL_DYN_LINK OFF)
+
 
 # Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
 
+
+include_directories(libs)
 add_subdirectory(libs/imgui)
 include_directories(modules)
-include_directories(libs)
-include_directories(libs/include)
 
-set(Boost_USE_STATIC_LIBS   ON)
 
 add_executable(GasFlowControlMonitoringApp main.cpp
         modules/PlotWindow.cpp
@@ -28,24 +33,17 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         modules/mainMenu.cpp
         resources/ExoFontEmbedded_utf8.cpp
         libs/implot/implot.cpp
-        libs/implot/implot.h
-        libs/implot/implot_internal.h
         libs/implot/implot_items.cpp
-        libs/implot/implot_demo.cpp
 )
 
-# Set the linker flags
+if(MINGW)
+    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi )
+    target_link_libraries(GasFlowControlMonitoringApp PRIVATE Freetype::Freetype)
+endif()
+
 set(CMAKE_EXE_LINKER_FLAGS " -static")
-set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
-
-# Set the target properties
-set_target_properties(GasFlowControlMonitoringApp PROPERTIES LINK_SEARCH_START_STATIC 1)
-set_target_properties(GasFlowControlMonitoringApp PROPERTIES LINK_SEARCH_END_STATIC 1)
-
-# Set the library suffixes
-set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
-
 
 # Link SDL2
-target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-opengl2 ${SDL2_LIBRARIES} ${Boost_LIBRARIES})
+target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2  ${Boost_LIBRARIES} ${SDL2_LIBRARIES})
 
+target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
