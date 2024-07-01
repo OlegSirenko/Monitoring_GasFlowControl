@@ -52,10 +52,17 @@ jobs:
       run: git submodule update --init --recursive libs/imgui
     - name: Setup SDL
       uses: libsdl-org/setup-sdl@v1
+
     - name: Install OpenGL libraries
-      run: sudo apt-get install libgl1-mesa-dev
-    - name: Install GLFW # May be needed?
-      run: sudo apt-get install libglfw3-dev
+      run: |
+        if [ "$RUNNER_OS" == "Linux" ]; then
+            sudo apt-get install libgl1-mesa-dev
+            sudo apt-get install libglfw3-dev
+        else
+            echo "$RUNNER_OS not supported"
+            exit 1
+        fi
+      shell: bash
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: strings
