@@ -72,7 +72,7 @@ Firstly you need to install CMake with dependencies
 ```shell
 sudo apt update 
 sudo apt upgrade
-sudo apt install git make openssl openssl-dev libssl-dev ninja
+sudo apt install git make openssl libssl-dev ninja
 git clone https://github.com/Kitware/CMake.git
 cd CMake/
 ./bootstrap && make && sudo make install
