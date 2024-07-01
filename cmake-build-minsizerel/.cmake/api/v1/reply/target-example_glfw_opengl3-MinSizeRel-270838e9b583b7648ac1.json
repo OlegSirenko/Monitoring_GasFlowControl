@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/example_glfw_opengl2"
+			"path" : "bin/example_glfw_opengl3"
 		}
 	],
 	"backtrace" : 2,
@@ -33,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 623,
+				"line" : 624,
 				"parent" : 0
 			},
 			{
@@ -189,7 +189,7 @@
 				},
 				{
 					"backtrace" : 12,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/."
 				},
 				{
 					"backtrace" : 12,
@@ -198,7 +198,7 @@
 				{
 					"backtrace" : 12,
 					"isSystem" : true,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends"
 				}
 			],
 			"language" : "CXX",
@@ -224,7 +224,7 @@
 			]
 		}
 	],
-	"id" : "example_glfw_opengl2::@8273e96cb584335637bd",
+	"id" : "example_glfw_opengl3::@8273e96cb584335637bd",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -270,8 +270,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "example_glfw_opengl2",
-	"nameOnDisk" : "example_glfw_opengl2",
+	"name" : "example_glfw_opengl3",
+	"nameOnDisk" : "example_glfw_opengl3",
 	"paths" : 
 	{
 		"build" : "libs/imgui",
@@ -314,7 +314,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/examples/example_glfw_opengl2/main.cpp",
+			"path" : "libs/imgui/examples/example_glfw_opengl3/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -402,7 +402,7 @@
 		{
 			"backtrace" : 12,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_opengl2.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_opengl3.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

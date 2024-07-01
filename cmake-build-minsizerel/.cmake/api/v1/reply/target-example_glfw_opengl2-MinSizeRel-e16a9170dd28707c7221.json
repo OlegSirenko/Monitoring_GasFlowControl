@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/example_sdl2_sdlrenderer2"
+			"path" : "bin/example_glfw_opengl2"
 		}
 	],
 	"backtrace" : 2,
@@ -13,12 +13,16 @@
 			"add_executable",
 			"IMGUI_EXAMPLE",
 			"target_link_libraries",
+			"set_property",
+			"include",
+			"set_target_properties",
 			"add_compile_options",
 			"include_directories"
 		],
 		"files" : 
 		[
 			"libs/imgui/CMakeLists.txt",
+			"/home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindOpenGL.cmake",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -29,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 630,
+				"line" : 623,
 				"parent" : 0
 			},
 			{
@@ -41,8 +45,8 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 547,
-				"parent" : 1
+				"line" : 392,
+				"parent" : 0
 			},
 			{
 				"command" : 2,
@@ -57,19 +61,35 @@
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 4,
 				"file" : 0,
-				"line" : 317,
+				"line" : 413,
 				"parent" : 0
 			},
 			{
+				"file" : 1,
+				"parent" : 6
+			},
+			{
 				"command" : 3,
+				"file" : 1,
+				"line" : 673,
+				"parent" : 7
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 671,
+				"parent" : 7
+			},
+			{
+				"command" : 6,
 				"file" : 0,
 				"line" : 136,
 				"parent" : 0
 			},
 			{
-				"command" : 3,
+				"command" : 6,
 				"file" : 0,
 				"line" : 141,
 				"parent" : 0
@@ -81,19 +101,19 @@
 				"parent" : 1
 			},
 			{
-				"file" : 1
+				"file" : 2
 			},
 			{
-				"command" : 4,
-				"file" : 1,
-				"line" : 24,
-				"parent" : 10
-			},
-			{
-				"command" : 4,
-				"file" : 1,
+				"command" : 7,
+				"file" : 2,
 				"line" : 21,
-				"parent" : 10
+				"parent" : 13
+			},
+			{
+				"command" : 7,
+				"file" : 2,
+				"line" : 24,
+				"parent" : 13
 			}
 		]
 	},
@@ -106,76 +126,79 @@
 					"fragment" : "-Os -DNDEBUG -std=gnu++17 -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wunused-parameter"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wformat"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wnarrowing"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wno-sign-conversion"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 10,
 					"fragment" : "-Wno-error=declaration-after-statement"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 11,
 					"fragment" : "-Wno-deprecated-copy"
+				},
+				{
+					"backtrace" : 12,
+					"fragment" : "-I/usr/include"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "IMGUI_DISABLE_OBSOLETE_FUNCTIONS=1"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "IMGUI_DISABLE_OBSOLETE_KEYIO=1"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"define" : "IMGUI_ENABLE_FREETYPE=1"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 11,
+					"backtrace" : 14,
+					"path" : "/usr/include/SDL2"
+				},
+				{
+					"backtrace" : 15,
 					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs"
 				},
 				{
-					"backtrace" : 9,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui"
+					"backtrace" : 12,
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/."
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 12,
 					"path" : "/usr/include/freetype2"
 				},
 				{
 					"backtrace" : 12,
 					"isSystem" : true,
-					"path" : "/usr/include/SDL2"
-				},
-				{
-					"backtrace" : 9,
-					"isSystem" : true,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends"
 				}
 			],
 			"language" : "CXX",
@@ -197,11 +220,11 @@
 				8,
 				13,
 				15,
-				17
+				16
 			]
 		}
 	],
-	"id" : "example_sdl2_sdlrenderer2::@8273e96cb584335637bd",
+	"id" : "example_glfw_opengl2::@8273e96cb584335637bd",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -216,7 +239,12 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-lSDL2main",
+				"fragment" : "-L/usr/lib/x86_64-linux-gnu",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "-lglfw",
 				"role" : "libraries"
 			},
 			{
@@ -230,15 +258,20 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 6,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
+				"backtrace" : 8,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 9,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "example_sdl2_sdlrenderer2",
-	"nameOnDisk" : "example_sdl2_sdlrenderer2",
+	"name" : "example_glfw_opengl2",
+	"nameOnDisk" : "example_glfw_opengl2",
 	"paths" : 
 	{
 		"build" : "libs/imgui",
@@ -258,7 +291,7 @@
 				8,
 				13,
 				15,
-				17
+				16
 			]
 		},
 		{
@@ -272,8 +305,7 @@
 				10,
 				11,
 				12,
-				14,
-				16
+				14
 			]
 		}
 	],
@@ -282,100 +314,95 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/examples/example_sdl2_sdlrenderer2/main.cpp",
+			"path" : "libs/imgui/examples/example_glfw_opengl2/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imconfig.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imgui.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_demo.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_draw.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imgui_internal.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_tables.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_widgets.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imstb_rectpack.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imstb_textedit.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/imstb_truetype.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"path" : "libs/imgui/misc/freetype/imgui_freetype.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/misc/freetype/imgui_freetype.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
-			"path" : "libs/imgui/backends/imgui_impl_sdl2.h",
+			"backtrace" : 12,
+			"path" : "libs/imgui/backends/imgui_impl_glfw.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_sdl2.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_glfw.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 9,
-			"path" : "libs/imgui/backends/imgui_impl_sdlrenderer2.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 9,
+			"backtrace" : 12,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_sdlrenderer2.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_opengl2.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

@@ -129,7 +129,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-O2 -g -DNDEBUG -std=gnu++17 -fdiagnostics-color=always"
+					"fragment" : "-Os -DNDEBUG -std=gnu++17 -fdiagnostics-color=always"
 				},
 				{
 					"backtrace" : 11,
@@ -195,7 +195,7 @@
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/."
 				},
 				{
 					"backtrace" : 13,
@@ -204,7 +204,7 @@
 				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends"
 				}
 			],
 			"language" : "CXX",
@@ -236,7 +236,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-O2 -g -DNDEBUG",
+				"fragment" : "-Os -DNDEBUG",
 				"role" : "flags"
 			},
 			{
