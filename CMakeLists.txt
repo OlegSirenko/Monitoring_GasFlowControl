@@ -10,13 +10,6 @@ if(WIN32)
     find_package(Freetype CONFIG REQUIRED)
 endif ()
 
-#set (Boost_NO_SYSTEM_PATHS ON)
-#set (Boost_USE_MULTITHREADED ON)
-#set (Boost_USE_STATIC_LIBS ON)
-#set (Boost_USE_STATIC_RUNTIME OFF)
-#set (BOOST_ALL_DYN_LINK OFF)
-
-
 # Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
 
@@ -49,4 +42,4 @@ target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-
 
 if(WIN32)
     target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
-endif ()
+endif()
