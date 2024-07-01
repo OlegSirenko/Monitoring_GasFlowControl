@@ -6,14 +6,15 @@ set(CMAKE_CXX_STANDARD 17)
 # Find SDL2
 find_package(SDL2 CONFIG REQUIRED)
 
+if(WIN32)
+    find_package(Freetype CONFIG REQUIRED)
+endif ()
 
-find_package(Freetype CONFIG REQUIRED)
-
-set (Boost_NO_SYSTEM_PATHS ON)
-set (Boost_USE_MULTITHREADED ON)
-set (Boost_USE_STATIC_LIBS ON)
-set (Boost_USE_STATIC_RUNTIME OFF)
-set (BOOST_ALL_DYN_LINK OFF)
+#set (Boost_NO_SYSTEM_PATHS ON)
+#set (Boost_USE_MULTITHREADED ON)
+#set (Boost_USE_STATIC_LIBS ON)
+#set (Boost_USE_STATIC_RUNTIME OFF)
+#set (BOOST_ALL_DYN_LINK OFF)
 
 
 # Include SDL2 directories
@@ -36,14 +37,14 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         libs/implot/implot_items.cpp
 )
 
-if(MINGW)
+if(WIN32)
+    set(CMAKE_EXE_LINKER_FLAGS " -static")
     target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi )
     target_link_libraries(GasFlowControlMonitoringApp PRIVATE Freetype::Freetype)
 endif()
 
-set(CMAKE_EXE_LINKER_FLAGS " -static")
+target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
 
-# Link SDL2
-target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2  ${Boost_LIBRARIES} ${SDL2_LIBRARIES})
-
-target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+if(WIN32)
+    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+endif ()

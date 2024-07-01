@@ -1,0 +1,156 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-MinSizeRel-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "libs/imgui",
+					"jsonFile" : "directory-libs.imgui-MinSizeRel-1bfd47ea2792a56cc0dd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.13"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "libs/imgui",
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "GasFlowControlMonitoringApp",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "imgui",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "GasFlowControlMonitoringApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-GasFlowControlMonitoringApp-MinSizeRel-ca3332a7e17c3cb840e6.json",
+					"name" : "GasFlowControlMonitoringApp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_glfw_opengl2::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_glfw_opengl2-MinSizeRel-e16a9170dd28707c7221.json",
+					"name" : "example_glfw_opengl2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_glfw_opengl3::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_glfw_opengl3-MinSizeRel-270838e9b583b7648ac1.json",
+					"name" : "example_glfw_opengl3",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_glfw_vulkan::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_glfw_vulkan-MinSizeRel-0a34821a77f90b862c90.json",
+					"name" : "example_glfw_vulkan",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_sdl2_opengl2::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_sdl2_opengl2-MinSizeRel-0195e110af0606f9e9f5.json",
+					"name" : "example_sdl2_opengl2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_sdl2_opengl3::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_sdl2_opengl3-MinSizeRel-9f47791cd0be1de37377.json",
+					"name" : "example_sdl2_opengl3",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_sdl2_sdlrenderer2::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_sdl2_sdlrenderer2-MinSizeRel-84ccceb320dfd274f3f9.json",
+					"name" : "example_sdl2_sdlrenderer2",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "example_sdl2_vulkan::@8273e96cb584335637bd",
+					"jsonFile" : "target-example_sdl2_vulkan-MinSizeRel-78383bb3633d979dd768.json",
+					"name" : "example_sdl2_vulkan",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/cmake-build-minsizerel",
+		"source" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

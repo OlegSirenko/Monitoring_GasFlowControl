@@ -150,13 +150,12 @@ int main(int, char**)
         mainMenu::Render();
 
         connection_emitted = server->get_connections_count() > 0;
+        controlPanel->num_connections = server->get_connections_count();
 
         if(connection_emitted){
             update_plot_windows(server, plotWindowsMap, window_width, window_height, window_position_x, window_position_y, true);
-            controlPanel->num_connections = server->get_connections_count();
             // Render each PlotWindow
             auto connections = server->get_connections();
-
             render_windows(server, plotWindowsMap, current_time);
         }
         controlPanel->Render(connection_emitted, logs);
