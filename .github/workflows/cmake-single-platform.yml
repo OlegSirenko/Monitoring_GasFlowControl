@@ -21,22 +21,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: Fetch ImGui submodule
+      run: git submodule update --init --recursive libs/imgui
     - name: Setup SDL
       uses: libsdl-org/setup-sdl@v1
-    - name: Build Boost
-      id: boost
-      uses: egor-tensin/build-boost@v1
-      with:
-        version: 1.82.0
-        libraries: filesystem program_options system
-        platform: x64
-        configuration: Release
-    
-    - name: Show paths
-      run: |
-        printf 'Boost has been unpacked to: %s\n' '${{ steps.boost.outputs.root }}'
-        printf 'Libraries can be found here: %s\n' '${{ steps.boost.outputs.librarydir }}'
-      shell: bash
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
