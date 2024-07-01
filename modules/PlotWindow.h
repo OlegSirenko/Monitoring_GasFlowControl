@@ -12,6 +12,7 @@
 #include <chrono>
 #include <PID.h>
 #include <deque>
+#include <string>
 
 
 class PlotWindow {

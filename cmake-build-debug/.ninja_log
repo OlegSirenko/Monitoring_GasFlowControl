@@ -35,3 +35,6 @@
 29	5656	7415453823485552	CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.obj	3214fba4fa12b407
 47	12709	7415453823655592	CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.obj	eb1e52e1b3a106fd
 12709	21112	7415453950281010	GasFlowControlMonitoringApp.exe	e5ac18d0c98a22cd
+20	617	7415458690327887	CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.obj	a3b953b428b13cba
+17	4001	7415458690287876	CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.obj	fa5e25325fb3debb
+4001	12366	7415458730129274	GasFlowControlMonitoringApp.exe	e5ac18d0c98a22cd
