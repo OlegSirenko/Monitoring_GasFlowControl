@@ -21,6 +21,8 @@ endif ()
 include_directories(${SDL2_INCLUDE_DIRS})
 
 
+MESSAGE(Current dir: ${CMAKE_CURRENT_SOURCE_DIR})
+
 include_directories(libs)
 add_subdirectory(libs/imgui)
 include_directories(modules)
