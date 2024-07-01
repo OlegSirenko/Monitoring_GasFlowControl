@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/example_glfw_opengl2"
+			"path" : "bin/example_sdl2_opengl2"
 		}
 	],
 	"backtrace" : 2,
@@ -33,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 623,
+				"line" : 627,
 				"parent" : 0
 			},
 			{
@@ -45,7 +45,13 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 392,
+				"line" : 547,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 317,
 				"parent" : 0
 			},
 			{
@@ -68,19 +74,19 @@
 			},
 			{
 				"file" : 1,
-				"parent" : 6
+				"parent" : 7
 			},
 			{
 				"command" : 3,
 				"file" : 1,
 				"line" : 673,
-				"parent" : 7
+				"parent" : 8
 			},
 			{
 				"command" : 5,
 				"file" : 1,
 				"line" : 671,
-				"parent" : 7
+				"parent" : 8
 			},
 			{
 				"command" : 6,
@@ -106,14 +112,14 @@
 			{
 				"command" : 7,
 				"file" : 2,
-				"line" : 21,
-				"parent" : 13
+				"line" : 24,
+				"parent" : 14
 			},
 			{
 				"command" : 7,
 				"file" : 2,
-				"line" : 24,
-				"parent" : 13
+				"line" : 21,
+				"parent" : 14
 			}
 		]
 	},
@@ -126,79 +132,76 @@
 					"fragment" : "-O2 -g -DNDEBUG -std=gnu++17 -fdiagnostics-color=always"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wall"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wextra"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wunused-parameter"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wformat"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wnarrowing"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wno-sign-conversion"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"fragment" : "-Wno-error=declaration-after-statement"
 				},
 				{
-					"backtrace" : 11,
-					"fragment" : "-Wno-deprecated-copy"
-				},
-				{
 					"backtrace" : 12,
-					"fragment" : "-I/usr/include"
+					"fragment" : "-Wno-deprecated-copy"
 				}
 			],
 			"defines" : 
 			[
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"define" : "IMGUI_DISABLE_OBSOLETE_FUNCTIONS=1"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"define" : "IMGUI_DISABLE_OBSOLETE_KEYIO=1"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"define" : "IMGUI_ENABLE_FREETYPE=1"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 14,
-					"path" : "/usr/include/SDL2"
-				},
-				{
 					"backtrace" : 15,
 					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs"
 				},
 				{
-					"backtrace" : 12,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/."
+					"backtrace" : 13,
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 13,
 					"path" : "/usr/include/freetype2"
 				},
 				{
-					"backtrace" : 12,
+					"backtrace" : 16,
 					"isSystem" : true,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends"
+					"path" : "/usr/include/SDL2"
+				},
+				{
+					"backtrace" : 13,
+					"isSystem" : true,
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends"
 				}
 			],
 			"language" : "CXX",
@@ -224,7 +227,7 @@
 			]
 		}
 	],
-	"id" : "example_glfw_opengl2::@8273e96cb584335637bd",
+	"id" : "example_sdl2_opengl2::@8273e96cb584335637bd",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -239,39 +242,39 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-L/usr/lib/x86_64-linux-gnu",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-lglfw",
+				"fragment" : "-lSDL2main",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-ldl",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libfreetype.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 8,
+				"backtrace" : 9,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libGLX.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 9,
+				"backtrace" : 10,
 				"fragment" : "/usr/lib/x86_64-linux-gnu/libOpenGL.so",
 				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
-	"name" : "example_glfw_opengl2",
-	"nameOnDisk" : "example_glfw_opengl2",
+	"name" : "example_sdl2_opengl2",
+	"nameOnDisk" : "example_sdl2_opengl2",
 	"paths" : 
 	{
 		"build" : "libs/imgui",
@@ -314,93 +317,93 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/examples/example_glfw_opengl2/main.cpp",
+			"path" : "libs/imgui/examples/example_sdl2_opengl2/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imconfig.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imgui.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_demo.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_draw.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imgui_internal.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_tables.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/imgui_widgets.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imstb_rectpack.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imstb_textedit.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/imstb_truetype.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"path" : "libs/imgui/misc/freetype/imgui_freetype.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/misc/freetype/imgui_freetype.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
-			"path" : "libs/imgui/backends/imgui_impl_glfw.h",
+			"backtrace" : 13,
+			"path" : "libs/imgui/backends/imgui_impl_sdl2.h",
 			"sourceGroupIndex" : 1
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_glfw.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_sdl2.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 12,
+			"backtrace" : 13,
 			"compileGroupIndex" : 0,
 			"path" : "libs/imgui/backends/imgui_impl_opengl2.cpp",
 			"sourceGroupIndex" : 0

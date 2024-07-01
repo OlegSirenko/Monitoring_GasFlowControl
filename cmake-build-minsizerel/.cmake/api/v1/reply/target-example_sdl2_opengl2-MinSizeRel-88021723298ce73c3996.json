@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "bin/example_glfw_vulkan"
+			"path" : "bin/example_sdl2_opengl2"
 		}
 	],
 	"backtrace" : 2,
@@ -33,7 +33,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 625,
+				"line" : 627,
 				"parent" : 0
 			},
 			{
@@ -45,7 +45,13 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 392,
+				"line" : 547,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 317,
 				"parent" : 0
 			},
 			{
@@ -58,12 +64,6 @@
 				"command" : 2,
 				"file" : 0,
 				"line" : 216,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 522,
 				"parent" : 0
 			},
 			{
@@ -112,13 +112,13 @@
 			{
 				"command" : 7,
 				"file" : 2,
-				"line" : 21,
+				"line" : 24,
 				"parent" : 14
 			},
 			{
 				"command" : 7,
 				"file" : 2,
-				"line" : 24,
+				"line" : 21,
 				"parent" : 14
 			}
 		]
@@ -162,10 +162,6 @@
 				{
 					"backtrace" : 12,
 					"fragment" : "-Wno-deprecated-copy"
-				},
-				{
-					"backtrace" : 13,
-					"fragment" : "-I/usr/include"
 				}
 			],
 			"defines" : 
@@ -187,24 +183,25 @@
 			[
 				{
 					"backtrace" : 15,
-					"path" : "/usr/include/SDL2"
-				},
-				{
-					"backtrace" : 16,
 					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs"
 				},
 				{
 					"backtrace" : 13,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/."
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui"
 				},
 				{
 					"backtrace" : 13,
 					"path" : "/usr/include/freetype2"
 				},
 				{
+					"backtrace" : 16,
+					"isSystem" : true,
+					"path" : "/usr/include/SDL2"
+				},
+				{
 					"backtrace" : 13,
 					"isSystem" : true,
-					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends"
+					"path" : "/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends"
 				}
 			],
 			"language" : "CXX",
@@ -230,7 +227,7 @@
 			]
 		}
 	],
-	"id" : "example_glfw_vulkan::@8273e96cb584335637bd",
+	"id" : "example_sdl2_opengl2::@8273e96cb584335637bd",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -245,27 +242,22 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "-L/usr/lib/x86_64-linux-gnu",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 3,
-				"fragment" : "-lglfw",
+				"fragment" : "-lSDL2main",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 4,
-				"fragment" : "-ldl",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libfreetype.so",
+				"fragment" : "-ldl",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
-				"fragment" : "/usr/lib/x86_64-linux-gnu/libvulkan.so",
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libfreetype.so",
 				"role" : "libraries"
 			},
 			{
@@ -281,8 +273,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "example_glfw_vulkan",
-	"nameOnDisk" : "example_glfw_vulkan",
+	"name" : "example_sdl2_opengl2",
+	"nameOnDisk" : "example_sdl2_opengl2",
 	"paths" : 
 	{
 		"build" : "libs/imgui",
@@ -325,7 +317,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/examples/example_glfw_vulkan/main.cpp",
+			"path" : "libs/imgui/examples/example_sdl2_opengl2/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -401,19 +393,19 @@
 		},
 		{
 			"backtrace" : 13,
-			"path" : "libs/imgui/backends/imgui_impl_glfw.h",
+			"path" : "libs/imgui/backends/imgui_impl_sdl2.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 13,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_glfw.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_sdl2.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 13,
 			"compileGroupIndex" : 0,
-			"path" : "libs/imgui/backends/imgui_impl_vulkan.cpp",
+			"path" : "libs/imgui/backends/imgui_impl_opengl2.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
