@@ -59,8 +59,7 @@ jobs:
             sudo apt-get install libgl1-mesa-dev
             sudo apt-get install libglfw3-dev
         else
-            echo "$RUNNER_OS not supported"
-            exit 1
+            echo "$RUNNER_OS not supported. OpenGL install not used for $RUNNER_OS"
         fi
       shell: bash
     - name: Set reusable strings
