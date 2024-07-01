@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/libs/imgui" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/libs/imgui_old" vcs="Git" />
   </component>
 </project>

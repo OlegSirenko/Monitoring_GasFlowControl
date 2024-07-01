@@ -1,0 +1,4 @@
+[submodule "libs/imgui"]
+	path = libs/imgui
+	url = https://github.com/OlegSirenko/imgui.git
+	branch = docking
