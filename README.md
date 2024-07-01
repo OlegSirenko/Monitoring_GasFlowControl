@@ -62,5 +62,27 @@ Microcontroller sends only one number as an actual Data from one sensor.
 
 **In next iterations will be modified for Real-Time communication in interface:** 
 ```json
-{"actual_time": {"sensor_1": "actual_data_from_sensor", "sensor_2": "actual_data_from_sensor", ...}}
+{"actual_time": {"sensor_1": "actual_data_from_sensor", "sensor_2": "actual_data_from_sensor"}}
+```
+
+
+# Building
+## Linux machines
+Firstly you need to install CMake with dependencies
+```shell
+sudo apt update 
+sudo apt upgrade
+sudo apt install git make openssl openssl-dev libssl-dev ninja
+git clone https://github.com/Kitware/CMake.git
+cd CMake/
+./bootstrap && make && sudo make install
+```
+
+*When cmake was installed we could start building the application*
+
+```shell
+git clone https://github.com/OlegSirenko/Monitoring_GasFlowControll.git
+cd Monitoring_GasFlowControll
+cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=ninja -G Ninja -S . -B ./cmake-build-release
+cmake --build ./cmake-build-release --target GasFlowControlMonitoringApp -j 6
 ```
