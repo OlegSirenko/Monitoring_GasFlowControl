@@ -126,7 +126,6 @@ int main(int, char**)
 
     // Start server
     std::thread server_thread([&io_context, &logs] {
-//        std::cout<<"Waiting for data... "<<std::endl;
         logs.emplace_back("Server started");
         io_context->run();
         logs.emplace_back("Server closed");
@@ -140,7 +139,7 @@ int main(int, char**)
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
-        ImGui::DockSpaceOverViewport(ImGui::GetMainViewport());
+        ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 
         //ImGui::ShowDemoWindow();
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds

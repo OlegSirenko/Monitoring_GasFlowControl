@@ -56,8 +56,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/main.cpp.o: CXX_COMPILER__GasFl
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/PlotWindow.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -66,8 +64,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PlotWindow.cpp.o: CXX_C
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/ControlPanel.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -76,8 +72,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ControlPanel.cpp.o: CXX
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/PID.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -86,8 +80,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/PID.cpp.o: CXX_COMPILER
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/ServerModule.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -96,8 +88,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/ServerModule.cpp.o: CXX
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/mainMenu.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules/mainMenu.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -106,8 +96,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/modules/mainMenu.cpp.o: CXX_COM
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/modules
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/resources/ExoFontEmbedded_utf8.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/resources/ExoFontEmbedded_utf8.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -116,8 +104,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/resources/ExoFontEmbedded_utf8.
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/resources
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/implot/implot.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -126,8 +112,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot.cpp.o: CXX_C
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/implot/implot_items.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -136,8 +120,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot/implot_items.cpp.o:
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/implot
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -146,8 +128,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui.cpp.o: CXX_COM
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_demo.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -156,8 +136,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_demo.cpp.o: CX
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_draw.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -166,8 +144,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_draw.cpp.o: CX
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_tables.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -176,8 +152,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_tables.cpp.o: 
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_widgets.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -186,8 +160,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/imgui_widgets.cpp.o:
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -196,8 +168,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype/imgui_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/misc/freetype
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -206,8 +176,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_sdlrenderer2.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdlrenderer2.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -216,8 +184,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__GasFlowControlMonitoringApp_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_GasFlowControlMonitoringApp
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -226,8 +192,6 @@ build CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends/imgui_impl_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/modules -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   OBJECT_FILE_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir/libs/imgui/backends
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
 
 
 # =============================================================================
@@ -243,9 +207,8 @@ build GasFlowControlMonitoringApp: CXX_EXECUTABLE_LINKER__GasFlowControlMonitori
   OBJECT_DIR = CMakeFiles/GasFlowControlMonitoringApp.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/GasFlowControlMonitoringApp.dir/
   TARGET_FILE = GasFlowControlMonitoringApp
-  TARGET_PDB = GasFlowControlMonitoringApp.pdb
+  TARGET_PDB = GasFlowControlMonitoringApp.dbg
 
 
 #############################################
@@ -291,8 +254,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_openg
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/examples/example_glfw_opengl2
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -301,8 +262,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui.cpp.o: CXX_COMPILER__
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -311,8 +270,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_demo.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -321,8 +278,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_draw.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -331,8 +286,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_tables.cpp.o: CXX_COM
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -341,8 +294,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/imgui_widgets.cpp.o: CXX_CO
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -351,8 +302,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype/imgui_freetyp
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -361,8 +310,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_glfw.cp
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__example_glfw_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_example_glfw_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -371,8 +318,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends/imgui_impl_opengl2
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
 
 
 # =============================================================================
@@ -388,9 +333,8 @@ build bin/example_glfw_opengl2: CXX_EXECUTABLE_LINKER__example_glfw_opengl2_MinS
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl2.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl2.dir/
   TARGET_FILE = bin/example_glfw_opengl2
-  TARGET_PDB = bin/example_glfw_opengl2.pdb
+  TARGET_PDB = example_glfw_opengl2.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_glfw_opengl3
@@ -408,8 +352,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_openg
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/examples/example_glfw_opengl3
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -418,8 +360,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui.cpp.o: CXX_COMPILER__
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -428,8 +368,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_demo.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -438,8 +376,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_draw.cpp.o: CXX_COMPI
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -448,8 +384,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_tables.cpp.o: CXX_COM
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -458,8 +392,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/imgui_widgets.cpp.o: CXX_CO
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -468,8 +400,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype/imgui_freetyp
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -478,8 +408,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_glfw.cp
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__example_glfw_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_example_glfw_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -488,8 +416,6 @@ build libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends/imgui_impl_opengl3
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
 
 
 # =============================================================================
@@ -505,9 +431,8 @@ build bin/example_glfw_opengl3: CXX_EXECUTABLE_LINKER__example_glfw_opengl3_MinS
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_opengl3.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_opengl3.dir/
   TARGET_FILE = bin/example_glfw_opengl3
-  TARGET_PDB = bin/example_glfw_opengl3.pdb
+  TARGET_PDB = example_glfw_opengl3.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_glfw_vulkan
@@ -525,8 +450,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/examples/example_glfw_vulkan
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -535,8 +458,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui.cpp.o: CXX_COMPILER__e
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -545,8 +466,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_demo.cpp.o: CXX_COMPIL
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -555,8 +474,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_draw.cpp.o: CXX_COMPIL
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -565,8 +482,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_tables.cpp.o: CXX_COMP
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -575,8 +490,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/imgui_widgets.cpp.o: CXX_COM
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -585,8 +498,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype/imgui_freetype
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_glfw.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -595,8 +506,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_glfw.cpp
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_vulkan.cpp.o: CXX_COMPILER__example_glfw_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_vulkan.cpp || cmake_object_order_depends_target_example_glfw_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -605,8 +514,6 @@ build libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends/imgui_impl_vulkan.c
   INCLUDES = -I/usr/include/SDL2 -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
 
 
 # =============================================================================
@@ -622,9 +529,8 @@ build bin/example_glfw_vulkan: CXX_EXECUTABLE_LINKER__example_glfw_vulkan_MinSiz
   OBJECT_DIR = libs/imgui/CMakeFiles/example_glfw_vulkan.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_glfw_vulkan.dir/
   TARGET_FILE = bin/example_glfw_vulkan
-  TARGET_PDB = bin/example_glfw_vulkan.pdb
+  TARGET_PDB = example_glfw_vulkan.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_sdl2_opengl2
@@ -642,8 +548,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_openg
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/examples/example_sdl2_opengl2
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -652,8 +556,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui.cpp.o: CXX_COMPILER__
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -662,8 +564,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_demo.cpp.o: CXX_COMPI
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -672,8 +572,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_draw.cpp.o: CXX_COMPI
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -682,8 +580,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_tables.cpp.o: CXX_COM
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -692,8 +588,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/imgui_widgets.cpp.o: CXX_CO
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -702,8 +596,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype/imgui_freetyp
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -712,8 +604,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_sdl2.cp
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_opengl2.cpp.o: CXX_COMPILER__example_sdl2_opengl2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -722,8 +612,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends/imgui_impl_opengl2
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
 
 
 # =============================================================================
@@ -739,9 +627,8 @@ build bin/example_sdl2_opengl2: CXX_EXECUTABLE_LINKER__example_sdl2_opengl2_MinS
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl2.dir/
   TARGET_FILE = bin/example_sdl2_opengl2
-  TARGET_PDB = bin/example_sdl2_opengl2.pdb
+  TARGET_PDB = example_sdl2_opengl2.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_sdl2_opengl3
@@ -759,8 +646,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_openg
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/examples/example_sdl2_opengl3
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -769,8 +654,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui.cpp.o: CXX_COMPILER__
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -779,8 +662,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_demo.cpp.o: CXX_COMPI
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -789,8 +670,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_draw.cpp.o: CXX_COMPI
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -799,8 +678,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_tables.cpp.o: CXX_COM
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -809,8 +686,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/imgui_widgets.cpp.o: CXX_CO
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -819,8 +694,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype/imgui_freetyp
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -829,8 +702,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_sdl2.cp
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_opengl3.cpp.o: CXX_COMPILER__example_sdl2_opengl3_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_opengl3.cpp || cmake_object_order_depends_target_example_sdl2_opengl3
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -839,8 +710,6 @@ build libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends/imgui_impl_opengl3
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
 
 
 # =============================================================================
@@ -856,9 +725,8 @@ build bin/example_sdl2_opengl3: CXX_EXECUTABLE_LINKER__example_sdl2_opengl3_MinS
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_opengl3.dir/
   TARGET_FILE = bin/example_sdl2_opengl3
-  TARGET_PDB = bin/example_sdl2_opengl3.pdb
+  TARGET_PDB = example_sdl2_opengl3.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_sdl2_vulkan
@@ -876,8 +744,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/examples/example_sdl2_vulkan
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -886,8 +752,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui.cpp.o: CXX_COMPILER__e
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -896,8 +760,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_demo.cpp.o: CXX_COMPIL
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -906,8 +768,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_draw.cpp.o: CXX_COMPIL
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -916,8 +776,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_tables.cpp.o: CXX_COMP
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -926,8 +784,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/imgui_widgets.cpp.o: CXX_COM
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -936,8 +792,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype/imgui_freetype
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -946,8 +800,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_sdl2.cpp
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_vulkan.cpp.o: CXX_COMPILER__example_sdl2_vulkan_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_vulkan.cpp || cmake_object_order_depends_target_example_sdl2_vulkan
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -956,8 +808,6 @@ build libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends/imgui_impl_vulkan.c
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
 
 
 # =============================================================================
@@ -973,9 +823,8 @@ build bin/example_sdl2_vulkan: CXX_EXECUTABLE_LINKER__example_sdl2_vulkan_MinSiz
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_vulkan.dir/
   TARGET_FILE = bin/example_sdl2_vulkan
-  TARGET_PDB = bin/example_sdl2_vulkan.pdb
+  TARGET_PDB = example_sdl2_vulkan.dbg
 
 # =============================================================================
 # Object build statements for EXECUTABLE target example_sdl2_sdlrenderer2
@@ -993,8 +842,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/examples/example_sdl2_sdlrenderer2
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1003,8 +850,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui.cpp.o: CXX_COMPI
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_demo.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_demo.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1013,8 +858,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_demo.cpp.o: CXX_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_draw.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_draw.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1023,8 +866,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_draw.cpp.o: CXX_
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_tables.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_tables.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1033,8 +874,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_tables.cpp.o: CX
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_widgets.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1043,8 +882,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/imgui_widgets.cpp.o: C
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype/imgui_freetype.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/misc/freetype/imgui_freetype.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1053,8 +890,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype/imgui_fr
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/misc/freetype
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdl2.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdl2.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1063,8 +898,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sd
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sdlrenderer2.cpp.o: CXX_COMPILER__example_sdl2_sdlrenderer2_unscanned_MinSizeRel /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/backends/imgui_impl_sdlrenderer2.cpp || cmake_object_order_depends_target_example_sdl2_sdlrenderer2
   DEFINES = -DIMGUI_DISABLE_OBSOLETE_FUNCTIONS=1 -DIMGUI_DISABLE_OBSOLETE_KEYIO=1 -DIMGUI_ENABLE_FREETYPE=1
@@ -1073,8 +906,6 @@ build libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends/imgui_impl_sd
   INCLUDES = -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs -I/home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/. -I/usr/include/freetype2 -isystem /usr/include/SDL2 -isystem /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/./backends
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   OBJECT_FILE_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/backends
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
 
 
 # =============================================================================
@@ -1090,9 +921,8 @@ build bin/example_sdl2_sdlrenderer2: CXX_EXECUTABLE_LINKER__example_sdl2_sdlrend
   OBJECT_DIR = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = libs/imgui/CMakeFiles/example_sdl2_sdlrenderer2.dir/
   TARGET_FILE = bin/example_sdl2_sdlrenderer2
-  TARGET_PDB = bin/example_sdl2_sdlrenderer2.pdb
+  TARGET_PDB = example_sdl2_sdlrenderer2.dbg
 
 
 #############################################
@@ -1158,14 +988,14 @@ build libs/imgui/all: phony bin/example_glfw_opengl2 bin/example_glfw_opengl3 bi
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindFreetype.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGLUT.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindOpenGL.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPkgConfig.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindVulkan.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/CMakeLists.txt /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindFreetype.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGLUT.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindOpenGL.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPkgConfig.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindVulkan.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/CMakeLists.txt /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCCompilerABI.c /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystem.cmake.in /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindFreetype.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGLUT.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindOpenGL.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPkgConfig.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindVulkan.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/CMakeLists.txt /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/CheckIncludeFile.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindFreetype.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindGLUT.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindOpenGL.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPackageMessage.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindPkgConfig.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/FindVulkan.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/Linux.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/Platform/UnixPaths.cmake /home/tehnokrat/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.28/Modules/SelectLibraryConfigurations.cmake /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/CMakeLists.txt /home/tehnokrat/CLionProjects/ImGUI_GasFlowControll/libs/imgui/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config-version.cmake /usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################
