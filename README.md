@@ -1,4 +1,5 @@
 [![Linux Build](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml/badge.svg)](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml)
+[![Windows build](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml/badge.svg)](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml)
 # Monitoring for Gas Flow Control System
 
 <img align="middle" src="resources/GasFlowControlIcon_png.png" alt="Logo" width="250" >
