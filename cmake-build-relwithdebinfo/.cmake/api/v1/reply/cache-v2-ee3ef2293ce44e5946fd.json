@@ -1879,7 +1879,7 @@
 				}
 			],
 			"type" : "BOOL",
-			"value" : "ON"
+			"value" : "OFF"
 		},
 		{
 			"name" : "IMGUI_EXAMPLES_DIR",
