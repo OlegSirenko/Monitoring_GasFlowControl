@@ -44,7 +44,7 @@ static void SetSDLIcon(SDL_Window* window) {
     bmask = 0x00ff0000;
     amask = (icon.bytes_per_pixel == 3) ? 0 : 0xff000000;
 #endif
-    SDL_Surface* sdl_icon = SDL_CreateRGBSurfaceFrom((void*)icon.pixel_data,
+    SDL_Surface* sdl_icon = SDL_CreateRGBSurfaceFrom(const_cast<void*>(static_cast<const void*>(icon.pixel_data)),
                                                  icon.width, icon.height, icon.bytes_per_pixel*8,
                                                  icon.bytes_per_pixel*icon.width, rmask, gmask, bmask, amask);
     SDL_SetWindowIcon(window, sdl_icon);
