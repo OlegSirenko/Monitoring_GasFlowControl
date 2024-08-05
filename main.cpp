@@ -29,6 +29,29 @@ void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_
 
 void embraceTheDarkness();
 
+static void SetSDLIcon(SDL_Window* window) {
+#include "resources/icon_256.c"
+    Uint32 rmask, gmask, bmask, amask;
+#if SDL_BYTEORDER == SDL_BIG_ENDIAN
+    int shift = (my_icon.bytes_per_pixel == 3) ? 8 : 0;
+    rmask = 0xff000000 >> shift;
+    gmask = 0x00ff0000 >> shift;
+    bmask = 0x0000ff00 >> shift;
+    amask = 0x000000ff >> shift;
+#else // little endian, like x86
+    rmask = 0x000000ff;
+    gmask = 0x0000ff00;
+    bmask = 0x00ff0000;
+    amask = (icon.bytes_per_pixel == 3) ? 0 : 0xff000000;
+#endif
+    SDL_Surface* sdl_icon = SDL_CreateRGBSurfaceFrom(const_cast<void*>(static_cast<const void*>(icon.pixel_data)),
+                                                 icon.width, icon.height, icon.bytes_per_pixel*8,
+                                                 icon.bytes_per_pixel*icon.width, rmask, gmask, bmask, amask);
+    SDL_SetWindowIcon(window, sdl_icon);
+
+    SDL_FreeSurface(sdl_icon);
+}
+
 
 // Main code
 int main(int, char**)
