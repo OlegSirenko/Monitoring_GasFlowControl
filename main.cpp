@@ -6,12 +6,10 @@
 #include <cstdio>
 #include <SDL.h>
 #include <SDL_opengl.h>
-#include <iostream>
 #include <vector>
 #include <chrono>
 #include "ControlPanel.h"
 #include "PlotWindow.h"
-#include <deque>
 #include "resources/ExoFontEmbedded_utf8.cpp"
 #include "mainMenu.h"
 #include "ServerModule.h"
@@ -30,7 +28,7 @@ void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_
 void embraceTheDarkness();
 
 static void SetSDLIcon(SDL_Window* window) {
-#include "resources/icon_256.c"
+#include "resources/icon_256_gnome.c"
     Uint32 rmask, gmask, bmask, amask;
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     int shift = (my_icon.bytes_per_pixel == 3) ? 8 : 0;
@@ -81,7 +79,7 @@ int main(int, char**)
         printf("Error: SDL_CreateWindow(): %s\n", SDL_GetError());
         return -1;
     }
-
+    SetSDLIcon(window);
     SDL_GLContext gl_context = SDL_GL_CreateContext(window);
     SDL_GL_MakeCurrent(window, gl_context);
     SDL_GL_SetSwapInterval(1); // Enable vsync
