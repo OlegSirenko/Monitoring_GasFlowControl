@@ -6,12 +6,10 @@
 #include <cstdio>
 #include <SDL.h>
 #include <SDL_opengl.h>
-#include <iostream>
 #include <vector>
 #include <chrono>
 #include "ControlPanel.h"
 #include "PlotWindow.h"
-#include <deque>
 #include "resources/ExoFontEmbedded_utf8.cpp"
 #include "mainMenu.h"
 #include "ServerModule.h"
@@ -76,12 +74,15 @@ int main(int, char**)
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
     auto window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
     SDL_Window* window = SDL_CreateWindow("Monitoring for Gas FLow control system", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+
+
     if (window == nullptr)
     {
         printf("Error: SDL_CreateWindow(): %s\n", SDL_GetError());
         return -1;
     }
 
+    SetSDLIcon(window);
     SDL_GLContext gl_context = SDL_GL_CreateContext(window);
     SDL_GL_MakeCurrent(window, gl_context);
     SDL_GL_SetSwapInterval(1); // Enable vsync
@@ -113,11 +114,6 @@ int main(int, char**)
     ImGui_ImplOpenGL2_Init();
 
     io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, 17);
-
-    bool show_demo_window = false;
-    bool show_another_window = false;
-    bool show_plot_window = true;
-
 
     ImVec4 clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
 
