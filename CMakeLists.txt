@@ -29,6 +29,7 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         modules/mainMenu.cpp
         resources/ExoFontEmbedded_utf8.cpp
         resources/icon_256.c
+        resources/icon_256_gnome.c
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
 )

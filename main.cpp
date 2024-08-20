@@ -28,7 +28,7 @@ void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_
 void embraceTheDarkness();
 
 static void SetSDLIcon(SDL_Window* window) {
-#include "resources/icon_256.c"
+#include "resources/icon_256_gnome.c"
     Uint32 rmask, gmask, bmask, amask;
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     int shift = (my_icon.bytes_per_pixel == 3) ? 8 : 0;
