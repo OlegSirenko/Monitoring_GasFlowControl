@@ -15,20 +15,21 @@
 #include "ServerModule.h"
 #include <boost/asio.hpp>
 #include <thread>
+#include "resources/icon_256_gnome.c"
+
 
 void handle_events(bool&, SDL_Window*);
-void update_plot_windows(std::shared_ptr<tcp_server>& server,
+void update_plot_windows(const std::shared_ptr<tcp_server>& server,
                          std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
                          int window_width, int window_height, int window_position_x,
                          int window_position_y, bool attach_window);
 
 
-void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time);
+void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time);
 
 void embraceTheDarkness();
 
 static void SetSDLIcon(SDL_Window* window) {
-#include "resources/icon_256_gnome.c"
     Uint32 rmask, gmask, bmask, amask;
 #if SDL_BYTEORDER == SDL_BIG_ENDIAN
     int shift = (my_icon.bytes_per_pixel == 3) ? 8 : 0;
@@ -72,8 +73,10 @@ int main(int, char**)
     SDL_GL_SetAttribute(SDL_GL_STENCIL_SIZE, 8);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MAJOR_VERSION, 2);
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
-    auto window_flags = (SDL_WindowFlags)(SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-    SDL_Window* window = SDL_CreateWindow("Monitoring for Gas FLow control system", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
+    constexpr auto window_flags = static_cast<SDL_WindowFlags>(
+        SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+    SDL_Window *window = SDL_CreateWindow("Monitoring for Gas FLow control system", SDL_WINDOWPOS_CENTERED,
+                                          SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
 
 
     if (window == nullptr)
@@ -115,7 +118,7 @@ int main(int, char**)
 
     io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, 17);
 
-    ImVec4 clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
+    constexpr auto clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
 
     // Main loop
     bool done = false;
@@ -123,17 +126,14 @@ int main(int, char**)
 
     int window_height, window_width, window_position_x, window_position_y;
 
-    auto start = std::chrono::system_clock::now();
-
-    double setpoint = 0.0;
+    const auto start = std::chrono::system_clock::now();
 
     // Init server context and thread
     auto io_context = std::make_shared<boost::asio::io_context>();
-    auto server = std::make_shared<tcp_server>(*io_context);
+    const auto server = std::make_shared<tcp_server>(*io_context);
 
 
-
-    std::unique_ptr<ControlPanel> controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
+    const auto controlPanel = std::make_unique<ControlPanel>(window_width, window_height, window_position_x, window_position_y);
 
     std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>> plotWindowsMap;
 
@@ -163,7 +163,7 @@ int main(int, char**)
         //ImGui::ShowDemoWindow();
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
         auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
-        auto current_time = elapsed.count();
+        const auto current_time = elapsed.count();
 
         mainMenu::Render();
 
@@ -184,7 +184,7 @@ int main(int, char**)
 
         // Rendering
         ImGui::Render();
-        glViewport(0, 0, (int)io.DisplaySize.x, (int)io.DisplaySize.y);
+        glViewport(0, 0, static_cast<int>(io.DisplaySize.x), static_cast<int>(io.DisplaySize.y));
         glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
         glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL2_RenderDrawData(ImGui::GetDrawData());
@@ -219,8 +219,6 @@ int main(int, char**)
 }
 
 
-
-
 void handle_events(bool& done, SDL_Window* window) {
     SDL_Event event;
     while (SDL_PollEvent(&event))
@@ -234,7 +232,7 @@ void handle_events(bool& done, SDL_Window* window) {
 }
 
 
-void update_plot_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, int window_width, int window_height, int window_position_x, int window_position_y, bool attach_window) {
+void update_plot_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, int window_width, int window_height, int window_position_x, int window_position_y, bool attach_window) {
     auto connections = server->get_connections();
     // Remove any PlotWindows that don't have an associated connection
     for (auto it = plotWindowsMap.begin(); it != plotWindowsMap.end(); ) {
@@ -254,15 +252,15 @@ void update_plot_windows(std::shared_ptr<tcp_server>& server, std::unordered_map
 }
 
 
-void render_windows(std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time) {
+void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, const long current_time) {
     auto connections = server->get_connections();
     for (auto & connection : connections) {
-        auto& plotWindow = plotWindowsMap[connection];
-        std::string data(connection->get_latest_data());
-        if(!data.empty()){
-            double current_data_from_connection = std::stod(data);
-            std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
+        const auto& plotWindow = plotWindowsMap[connection];
+        if(std::string data(connection->get_latest_data()); !data.empty()){
+            const double current_data_from_connection = std::stod(data);
+            const std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
             plotWindow->Render(current_time, current_data_from_connection, plot_window_name);
+            connection->send_data(std::to_string(plotWindow->GetPidOutput()));
         }
     }
 }
