@@ -90,12 +90,18 @@ jobs:
         # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
         run: ctest --build-config ${{ matrix.build_type }}
 
-      - name: Upload executablle
+      - name: Windows executable
         uses: actions/upload-artifact@v4
+        if: runner.os == 'Windows'
         with:
-          name: homework_pre
-          path: ${{ steps.strings.outputs.build-output-dir }}
-
+          name: Build artifacts for Windows
+          path: ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp.exe
+      - name: Linux executable
+        uses: actions/upload-artifact@v4
+        if: runner.os == 'Linux'
+        with:
+          name: Build artifacts for Linux
+          path: ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp
 #  job_2:
 #    name: Build Installer
 #    runs-on: windows-latest

@@ -20,7 +20,22 @@ include_directories(libs)
 add_subdirectory(libs/imgui)
 include_directories(modules)
 
+if (WIN32)
+    add_executable(GasFlowControlMonitoringApp WIN32 main.cpp
+            modules/PlotWindow.cpp
+            modules/ControlPanel.cpp
+            modules/PID.cpp
+            modules/ServerModule.cpp
+            modules/mainMenu.cpp
+            resources/ExoFontEmbedded_utf8.cpp
+            resources/icon_256.c
+            resources/icon_256_gnome.c
+            libs/implot/implot.cpp
+            libs/implot/implot_items.cpp
+    )
+endif ()
 
+if (UNIX)
 add_executable(GasFlowControlMonitoringApp main.cpp
         modules/PlotWindow.cpp
         modules/ControlPanel.cpp
@@ -33,11 +48,11 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
 )
+endif ()
 
 if(WIN32)
     set(CMAKE_EXE_LINKER_FLAGS " -static")
     target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi )
-#    target_link_libraries(GasFlowControlMonitoringApp PRIVATE Freetype::Freetype)
 endif()
 
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
