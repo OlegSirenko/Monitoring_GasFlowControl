@@ -95,7 +95,7 @@ jobs:
         if: runner.os == 'Windows'
         with:
           name: Build artifacts for Windows
-          path: ${{ steps.strings.outputs.build-output-dir }}/Release/
+          path: ${{ steps.strings.outputs.build-output-dir }}
 
       - name: Linux executable
         uses: actions/upload-artifact@v4
