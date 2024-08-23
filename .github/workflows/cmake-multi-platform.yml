@@ -95,10 +95,10 @@ jobs:
         if: runner.os == 'Windows'
         with:
           name: Build artifacts for Windows
-          path: ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp.exe
+          path: ${{ steps.strings.outputs.build-output-dir }}/Release/GasFlowControlMonitoringApp.exe
       - name: Linux executable
         uses: actions/upload-artifact@v4
-        if: runner.os == 'Linux'
+        if: runner.os == 'Linux' && matrix.c_compiler == 'gcc'
         with:
           name: Build artifacts for Linux
           path: ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp
