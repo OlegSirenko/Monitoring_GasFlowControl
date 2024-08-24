@@ -49,7 +49,7 @@ jobs:
             c_compiler: cl
 
     steps:
-      - uses: libsdl-org/setup-sdl@main
+      - uses: libsdl-org/setup-sdl@try-node16
         id: sdl
         with:
           install-linux-dependencies: true
@@ -101,7 +101,9 @@ jobs:
         if: runner.os == 'Windows'
         with:
           name: Build artifacts for Windows
-          path: ${{ steps.strings.outputs.build-output-dir }}
+          path: |
+            ${{ steps.strings.outputs.build-output-dir }} / GasFlowControlMonitoringApp.exe
+            ${{ github.workspace }}/resources/dinamic_libs/SDL2.dll
 
       - name: Linux executable
         uses: actions/upload-artifact@v4
