@@ -110,18 +110,24 @@ jobs:
           name: Build artifacts for Linux
           path: ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp
 
-#  job_2:
-#    name: Build Installer
-#    runs-on: windows-latest
-#    steps:
-#      - uses: actions/checkout@v4
-#
-#      - name: Add msbuild to PATH
-#        uses: microsoft/setup-msbuild@v2
-#
-#      - name: Install WiX
-#        run: dotnet tool install --global wix
-#
+  job_2:
+    name: Build Installer
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build installer for Windows
+        uses: actions/download-artifact@v4
+        with:
+          name: Build artifacts for Windows
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Install WiX
+        run: dotnet tool install --global wix
+
+      - name: Check folders
+        run: ls
 #      - name: Build WiX on Windows x86
 #        run: cd GasFlowControl\GasFlowControl && ls && wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x86 -out .\out\Setup_GasFlowControl_x86.msi
 #      - name: Build WiX on Windows x64
