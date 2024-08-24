@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Find SDL2
 find_package(SDL2 CONFIG REQUIRED)
+find_package(SDL2 REQUIRED)
 
 if(WIN32)
 #    find_package(Freetype CONFIG REQUIRED)
@@ -52,7 +53,7 @@ endif ()
 
 if(WIN32)
     set(CMAKE_EXE_LINKER_FLAGS " -static")
-    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi )
+    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi)
 endif()
 
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})

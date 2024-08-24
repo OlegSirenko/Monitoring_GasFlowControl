@@ -15,6 +15,7 @@ jobs:
     name: Build executable
     runs-on: ${{ matrix.os }}
 
+
     strategy:
       # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
       fail-fast: false
@@ -48,11 +49,16 @@ jobs:
             c_compiler: cl
 
     steps:
+      - uses: libsdl-org/setup-sdl@main
+        id: sdl
+        with:
+          install-linux-dependencies: true
+          version: 2-latest
+          version-sdl-image: 2-latest
+
       - uses: actions/checkout@v4
-      - name: Fetch ImGui submodule
-        run: git submodule update --init --recursive libs/imgui
-      - name: Setup SDL
-        uses: libsdl-org/setup-sdl@v1
+        with:
+          submodules: true
 
       - name: Install OpenGL libraries
         run: |
