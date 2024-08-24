@@ -1,6 +1,11 @@
-[![Linux Build](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml/badge.svg?event=push)](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml)
-[![Windows build](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml/badge.svg?event=push)](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml)
-[![Build multiple platforms](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main&event=push)](https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-multi-platform.yml)
+[//]: # ([![Linux Build]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml/badge.svg?event=push&#41;]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform.yml&#41;)
+
+[//]: # ([![Windows build]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml/badge.svg?event=push&#41;]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-single-platform-win.yml&#41;)
+
+[//]: # ([![Build multiple platforms]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-multi-platform.yml/badge.svg?branch=main&event=push&#41;]&#40;https://github.com/OlegSirenko/Monitoring_GasFlowControll/actions/workflows/cmake-multi-platform.yml&#41;)
+
+<!-- [START BADGES] -->
+<!-- [END BADGES] -->
 
 # Monitoring for Gas Flow Control System
 
