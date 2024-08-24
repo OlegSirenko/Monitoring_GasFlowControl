@@ -10,7 +10,7 @@ tcp_server::tcp_server(boost::asio::io_context &io_context)
 
 
 void tcp_server::start_accept() {
-    tcp_connection::pointer new_connection = tcp_connection::create(io_context_);
+    const tcp_connection::pointer new_connection = tcp_connection::create(io_context_);
 
     acceptor_.async_accept(new_connection->socket(),
                            boost::bind(&tcp_server::handle_accept,
@@ -72,8 +72,18 @@ void tcp_connection::start() {
     start_read();
 }
 
-void tcp_connection::handle_write(const boost::system::error_code &, size_t) {
+void tcp_connection::handle_write(const boost::system::error_code &error, size_t) const {
+    if (!error){
 
+    }
+    else{
+        // Handle the error
+        std::cerr << "Error during write: " << error.message() << std::endl;
+        if (close_callback_)
+        {
+            close_callback_();
+        }
+    }
 }
 
 void tcp_connection::start_read() {
@@ -88,11 +98,6 @@ void tcp_connection::handle_read(const boost::system::error_code &error, size_t 
     if (!error) {
         // Handle the data...
         data_[bytes_transferred] = '\0';
-
-        //std::string received_data(data_);
-        //std::cout << "Received data: " << received_data << "From IP: "<< get_ip() <<":"<< get_port() <<"  "<< std::endl;
-
-        // Continue reading from the socket
         start_read();
     }
     else {
@@ -104,11 +109,11 @@ void tcp_connection::handle_read(const boost::system::error_code &error, size_t 
     }
 }
 
-std::string tcp_connection::get_ip() {
+std::string tcp_connection::get_ip() const {
     return socket_.remote_endpoint().address().to_string();
 }
 
-int tcp_connection::get_port() {
+int tcp_connection::get_port() const {
     return socket_.remote_endpoint().port();
 }
 
@@ -120,5 +125,13 @@ std::string tcp_connection::get_latest_data() {
     std::string actual_data(data_);
     return actual_data;
 }
+
+void tcp_connection::send_data(const std::string& data) {
+    boost::asio::async_write(socket_, boost::asio::buffer(data),
+                                         boost::bind(&tcp_connection::handle_write, shared_from_this(),
+                                                       boost::asio::placeholders::error,
+                                                       boost::asio::placeholders::bytes_transferred));
+}
+
 //--------------------------------------------------------------------------------------------------------------------//
 

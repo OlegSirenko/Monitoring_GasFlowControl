@@ -22,19 +22,19 @@ public:
     tcp::socket& socket();
     static std::string make_daytime_string();
     void start();
-    std::string get_ip();
-    int get_port();
+    std::string get_ip() const;
+    int get_port() const;
     void set_close_callback(const CloseCallback& callback);
     std::string get_latest_data();
+    void send_data(const std::string&);
 
 
 
 private:
     explicit tcp_connection(boost::asio::io_context& io_context) : socket_(io_context){}
-    void handle_write(const boost::system::error_code& /*error*/, size_t /*bytes_transferred*/);
+    void handle_write(const boost::system::error_code& /*error*/, size_t /*bytes_transferred*/) const;
     void start_read();
     void handle_read(const boost::system::error_code& error, size_t bytes_transferred);
-
 
 // Private Vars
 private:

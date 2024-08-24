@@ -40,10 +40,9 @@ public:
         instance_count--;
     }
 
-    [[deprecated]]void Render(bool, long, double, double, std::string);
     void Render(long, double, std::string);
     void update_pid(double, double);
-
+    [[nodiscard]] double GetPidOutput() const;
 
 
 private:
@@ -67,8 +66,8 @@ private:
 
     PID pid;
 
-    bool pid_enable;
-    bool autotune_enabled;
+    bool pid_enable; // flag to understand if the pid regulation is enabled; true if PID enabled -- false if disabled
+    bool autotune_enabled; // flag to understand if the autotune is enabled.
     std::string enable_pid_button_label;
     std::string enable_autotune_button_label;
 
@@ -77,6 +76,9 @@ private:
     std::deque<double> recent_errors;
     double sum_errors;
     const std::size_t max_errors_size = 100;
+
+    double pid_output_;
+    double current_data_;
 
 };
 
