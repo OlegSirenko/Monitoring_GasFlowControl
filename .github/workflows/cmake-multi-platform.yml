@@ -100,6 +100,7 @@ jobs:
           path: |
             ${{ steps.strings.outputs.build-output-dir }}/Release/GasFlowControlMonitoringApp.exe
             ${{ github.workspace }}/resources/dinamic_libs/SDL2.dll
+            ${{ github.workspace }}/resources/imgui_configuration/imgui.ini
           
 
       - name: Linux executable
