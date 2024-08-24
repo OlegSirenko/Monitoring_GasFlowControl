@@ -102,7 +102,7 @@ jobs:
         with:
           name: Build artifacts for Windows
           path: |
-            ${{ steps.strings.outputs.build-output-dir }} / GasFlowControlMonitoringApp.exe
+            ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp.exe
             ${{ github.workspace }}/resources/dinamic_libs/SDL2.dll
 
       - name: Linux executable
