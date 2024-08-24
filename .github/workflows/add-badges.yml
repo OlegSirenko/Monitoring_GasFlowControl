@@ -1,0 +1,34 @@
+name: Add Badges
+on:
+  push:
+    branches:
+      - master
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/add-badges@v1
+        env:
+          repo_url: ${{ github.event.repository.html_url }}
+          repo_name: ${{ github.event.repository.name }}
+          repo_owner: ${{ github.event.repository.owner.login }}
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          badges: |
+            [
+              {
+                "badge": "https://img.shields.io/github/license/${{ env.repo_owner }}/${{ env.repo_name }}?style=flat-square",
+                "alt": "MIT License",
+                "link": "${{ env.repo_url }}/blob/master/LICENSE"
+              },
+              {
+                "badge": "https://img.shields.io/badge/-C++-blue?logo=cplusplus",
+                "alt": "Language",
+                "link": "https://www.typescriptlang.org"
+              },
+              {
+                "badge": "https://img.shields.io/github/workflow/status/${{ env.repo_owner }}/${{ env.repo_name }}/Build multiple platforms/main?logo=github&style=flat-square",
+                "alt": "build",
+                "link": "${{ env.repo_url }}/actions/workflows/cmake-multi-platform.yml"
+              }
+            ]
