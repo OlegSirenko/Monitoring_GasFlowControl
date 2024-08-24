@@ -49,16 +49,12 @@ jobs:
             c_compiler: cl
 
     steps:
-      - uses: libsdl-org/setup-sdl@try-node16
-        id: sdl
-        with:
-          install-linux-dependencies: true
-          version: 2-latest
-          version-sdl-image: 2-latest
-
       - uses: actions/checkout@v4
         with:
           submodules: true
+
+      - name: Setup SDL
+        uses: libsdl-org/setup-sdl@v1
 
       - name: Install OpenGL libraries
         run: |
@@ -102,8 +98,9 @@ jobs:
         with:
           name: Build artifacts for Windows
           path: |
-            ${{ steps.strings.outputs.build-output-dir }}/GasFlowControlMonitoringApp.exe
+            ${{ steps.strings.outputs.build-output-dir }}/Release/GasFlowControlMonitoringApp.exe
             ${{ github.workspace }}/resources/dinamic_libs/SDL2.dll
+          
 
       - name: Linux executable
         uses: actions/upload-artifact@v4
