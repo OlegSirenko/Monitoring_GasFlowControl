@@ -62,48 +62,48 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
     ImGui::End();
 }
 
-void PlotWindow::update_pid(double set_point, double input_data) {
-        double error = set_point - input_data;
-        pid.UpdateError(error);
-        recent_errors.push_back(error);
-        sum_errors += error;
-        if (recent_errors.size() > max_errors_size) {
-            sum_errors -= recent_errors.front();
-            recent_errors.pop_front();
-        }
+void PlotWindow::update_pid(const double set_point, const double input_data) {
+    const double error = set_point - input_data;
+    pid.UpdateError(error);
+    recent_errors.push_back(error);
+    sum_errors += error;
+    if (recent_errors.size() > max_errors_size) {
+        sum_errors -= recent_errors.front();
+        recent_errors.pop_front();
+    }
 
-        double average_error = sum_errors / recent_errors.size();
+    const double average_error = sum_errors / recent_errors.size();
 
-        if (autotune_enabled) {
-            std::string output_autotune = "Started autotuning " +
-                                          std::to_string(pid.Kp ) + " " +
-                                          std::to_string(pid.Ki) + " " +
-                                          std::to_string(pid.Kd );
+    if (autotune_enabled) {
+        std::string output_autotune = "Started autotuning " +
+                                      std::to_string(pid.Kp ) + " " +
+                                      std::to_string(pid.Ki) + " " +
+                                      std::to_string(pid.Kd );
+        std::cout<<output_autotune<<std::endl;
+        std::cout << "Before checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
+
+        pid.AutoTuneController(average_error);
+
+        if(std::abs(average_error) < this->slider_error){
+            autotune_enabled = false;
+            output_autotune = "Autotuning ended with " +
+                              std::to_string(pid.Kp ) + " " +
+                              std::to_string(pid.Ki) + " " +
+                              std::to_string(pid.Kd ) +
+                              "\n Average Error == " + std::to_string(average_error);
             std::cout<<output_autotune<<std::endl;
-            std::cout << "Before checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
-
-            pid.AutoTuneController(average_error);
-
-            if(std::abs(average_error) < this->slider_error){
-                autotune_enabled = false;
-                output_autotune = "Autotuning ended with " +
-                                  std::to_string(pid.Kp ) + " " +
-                                  std::to_string(pid.Ki) + " " +
-                                  std::to_string(pid.Kd ) +
-                                  "\n Average Error == " + std::to_string(average_error);
-                std::cout<<output_autotune<<std::endl;
-                slider_kp = pid.Kp;
-                slider_ki = pid.Ki;
-                slider_kd = pid.Kd;
-            }
+            slider_kp = pid.Kp;
+            slider_ki = pid.Ki;
+            slider_kd = pid.Kd;
+        }
             std::cout << "After checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
             std::cout<<"ENDED"<<std::endl;
         }
-        else{
-            pid.Kp = slider_kp;
-            pid.Ki = slider_ki;
-            pid.Kd = slider_kd;
-        }
+    else{
+        pid.Kp = slider_kp;
+        pid.Ki = slider_ki;
+        pid.Kd = slider_kd;
+    }
 }
 
 double PlotWindow::GetPidOutput() const {
