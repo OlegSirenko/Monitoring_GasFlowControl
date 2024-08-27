@@ -52,12 +52,13 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
                 std::cout<<"Button autotune clocked: "<<autotune_enabled<<std::endl;
             }
 
-            update_pid(0, current_data);
-
+            ImGui::InputDouble("Set Value", &setvalue_, 1, 10);
             ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
             ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
             ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
             ImGui::SliderFloat("max average error", &slider_error, 0.0005, 0.00001, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
+
+            update_pid(setvalue_, current_data);
         }
     }
     ImGui::EndChild();

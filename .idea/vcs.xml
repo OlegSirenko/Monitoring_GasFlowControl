@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Deploy/Installer_GasFlowControl" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Tests/imgui_test_engine" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/libs/imgui" vcs="Git" />
   </component>
 </project>

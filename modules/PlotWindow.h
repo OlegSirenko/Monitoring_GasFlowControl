@@ -63,6 +63,7 @@ private:
     float slider_ki;
     float slider_kd;
     float slider_error;
+    double setvalue_;
 
     PID pid;
 
