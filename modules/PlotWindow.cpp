@@ -31,7 +31,7 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
     }
     ImGui::Separator();
     if(ImGui::BeginChild("Data", ImVec2(640, 20))){
-        std::string output = "Accepted data from client: " + std::to_string(current_data) + " At " + std::to_string(times_delta / 1000) + " seconds from started application";
+        const std::string output = "Accepted data from client: " + std::to_string(current_data) + " At " + std::to_string(times_delta / 1000) + " seconds from started application";
         ImGui::Text("%s", output.c_str());
     }
     ImGui::EndChild();
