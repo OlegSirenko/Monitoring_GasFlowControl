@@ -53,7 +53,7 @@ public:
   void UpdateError( double cte );
 
   // Get the Steering Value (total PID error).
-  double GetSteerValue();
+  [[nodiscard]] double GetValue() const;
 
   void AutoTuneController( double cte );
 };

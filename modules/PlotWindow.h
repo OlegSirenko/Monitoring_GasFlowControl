@@ -28,6 +28,8 @@ public:
         slider_error = 0.0004;
         sum_errors = 0;
 
+        setvalue_ = 0;
+
         pid.Init(slider_kp, slider_ki, slider_kd);
         autotune_enabled = false;
         pid_enable = false;
@@ -63,6 +65,7 @@ private:
     float slider_ki;
     float slider_kd;
     float slider_error;
+    double setvalue_;
 
     PID pid;
 
