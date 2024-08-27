@@ -66,7 +66,7 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
 }
 
 void PlotWindow::update_pid(const double set_point, const double input_data) {
-    const double error = set_point - input_data;
+    const double error = input_data - set_point;
     pid.UpdateError(error);
     recent_errors.push_back(error);
     sum_errors += error;
