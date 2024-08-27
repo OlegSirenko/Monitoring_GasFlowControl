@@ -46,10 +46,9 @@ void PID::Init( double Kp, double Ki, double Kd ) {
 ///  @retval: void
 ///=============================================================================
 void PID::UpdateError( double cte ) {
+  const double prev_cte = this->p_error;
 
-  double prev_cte = this->p_error;
-
-  double under_windup_limit = ( this->i_error + cte ) < Ki_WINDUP_LIMIT;
+  const bool under_windup_limit = ( this->i_error + cte ) < Ki_WINDUP_LIMIT;
 
   this->p_error = cte;
   this->i_error = ( under_windup_limit ) ? this->i_error+cte : 0;
@@ -64,7 +63,7 @@ void PID::UpdateError( double cte ) {
 ///
 ///  @retval: void
 ///=============================================================================
-void PID::AutoTuneController( double cte ) {
+void PID::AutoTuneController(const double cte ) {
 
   this->p = { this->Kp, this->Ki, this->Kd };
   this->dp= { this->p_error, this->i_error, this->d_error };

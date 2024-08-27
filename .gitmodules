@@ -2,3 +2,6 @@
 	path = libs/imgui
 	url = https://github.com/OlegSirenko/imgui.git
 	branch = docking
+[submodule "Deploy/Installer_GasFlowControl"]
+	path = Deploy/Installer_GasFlowControl
+	url = git@github.com:OlegSirenko/Installer_GasFlowControl.git
