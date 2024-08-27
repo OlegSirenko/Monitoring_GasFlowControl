@@ -69,7 +69,7 @@ jobs:
               sudo apt-get install libgl1-mesa-dev
               sudo apt-get install libglfw3-dev 
               sudo apt install fuse
-              sudo apt install libsdl2-dev
+              sudo apt install libsdl2-dev libsdl2-2.0-0
           else
               echo "$RUNNER_OS not supported. OpenGL install not used for $RUNNER_OS"
           fi
