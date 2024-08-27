@@ -105,14 +105,18 @@ void mainMenu::Render() {
             ShowExampleMenuFile();
             ImGui::EndMenu();
         }
-        if (ImGui::BeginMenu("Edit"))
-        {
-            if (ImGui::MenuItem("Undo", "CTRL+Z")) {}
-            if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {}  // Disabled item
+        if (ImGui::BeginMenu("Edit")) {
+            if (ImGui::MenuItem("Undo", "CTRL+Z")) {
+            }
+            if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {
+            } // Disabled item
             ImGui::Separator();
-            if (ImGui::MenuItem("Cut", "CTRL+X")) {}
-            if (ImGui::MenuItem("Copy", "CTRL+C")) {}
-            if (ImGui::MenuItem("Paste", "CTRL+V")) {}
+            if (ImGui::MenuItem("Cut", "CTRL+X")) {
+            }
+            if (ImGui::MenuItem("Copy", "CTRL+C")) {
+            }
+            if (ImGui::MenuItem("Paste", "CTRL+V")) {
+            }
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();
@@ -124,9 +128,9 @@ void mainMenu::Render() {
 // (future version will add explicit flags to BeginMenu() to request processing shortcuts)
 static void ShowExampleMenuFile()
 {
-    ImGui::MenuItem("Change style", NULL, false, false);
-    static bool light = true;
-    static bool dark = false;
+    ImGui::MenuItem("Change style", nullptr, false, false);
+    static bool light = false;
+    static bool dark = true;
 
     if(ImGui::MenuItem("Light", "", &light)){
         dark = false;
@@ -140,7 +144,9 @@ static void ShowExampleMenuFile()
         embraceTheDarkness();
     }
     ImGui::Separator();
-    if (ImGui::MenuItem("Quit", "Alt+F4")) {}
+    if (ImGui::MenuItem("Quit", "Alt+F4")) {
+        exit(0);
+    }
 }
 
 
