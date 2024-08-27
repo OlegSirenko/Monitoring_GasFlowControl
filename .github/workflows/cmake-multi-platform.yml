@@ -79,9 +79,28 @@ jobs:
           fi
         shell: bash
 
+      - name: Set up cache
+        id: cache-sdl2
+        if: runner.os == 'Linux'
+        uses: actions/cache@v3
+        with:
+          path: |
+            /usr/local/lib
+            /usr/local/include
+          key: ${{ runner.os }}-sdl2-${{ hashFiles('**/SDL2') }}
+          restore-keys: |
+            ${{ runner.os }}-sdl2-
+
       - name: Build and install SDL2 from source
-        run: git clone https://github.com/libsdl-org/SDL.git -b SDL2 && cd SDL && mkdir build && cd build && ../configure && make && sudo make install
-        if: runner.OS == 'Linux'
+        run: |
+          git clone https://github.com/libsdl-org/SDL.git -b SDL2
+          cd SDL
+          mkdir build
+          cd build
+          ../configure
+          make
+          sudo make install
+        if: runner.OS == 'Linux' && steps.cache-sdl2.outputs.cache-hit != 'true'
 
       - name: Set reusable strings
         # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
