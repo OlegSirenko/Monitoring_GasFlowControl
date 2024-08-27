@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(GasFlowControlMonitoringApp)
 
 set(CMAKE_CXX_STANDARD 17)
+SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 # Find SDL2
 find_package(SDL2 CONFIG REQUIRED)
