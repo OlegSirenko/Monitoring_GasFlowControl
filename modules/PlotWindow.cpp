@@ -4,6 +4,8 @@
 
 #include "PlotWindow.h"
 
+#include <cmath>
+
 int PlotWindow::instance_count = 0;
 
 
@@ -84,7 +86,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
 
         pid.AutoTuneController(average_error);
 
-        if(std::abs(average_error) < this->slider_error){
+        if(std::isgreater(std::abs(average_error),  this->slider_error)){
             autotune_enabled = false;
             output_autotune = "Autotuning ended with " +
                               std::to_string(pid.Kp ) + " " +
