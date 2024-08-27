@@ -2,31 +2,43 @@ import socket
 import time
 import math
 
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+def receive_initial_message(s):
+    # Receive the initial datetime string from the server
+    datetime_string = s.recv(1024).decode('utf-8')
+    print('Received datetime from server:', datetime_string)
+
+def send_and_receive(s, data):
+    # Send the data and receive the PID output
+    s.sendall(str(data).encode('utf-8'))
+    response = s.recv(1024)
+    return float(response.decode('utf-8'))
 
 # Define the server address and port
 server_address = ('localhost', 12000)  # replace with your server's IP and port
 
-# Connect the socket to the server
+# Temperature simulation parameters
+ambient_temperature = 25.0  # Ambient temperature in degrees Celsius
+current_temperature = ambient_temperature
+setpoint = 100.0  # Desired temperature in degrees Celsius
+heating_power = 0.0
+
+# Create a TCP/IP socket
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect(server_address)
 
-x = 0
-
 try:
-    s.sendall(str(0).encode('utf-8'))
-    time.sleep(4)
+    # Receive the initial datetime string from the server
+    receive_initial_message(s)
+
     while True:
-        # Get the current output from the FOPDT model
-        x += 0.1
+        # Simulate the effect of heating power on the temperature
+        current_temperature += (heating_power - (current_temperature - ambient_temperature) * 0.1) * 0.01
 
-        # Send the data
-        s.sendall(str(math.sin(x)).encode('utf-8'))
-
-        # Update the input and time
-
-        # Wait for 0.01 seconds
-        time.sleep(0.01)
+        # Use the common function to send the current temperature and receive PID output
+        heating_power = send_and_receive(s, current_temperature)
+        print(f'Current Temperature: {current_temperature:.2f} °C, PID Output (Heating Power): {heating_power:.2f}')
 
 finally:
-    # Close the socket
     s.close()
+    print("Client script finished.")
+
