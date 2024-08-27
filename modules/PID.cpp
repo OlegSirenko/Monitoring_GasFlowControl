@@ -138,29 +138,14 @@ void PID::AutoTuneController(const double cte ) {
 }
 
 ///=============================================================================
-///  @brief  PID::GetSteerValue()
+///  @brief  PID::GetValue()
 ///          Get the PID error aka steering angle value 
 ///          
 ///  @param  None
 ///
 ///  @retval: Steer Value 
 ///=============================================================================
-double PID::GetSteerValue() {
-
-  double steer_value, value;
-
-	value = -Kp * this->p_error - Kd * this->d_error - Ki * this->i_error;
-  
-  // Limit the steer angle between 1 to -1
-  if( value > 1 ) {
-    steer_value = 1;
-  }
-  else if ( value < -1 ) {
-    steer_value = -1;
-  }
-  else {
-    steer_value = value;
-  }
-  
-  return steer_value;
+double PID::GetValue() const{
+  const double value = -Kp * this->p_error - Kd * this->d_error - Ki * this->i_error;
+  return value;
 }

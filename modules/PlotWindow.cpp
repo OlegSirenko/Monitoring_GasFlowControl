@@ -10,7 +10,7 @@ int PlotWindow::instance_count = 0;
 
 
 void PlotWindow::Render(const long times_delta, const double current_data, std::string window_name) {
-    pid_output_ = pid.GetSteerValue();
+    pid_output_ = pid.GetValue();
     current_data_ = current_data;
 
     times.push_back(times_delta);
