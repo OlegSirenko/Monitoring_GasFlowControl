@@ -53,8 +53,12 @@ jobs:
         with:
           submodules: true
 
+
+      ## TODO: Change to install SDL2 through VCPKG
       - name: Setup SDL
         uses: libsdl-org/setup-sdl@v1
+        if: runner.os == 'Windows'
+
 
       - name: Install OpenGL libraries
         run: |
