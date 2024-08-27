@@ -80,8 +80,7 @@ jobs:
         shell: bash
 
       - name: Build and install SDL2 from source
-        run: |
-          git clone https://github.com/libsdl-org/SDL && cd SDL && mkdir build && cd build && ../configure && make && sudo make install
+        run: git clone https://github.com/libsdl-org/SDL.git -b SDL2 && cd SDL && mkdir build && cd build && ../configure && make && sudo make install
         if: runner.OS == 'Linux'
 
       - name: Set reusable strings
