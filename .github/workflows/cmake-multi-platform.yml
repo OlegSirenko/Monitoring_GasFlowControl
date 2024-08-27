@@ -56,7 +56,12 @@ jobs:
 
       ## TODO: Change to install SDL2 through VCPKG
       - name: Setup SDL
-        uses: libsdl-org/setup-sdl@v1
+        uses: libsdl-org/setup-sdl@main
+        id: sdl
+        with:
+          install-linux-dependencies: true
+          version: 2-latest
+          version-sdl-image: 2-latest
         if: runner.os == 'Windows'
 
 
@@ -68,12 +73,23 @@ jobs:
               sudo apt install cmake
               sudo apt-get install libgl1-mesa-dev
               sudo apt-get install libglfw3-dev 
-              sudo apt install fuse
-              sudo apt install libsdl2-dev libsdl2-2.0-0
+              sudo apt install fuse 
           else
               echo "$RUNNER_OS not supported. OpenGL install not used for $RUNNER_OS"
           fi
         shell: bash
+
+      - name: Build and install SDL2 from source
+        run: |
+          git clone https://github.com/libsdl-org/SDL
+          cd SDL
+          mkdir build
+          cd build
+          ../configure
+          make
+          sudo make install
+        if: runner.OS == 'Linux'
+
       - name: Set reusable strings
         # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
         id: strings
