@@ -27,7 +27,7 @@ jobs:
       #
       # To add more build types (Release, Debug, RelWithDebInfo, etc.) customize the build_type list.
       matrix:
-        os: [ ubuntu-latest, windows-latest ]
+        os: [ ubuntu-20.04, windows-latest ]
         build_type: [ Release ]
         c_compiler: [ gcc, clang, cl ]
         include:
@@ -63,6 +63,9 @@ jobs:
       - name: Install OpenGL libraries
         run: |
           if [ "$RUNNER_OS" == "Linux" ]; then
+              sudo apt update
+              sudo apt install g++ 
+              sudo apt install cmake
               sudo apt-get install libgl1-mesa-dev
               sudo apt-get install libglfw3-dev 
               sudo apt install fuse
