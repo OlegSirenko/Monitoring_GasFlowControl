@@ -44,16 +44,15 @@ jobs:
 
 
       ## TODO: Change to install SDL2 through VCPKG
-      - name: Setup SDL
+      - name: Setup SDL for Windows
         uses: libsdl-org/setup-sdl@main
         id: sdl
         with:
-          install-linux-dependencies: true
+#          install-linux-dependencies: true
           version: 2-latest
           version-sdl-image: 2-latest
           add-to-environment: true
           build-type: ${{ matrix.build_type }}
-
 
 
       - name: Install OpenGL libraries
