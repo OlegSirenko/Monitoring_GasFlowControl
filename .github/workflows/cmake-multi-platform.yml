@@ -59,6 +59,7 @@ jobs:
           version-sdl-image: 2-latest
           add-to-environment: true
           build-type: ${{ matrix.build_type }}
+        if: runner.os == 'Windows'
 
       - name: Build and install SDL2 from source for Linux
         run: |
