@@ -54,6 +54,9 @@ jobs:
 #          build-type: ${{ matrix.build_type }}
 #        if: runner.os == 'Windows'
 
+      - name: Setup SDL2 and freetype for Windows
+        run: vcpkg install sdl2 && vcpkg install freetype
+
 
       - name: Install OpenGL libraries
         run: |
@@ -105,6 +108,7 @@ jobs:
 
       - name: Check the output of Windows
         run: ls  && ls cmake-build-release/Release
+        if: runner.os == 'Windows'
 
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v2
