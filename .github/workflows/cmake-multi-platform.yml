@@ -42,12 +42,6 @@ jobs:
         with:
           submodules: true
 
-
-      - name: Setup SDL2 and freetype for Windows
-        run: vcpkg install sdl2 && vcpkg install freetype && ls C:/vcpkg/
-        if: runner.os == 'Windows'
-
-
       - name: Install OpenGL libraries
         run: |
             sudo apt-get install libgl1-mesa-dev
@@ -56,6 +50,15 @@ jobs:
         shell: bash
         if: runner.os == 'Linux'
 
+      - name: Setup SDL for Windows
+        uses: libsdl-org/setup-sdl@main
+        id: sdl
+        with:
+          install-linux-dependencies: true
+          version: 2-latest
+          version-sdl-image: 2-latest
+          add-to-environment: true
+          build-type: ${{ matrix.build_type }}
 
       - name: Build and install SDL2 from source for Linux
         run: |
@@ -77,8 +80,6 @@ jobs:
           echo "build-output-dir=${{ github.workspace }}/cmake-build-release" >> "$GITHUB_OUTPUT"
 
       - name: Configure CMake for Linux
-        # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
-        # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
         run: >
           cmake -B ${{ steps.strings.outputs.build-output-dir }}
           -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
@@ -87,29 +88,11 @@ jobs:
           -S ${{ github.workspace }}
         if: runner.os == 'Linux'
 
-
-      - name: Configure CMake for Windows
-        run: >
-          cmake -B ${{ steps.strings.outputs.build-output-dir }}
-                    -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
-                    -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
-                    -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
-                    -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake
-                    -S ${{ github.workspace }}
-        if: runner.os == 'Windows'
-
-      - name: Build (Linux)
-        # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      - name: Build
         run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
-
-      - name: Build (Windows)
-        # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
-        run: cmake --build ${{ steps.strings.outputs.build-output-dir }} -DCMAKE_TOOLCHAIN_FILE=C:/vcpkg/scripts/buildsystems/vcpkg.cmake --config ${{ matrix.build_type }}
 
       - name: Test
         working-directory: ${{ steps.strings.outputs.build-output-dir }}
-        # Execute tests defined by the CMake configuration. Note that --build-config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
-        # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
         run: ctest --build-config ${{ matrix.build_type }}
 
       - name: Check the output of Windows
