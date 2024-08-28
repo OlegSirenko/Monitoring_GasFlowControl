@@ -51,7 +51,9 @@ jobs:
           install-linux-dependencies: true
           version: 2-latest
           version-sdl-image: 2-latest
-        if: runner.os == 'Windows'
+          add-to-environment: true
+          build-type: ${{ matrix.build_type }}
+
 
 
       - name: Install OpenGL libraries
@@ -68,16 +70,16 @@ jobs:
           fi
         shell: bash
 
-      - name: Build and install SDL2 from source
-        run: |
-          git clone https://github.com/libsdl-org/SDL.git -b SDL2
-          cd SDL
-          mkdir build
-          cd build
-          ../configure
-          make
-          sudo make install
-        if: runner.os == 'Linux'
+#      - name: Build and install SDL2 from source for Linux
+#        run: |
+#          git clone https://github.com/libsdl-org/SDL.git -b SDL2
+#          cd SDL
+#          mkdir build
+#          cd build
+#          ../configure
+#          make
+#          sudo make install
+#        if: runner.os == 'Linux'
 
       - name: Set reusable strings
         # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
