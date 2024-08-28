@@ -2,7 +2,9 @@ cmake_minimum_required(VERSION 3.27)
 project(GasFlowControlMonitoringApp)
 
 set(CMAKE_CXX_STANDARD 17)
-SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+if(UNIX)
+    SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
+endif ()
 
 # Find SDL2
 find_package(SDL2 CONFIG REQUIRED)
@@ -11,7 +13,6 @@ if(WIN32)
 #    find_package(Freetype CONFIG REQUIRED)
 endif ()
 
-# Include SDL2 directories
 include_directories(${SDL2_INCLUDE_DIRS})
 
 
@@ -55,6 +56,15 @@ if(WIN32)
     set(CMAKE_EXE_LINKER_FLAGS " -static")
     target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi)
 endif()
+
+if (WIN32)
+    set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
+    add_definitions(-D_WIN32_WINNT=0x0601)
+    set_target_properties(GasFlowControlMonitoringApp PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi)
+endif()
+
+
 
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
 
