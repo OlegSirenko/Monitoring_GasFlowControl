@@ -115,7 +115,7 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Build WiX on Windows x64
-        run: ls cmake-build-release/Release && cd Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl && ls && wix build .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x64 -out .\out\Setup_GasFlowControl_x64.msi
+        run: cd Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl && ls && wix build -ext WixToolset.VisualStudio.wixext .\Package.wxs .\Folders.wxs .\Package.en-us.wxl .\MainComponents.wxs -arch x64 -out .\out\Setup_GasFlowControl_x64.msi
         if: runner.os == 'Windows'
 
       - name: Upload a Windows Installer
