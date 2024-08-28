@@ -123,7 +123,7 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Build Wix bootstrapper
-        run: cd Deploy/Installer_GasFlowControl/Bootstrap/ && ls && wix build -arch x86 -ext WixToolset.BootstrapperApplications.wixext -ext WixToolset.Util.wixext -src .\install_vc_redist.wxs -out install_vc_redist.exe && ls
+        run: cd Deploy/Installer_GasFlowControl/Bootstrap/ && ls && wix build -arch x86 -ext WixToolset.BootstrapperApplications.wixext -ext WixToolset.Util.wixext -src .\install_vc_redist.wxs -out Setup_GasFlowControl.exe && ls
         if: runner.os == 'Windows'
 
       - name: Upload a Windows Installer
@@ -133,8 +133,8 @@ jobs:
           name: Installers
           # A file, directory or wildcard pattern that describes what to upload
           path: |
-            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x86.msi
-            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x64.msi
+#            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x86.msi
+#            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/GasFlowControl/GasFlowControl/out/Setup_GasFlowControl_x64.msi
             ${{ github.workspace }}/Deploy/Installer_GasFlowControl/Bootstrap/install_vc_redist.exe
           if-no-files-found: error # optional, default is warn
         if: runner.os == 'Windows'
