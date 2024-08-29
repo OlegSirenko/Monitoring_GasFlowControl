@@ -109,7 +109,7 @@ jobs:
 
       - name: Test
         working-directory: ${{ steps.strings.outputs.build-output-dir }}
-        run: ctest --build-config ${{ matrix.build_type }}
+        run: ctest --build-config ${{ matrix.build_type }} --rerun-failed --output-on-failure && type ${{ steps.strings.outputs.build-output-dir }}/Testing/Temporary/LastTest.log
 
       - name: Check the output of Windows
         run: ls  && ls cmake-build-release/Release
