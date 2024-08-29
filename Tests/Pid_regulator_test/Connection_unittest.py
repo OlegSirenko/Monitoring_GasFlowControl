@@ -18,11 +18,19 @@ def send_and_receive(s, data):
 # Define the server address and port
 server_address = ('localhost', 12000)  # replace with your server's IP and port
 
+# Determine the path to the executable
+build_dir = os.path.join(os.getcwd())
+if os.name == 'nt':  # Windows
+    executable_path = os.path.join(build_dir, 'Release', 'GasFlowControlMonitoringApp.exe')
+else:  # Unix-based systems
+    executable_path = os.path.join(build_dir, 'GasFlowControlMonitoringApp')
+
 # Start the server executable
 if os.name == 'nt':  # Windows
-    server_process = subprocess.Popen(['GasFlowControlMonitoringApp.exe'], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    server_process = subprocess.Popen([executable_path], creationflags=subprocess.CREATE_NEW_CONSOLE)
 else:  # Unix-based systems
-    server_process = subprocess.Popen(['./GasFlowControlMonitoringApp'])
+    server_process = subprocess.Popen([executable_path])
+
 
 # Give the server some time to start
 time.sleep(5)
