@@ -133,7 +133,7 @@ jobs:
           name: Installer
           # A file, directory or wildcard pattern that describes what to upload
           path: |
-            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/Bootstrap/install_vc_redist.exe
+            ${{ github.workspace }}/Deploy/Installer_GasFlowControl/Bootstrap/Setup_GasFlowControl.exe
           if-no-files-found: error # optional, default is warn
         if: runner.os == 'Windows'
 
