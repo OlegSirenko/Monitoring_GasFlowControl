@@ -6,6 +6,9 @@
 
 #include <cmath>
 
+#include "AppDocks.h"
+#include "imgui_internal.h"
+
 int PlotWindow::instance_count = 0;
 
 
@@ -19,7 +22,10 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
 
 
     window_name = "client_" + std::to_string(id);
-    if(ImGui::Begin(window_name.c_str())){
+    ImGui::DockBuilderDockWindow(window_name.c_str(), AppDocks::getSecondaryDock());
+
+
+    if(ImGui::Begin(window_name.c_str(), nullptr, ImGuiWindowFlags_NoMove)){
         if(ImPlot::BeginPlot("Data from Sensor") ){
             ImPlot::SetupAxes("Time, ms", "Data from sensor", ImPlotAxisFlags_AutoFit, ImPlotAxisFlags_AutoFit);
             ImPlot::PlotLine("Sensor input", times.data(), framerates.data(), framerates.size());
@@ -56,8 +62,7 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
             ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
             ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
             ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
-            ImGui::SliderFloat("max average error", &slider_error, 0.0005, 0.00001, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
-
+            ImGui::SliderFloat("max average error", &slider_error, 1, 0.5, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
             update_pid(setvalue_, current_data);
         }
     }
@@ -87,7 +92,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
 
         pid.AutoTuneController(average_error);
 
-        if(std::isgreater(std::abs(average_error),  this->slider_error)){
+        if(std::isgreater(this->slider_error, std::abs(average_error))){
             autotune_enabled = false;
             output_autotune = "Autotuning ended with " +
                               std::to_string(pid.Kp ) + " " +

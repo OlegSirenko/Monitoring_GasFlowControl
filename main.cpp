@@ -15,6 +15,8 @@
 #include "ServerModule.h"
 #include <boost/asio.hpp>
 #include <thread>
+#include "imgui_internal.h"
+#include <AppDocks.h>
 #include "resources/icon_256_gnome.c"
 
 
@@ -150,6 +152,8 @@ int main(int, char**)
         logs.emplace_back("Server closed");
     });
 
+    static bool firstLoop = true;
+    ImGuiSettingsHandler ini_handler;
 
     while (!done){
         handle_events(done, window);
@@ -158,7 +162,10 @@ int main(int, char**)
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
-        ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
+
+        if (firstLoop) {
+            AppDocks::init();
+        }
 
         //ImGui::ShowDemoWindow();
         auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
@@ -200,6 +207,7 @@ int main(int, char**)
         }
 
         SDL_GL_SwapWindow(window);
+        if (firstLoop) firstLoop = false;
     }
 
     // Cleanup

@@ -25,7 +25,7 @@ public:
         slider_kp = 0.025;
         slider_ki = 0.064;
         slider_kd = 0.28;
-        slider_error = 0.0004;
+        slider_error = 0.5;
         sum_errors = 0;
 
         setvalue_ = 0;

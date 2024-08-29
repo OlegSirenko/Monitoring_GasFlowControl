@@ -3,12 +3,14 @@
 //
 
 #include "ControlPanel.h"
-
+#include "AppDocks.h"
 
 void ControlPanel::Render(bool& connection_emitted, std::vector<std::string>& logs) {
 
+    ImGui::DockBuilderDockWindow("Control panel", AppDocks::getMainDock());
+    bool always_opened = true;
 
-    if (ImGui::Begin("Control panel")) // begin window
+    if (ImGui::Begin("Control panel", nullptr, ImGuiWindowFlags_NoMove)) // begin window
     {
         ImGui::SeparatorText("Server options");
 

@@ -49,6 +49,8 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         resources/icon_256_gnome.c
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
+        modules/AppDocks.cpp
+        modules/AppDocks.h
 )
 endif ()
 
@@ -70,4 +72,13 @@ target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-
 
 if(WIN32)
     target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+endif()
+
+
+# Add the Python test script to CMake tests
+enable_testing()
+if(WIN32)
+    add_test(NAME RunPythonClient COMMAND ${CMAKE_COMMAND} -E env cmd /c "python ${CMAKE_CURRENT_SOURCE_DIR}/Tests/Pid_regulator_test/Connection_unittest.py")
+else()
+    add_test(NAME RunPythonClient COMMAND ${CMAKE_COMMAND} -E env sh -c "python3 ${CMAKE_CURRENT_SOURCE_DIR}/Tests/Pid_regulator_test/Connection_unittest.py")
 endif()
