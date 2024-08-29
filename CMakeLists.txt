@@ -34,6 +34,8 @@ if (WIN32)
             resources/icon_256_gnome.c
             libs/implot/implot.cpp
             libs/implot/implot_items.cpp
+            modules/AppDocks.cpp
+            modules/AppDocks.h
     )
 endif ()
 
@@ -71,7 +73,7 @@ endif()
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
 
 if(WIN32)
-    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+#    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
 endif()
 
 
