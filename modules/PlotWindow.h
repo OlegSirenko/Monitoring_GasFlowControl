@@ -50,7 +50,7 @@ public:
 private:
     bool show_plot_window = true;
     std::vector<double> times;
-    std::vector<double> framerates;
+    std::vector<double> client_output;
     std::vector<double> pid_outs;
     int& window_width;
     int& window_position_x;
@@ -78,7 +78,8 @@ private:
 
     std::deque<double> recent_errors;
     double sum_errors;
-    const std::size_t max_errors_size = 100;
+    const std::size_t max_errors_size = 10;
+    int max_data_on_plot = 5000;
 
     double pid_output_;
     double current_data_;

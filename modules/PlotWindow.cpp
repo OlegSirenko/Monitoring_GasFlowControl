@@ -6,9 +6,6 @@
 
 #include <cmath>
 
-#include "AppDocks.h"
-#include "imgui_internal.h"
-
 int PlotWindow::instance_count = 0;
 
 
@@ -17,18 +14,22 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
     current_data_ = current_data;
 
     times.push_back(times_delta);
-    framerates.push_back(current_data_);
+    client_output.push_back(current_data_);
     pid_outs.push_back(pid_output_);
 
+    if (client_output.size() > max_data_on_plot) {
+        client_output.erase(client_output.begin());
+        times.erase(times.begin());
+        if(pid_enable)
+            pid_outs.erase(pid_outs.begin());
+    }
 
     window_name = "client_" + std::to_string(id);
-    ImGui::DockBuilderDockWindow(window_name.c_str(), AppDocks::getSecondaryDock());
 
-
-    if(ImGui::Begin(window_name.c_str(), nullptr, ImGuiWindowFlags_NoMove)){
+    if(ImGui::Begin(window_name.c_str())){
         if(ImPlot::BeginPlot("Data from Sensor") ){
             ImPlot::SetupAxes("Time, ms", "Data from sensor", ImPlotAxisFlags_AutoFit, ImPlotAxisFlags_AutoFit);
-            ImPlot::PlotLine("Sensor input", times.data(), framerates.data(), framerates.size());
+            ImPlot::PlotLine("Sensor input", times.data(), client_output.data(), client_output.size());
             if(pid_enable)
                 ImPlot::PlotLine("PID output", times.data(), pid_outs.data(), pid_outs.size());
             ImPlot::EndPlot();
@@ -62,9 +63,13 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
             ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
             ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
             ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
-            ImGui::SliderFloat("max average error", &slider_error, 1, 0.5, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
+            ImGui::SliderFloat("max average error", &slider_error, 50, 0.5, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
+
             update_pid(setvalue_, current_data);
         }
+        ImGui::SeparatorText("Plot configaration");
+        ImGui::SliderInt("Num values on plot", &max_data_on_plot, 100, 50000);
+
     }
     ImGui::EndChild();
     ImGui::End();

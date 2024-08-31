@@ -19,7 +19,6 @@ server_address = ('localhost', 12000)  # replace with your server's IP and port
 # Temperature simulation parameters
 ambient_temperature = 25.0  # Ambient temperature in degrees Celsius
 current_temperature = ambient_temperature
-setpoint = 100.0  # Desired temperature in degrees Celsius
 heating_power = 0.0
 
 # Create a TCP/IP socket
@@ -32,7 +31,7 @@ try:
 
     while True:
         # Simulate the effect of heating power on the temperature
-        current_temperature += (heating_power - (current_temperature - ambient_temperature) * 0.1) * 0.01
+        current_temperature += (heating_power - (current_temperature - ambient_temperature) * 0.01) * 0.001
 
         # Use the common function to send the current temperature and receive PID output
         heating_power = send_and_receive(s, current_temperature)

@@ -34,8 +34,6 @@ if (WIN32)
             resources/icon_256_gnome.c
             libs/implot/implot.cpp
             libs/implot/implot_items.cpp
-            modules/AppDocks.cpp
-            modules/AppDocks.h
     )
 endif ()
 
@@ -51,8 +49,6 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         resources/icon_256_gnome.c
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
-        modules/AppDocks.cpp
-        modules/AppDocks.h
 )
 endif ()
 
