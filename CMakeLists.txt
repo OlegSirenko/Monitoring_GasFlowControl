@@ -69,5 +69,14 @@ endif()
 target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
 
 if(WIN32)
-    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+#    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+endif()
+
+
+# Add the Python test script to CMake tests
+enable_testing()
+if(WIN32)
+    add_test(NAME RunPythonClient COMMAND ${CMAKE_COMMAND} -E env cmd /c "python ${CMAKE_CURRENT_SOURCE_DIR}/Tests/Pid_regulator_test/Connection_unittest.py")
+else()
+    add_test(NAME RunPythonClient COMMAND ${CMAKE_COMMAND} -E env sh -c "python3 ${CMAKE_CURRENT_SOURCE_DIR}/Tests/Pid_regulator_test/Connection_unittest.py")
 endif()

@@ -4,9 +4,7 @@
 
 #include "ControlPanel.h"
 
-
 void ControlPanel::Render(bool& connection_emitted, std::vector<std::string>& logs) {
-
 
     if (ImGui::Begin("Control panel")) // begin window
     {

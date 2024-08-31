@@ -15,6 +15,7 @@
 #include "ServerModule.h"
 #include <boost/asio.hpp>
 #include <thread>
+#include "imgui_internal.h"
 #include "resources/icon_256_gnome.c"
 
 
@@ -150,7 +151,6 @@ int main(int, char**)
         logs.emplace_back("Server closed");
     });
 
-
     while (!done){
         handle_events(done, window);
 
@@ -158,6 +158,7 @@ int main(int, char**)
         ImGui_ImplOpenGL2_NewFrame();
         ImGui_ImplSDL2_NewFrame();
         ImGui::NewFrame();
+
         ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 
         //ImGui::ShowDemoWindow();
