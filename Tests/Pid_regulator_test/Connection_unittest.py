@@ -3,6 +3,7 @@ import time
 import subprocess
 import os
 import random
+import shlex
 
 def receive_initial_message(s):
     # Receive the initial datetime string from the server
@@ -12,25 +13,20 @@ def receive_initial_message(s):
 def send_and_receive(s, data):
     # Send the data and receive the response
     s.sendall(str(data).encode('utf-8'))
-    response = s.recv(1024)
-    return float(response.decode('utf-8'))
+    resp = s.recv(1024)
+    return float(resp.decode('utf-8'))
 
 # Define the server address and port
 server_address = ('localhost', 12000)  # replace with your server's IP and port
 
-# Determine the path to the executable
+# Ensure the executable path is trusted and validated
 build_dir = os.path.join(os.getcwd())
 if os.name == 'nt':  # Windows
     executable_path = os.path.join(build_dir, 'Release', 'GasFlowControlMonitoringApp.exe')
+    server_process = subprocess.Popen([shlex.quote(executable_path)], creationflags=subprocess.CREATE_NEW_CONSOLE)
 else:  # Unix-based systems
     executable_path = os.path.join(build_dir, 'GasFlowControlMonitoringApp')
-
-# Start the server executable
-if os.name == 'nt':  # Windows
-    server_process = subprocess.Popen([executable_path], creationflags=subprocess.CREATE_NEW_CONSOLE)
-else:  # Unix-based systems
-    server_process = subprocess.Popen([executable_path])
-
+    server_process = subprocess.Popen([shlex.quote(executable_path)])
 
 # Give the server some time to start
 time.sleep(5)

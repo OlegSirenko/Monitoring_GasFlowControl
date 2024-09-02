@@ -1,6 +1,5 @@
 import socket
-import time
-import math
+
 
 def receive_initial_message(s):
     # Receive the initial datetime string from the server

@@ -20,8 +20,7 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
     if (client_output.size() > max_data_on_plot) {
         client_output.erase(client_output.begin());
         times.erase(times.begin());
-        if(pid_enable)
-            pid_outs.erase(pid_outs.begin());
+        pid_outs.erase(pid_outs.begin());
     }
 
     window_name = "client_" + std::to_string(id);
