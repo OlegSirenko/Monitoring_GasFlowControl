@@ -4,21 +4,21 @@
 
 using namespace std;
 
-PID::PID() {}
+PID::PID() = default;
 
-PID::~PID() {}
+PID::~PID() = default;
 
 ///=============================================================================
 ///  @brief  PID::Init()
 ///          Initialize the PID Controller.
 ///          
-///  @param  kp: Proportional control value 
-///  @param  ki: Integral control value
-///  @param  kd: Derivative control value
+///  @param  Kp: Proportional control value
+///  @param  Ki: Integral control value
+///  @param  Kd: Derivative control value
 ///
 ///  @retval: void
 ///=============================================================================
-void PID::Init( double Kp, double Ki, double Kd ) {
+void PID::Init(const double Kp, const double Ki, const double Kd ) {
 
   this->Kp = Kp;
   this->Ki = Ki;
@@ -45,7 +45,7 @@ void PID::Init( double Kp, double Ki, double Kd ) {
 ///
 ///  @retval: void
 ///=============================================================================
-void PID::UpdateError( double cte ) {
+void PID::UpdateError(const double cte ) {
   const double prev_cte = this->p_error;
 
   const bool under_windup_limit = ( this->i_error + cte ) < Ki_WINDUP_LIMIT;

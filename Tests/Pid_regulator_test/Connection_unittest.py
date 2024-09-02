@@ -23,7 +23,7 @@ server_address = ('localhost', 12000)  # replace with your server's IP and port
 build_dir = os.path.join(os.getcwd())
 if os.name == 'nt':  # Windows
     executable_path = os.path.join(build_dir, 'Release', 'GasFlowControlMonitoringApp.exe')
-    server_process = subprocess.Popen([shlex.quote(executable_path)], creationflags=subprocess.CREATE_NEW_CONSOLE)
+    server_process = subprocess.Popen([executable_path], creationflags=subprocess.CREATE_NEW_CONSOLE)
 else:  # Unix-based systems
     executable_path = os.path.join(build_dir, 'GasFlowControlMonitoringApp')
     server_process = subprocess.Popen([shlex.quote(executable_path)])

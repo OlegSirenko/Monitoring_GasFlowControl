@@ -16,14 +16,14 @@ class PID {
 public:
   
   // Errors
-  double p_error;
-  double i_error;
-  double d_error;
+  double p_error{};
+  double i_error{};
+  double d_error{};
 
   // Coefficients
-  double Kp;
-  double Ki;
-  double Kd;
+  double Kp{};
+  double Ki{};
+  double Kd{};
 
   // Constant Defines
   const double TOLERANCE = 0.01;
@@ -32,13 +32,13 @@ public:
 
   // AutoTuneController variables
   double best_error = 999.9;
-  int sample_index;
+  int sample_index{};
   std::vector<double> p;
   std::vector<double> dp;
-  int tune_state;
-  int next_state;
-  int K_index;
-  int next_index;
+  int tune_state{};
+  int next_state{};
+  int K_index{};
+  int next_index{};
 
   // Constructor
   PID();
