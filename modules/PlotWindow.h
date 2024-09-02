@@ -42,7 +42,7 @@ public:
         instance_count--;
     }
 
-    void Render(long, double, std::string);
+    void Render(double, double, std::string);
     void update_pid(double, double);
     [[nodiscard]] double GetPidOutput() const;
 

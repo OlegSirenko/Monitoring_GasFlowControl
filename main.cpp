@@ -10,13 +10,13 @@
 #include <chrono>
 #include "ControlPanel.h"
 #include "PlotWindow.h"
-#include "resources/ExoFontEmbedded_utf8.cpp"
+#include "resources/include/ExoFontEmbedded_utf8.cpp"
 #include "mainMenu.h"
 #include "ServerModule.h"
 #include <boost/asio.hpp>
 #include <thread>
 #include "imgui_internal.h"
-#include "resources/icon_256_gnome.c"
+#include "resources/include/icon_256_gnome.c"
 
 
 void handle_events(bool&, SDL_Window*);
@@ -26,7 +26,7 @@ void update_plot_windows(const std::shared_ptr<tcp_server>& server,
                          int window_position_y, bool attach_window);
 
 
-void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  long current_time);
+void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  double current_time);
 
 void embraceTheDarkness();
 
@@ -162,9 +162,8 @@ int main(int, char**)
         ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 
         //ImGui::ShowDemoWindow();
-        auto now = std::chrono::system_clock::now();  // Calculate the time elapsed since the start of the application in seconds
-        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(now - start);
-        const auto current_time = elapsed.count();
+
+        const double current_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
 
         mainMenu::Render();
 
@@ -253,7 +252,7 @@ void update_plot_windows(const std::shared_ptr<tcp_server>& server, std::unorder
 }
 
 
-void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, const long current_time) {
+void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap, const double current_time) {
     auto connections = server->get_connections();
     for (auto & connection : connections) {
         const auto& plotWindow = plotWindowsMap[connection];
