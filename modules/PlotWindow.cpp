@@ -122,7 +122,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
 
 double PlotWindow::GetPidOutput() const {
     if(!pid_enable)  // if PID regulator is not enabled -> send the same data that we get
-        return current_data_;
+        return 0;
     return pid_output_;
 }
 
