@@ -33,7 +33,7 @@ if (WIN32)
             # libs
             libs/implot/implot.cpp
             libs/implot/implot_items.cpp
-            libs/include/json.hpp
+#            libs/include/json.hpp
             # fonts and icons
             resources/include/ExoFontEmbedded_utf8.cpp
             resources/include/icon_256.c
