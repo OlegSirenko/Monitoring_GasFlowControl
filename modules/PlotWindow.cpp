@@ -5,30 +5,31 @@
 #include "PlotWindow.h"
 
 #include <cmath>
+#include <implot/implot_internal.h>
 
 int PlotWindow::instance_count = 0;
 
 
-void PlotWindow::Render(const long times_delta, const double current_data, std::string window_name) {
+void PlotWindow::Render(const double time_now_ms, const double current_data, std::string window_name) {
     pid_output_ = pid.GetValue();
     current_data_ = current_data;
+    times.push_back(time_now_ms);
 
-    times.push_back(times_delta);
     client_output.push_back(current_data_);
     pid_outs.push_back(pid_output_);
 
     if (client_output.size() > max_data_on_plot) {
-        client_output.erase(client_output.begin());
-        times.erase(times.begin());
-        if(pid_enable)
-            pid_outs.erase(pid_outs.begin());
+        size_t excess_elements = client_output.size() - max_data_on_plot;
+        client_output.erase(client_output.begin(), client_output.begin() + excess_elements);
+        times.erase(times.begin(), times.begin() + excess_elements);
+        pid_outs.erase(pid_outs.begin(), pid_outs.begin() + excess_elements);
     }
 
     window_name = "client_" + std::to_string(id);
 
     if(ImGui::Begin(window_name.c_str())){
         if(ImPlot::BeginPlot("Data from Sensor") ){
-            ImPlot::SetupAxes("Time, ms", "Data from sensor", ImPlotAxisFlags_AutoFit, ImPlotAxisFlags_AutoFit);
+            ImPlot::SetupAxes("Time, ms", "Data from sensor", ImPlotAxisFlags_AutoFit, ImPlotAxisFlags_AutoFit );
             ImPlot::PlotLine("Sensor input", times.data(), client_output.data(), client_output.size());
             if(pid_enable)
                 ImPlot::PlotLine("PID output", times.data(), pid_outs.data(), pid_outs.size());
@@ -38,7 +39,7 @@ void PlotWindow::Render(const long times_delta, const double current_data, std::
     }
     ImGui::Separator();
     if(ImGui::BeginChild("Data", ImVec2(640, 20))){
-        const std::string output = "Accepted data from client: " + std::to_string(current_data) + " At " + std::to_string(times_delta / 1000) + " seconds from started application";
+        const std::string output = "Accepted data from client: " + std::to_string(current_data) + " At " + std::to_string(time_now_ms);
         ImGui::Text("%s", output.c_str());
     }
     ImGui::EndChild();
@@ -121,7 +122,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
 
 double PlotWindow::GetPidOutput() const {
     if(!pid_enable)  // if PID regulator is not enabled -> send the same data that we get
-        return current_data_;
+        return 0;
     return pid_output_;
 }
 

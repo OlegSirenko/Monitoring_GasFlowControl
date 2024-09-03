@@ -4,21 +4,21 @@
 
 using namespace std;
 
-PID::PID() {}
+PID::PID() = default;
 
-PID::~PID() {}
+PID::~PID() = default;
 
 ///=============================================================================
 ///  @brief  PID::Init()
 ///          Initialize the PID Controller.
 ///          
-///  @param  kp: Proportional control value 
-///  @param  ki: Integral control value
-///  @param  kd: Derivative control value
+///  @param  Kp: Proportional control value
+///  @param  Ki: Integral control value
+///  @param  Kd: Derivative control value
 ///
 ///  @retval: void
 ///=============================================================================
-void PID::Init( double Kp, double Ki, double Kd ) {
+void PID::Init(const double Kp, const double Ki, const double Kd ) {
 
   this->Kp = Kp;
   this->Ki = Ki;
@@ -45,7 +45,7 @@ void PID::Init( double Kp, double Ki, double Kd ) {
 ///
 ///  @retval: void
 ///=============================================================================
-void PID::UpdateError( double cte ) {
+void PID::UpdateError(const double cte ) {
   const double prev_cte = this->p_error;
 
   const bool under_windup_limit = ( this->i_error + cte ) < Ki_WINDUP_LIMIT;
@@ -71,7 +71,7 @@ void PID::AutoTuneController(const double cte ) {
   cout << __func__ <<":"<< __LINE__ << " p,i,d errors:" << this->p_error << " "<< this->i_error  << " " << this->d_error << endl;
   cout << __func__ <<":"<< __LINE__ << " P values " << this->p[0] << " "<< this->p[1]  << " " << this->p[2] << endl;
 
-  switch ( this->tune_state ) 
+  switch ( this->tune_state )
   {
     case INCREASE_P:
       this->p[ this->K_index ] += this->dp[ this->K_index ];

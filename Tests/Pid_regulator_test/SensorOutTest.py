@@ -1,6 +1,5 @@
 import socket
-import time
-import math
+
 
 def receive_initial_message(s):
     # Receive the initial datetime string from the server
@@ -17,8 +16,8 @@ def send_and_receive(s, data):
 server_address = ('localhost', 12000)  # replace with your server's IP and port
 
 # Temperature simulation parameters
-ambient_temperature = 25.0  # Ambient temperature in degrees Celsius
-current_temperature = ambient_temperature
+ambient_temperature = 24  # Ambient temperature in degrees Celsius
+current_temperature = 10 
 heating_power = 0.0
 
 # Create a TCP/IP socket
@@ -31,10 +30,14 @@ try:
 
     while True:
         # Simulate the effect of heating power on the temperature
-        current_temperature += (heating_power - (current_temperature - ambient_temperature) * 0.01) * 0.001
+        current_temperature += (heating_power - (current_temperature - ambient_temperature) * 0.1) * 0.1
 
         # Use the common function to send the current temperature and receive PID output
         heating_power = send_and_receive(s, current_temperature)
+        if heating_power < 0:
+            heating_power = 0
+        elif heating_power > 256:
+            heating_power = 256
         print(f'Current Temperature: {current_temperature:.2f} °C, PID Output (Heating Power): {heating_power:.2f}')
 
 finally:

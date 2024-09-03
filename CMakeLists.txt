@@ -24,31 +24,42 @@ include_directories(modules)
 
 if (WIN32)
     add_executable(GasFlowControlMonitoringApp WIN32 main.cpp
+            # modules
             modules/PlotWindow.cpp
             modules/ControlPanel.cpp
             modules/PID.cpp
             modules/ServerModule.cpp
             modules/mainMenu.cpp
-            resources/ExoFontEmbedded_utf8.cpp
-            resources/icon_256.c
-            resources/icon_256_gnome.c
+            # libs
             libs/implot/implot.cpp
             libs/implot/implot_items.cpp
+#            libs/include/json.hpp
+            # fonts and icons
+            resources/include/ExoFontEmbedded_utf8.cpp
+            resources/include/icon_256.c
+            resources/include/icon_256_gnome.c
+
     )
 endif ()
 
 if (UNIX)
 add_executable(GasFlowControlMonitoringApp main.cpp
+        # modules
         modules/PlotWindow.cpp
         modules/ControlPanel.cpp
         modules/PID.cpp
         modules/ServerModule.cpp
         modules/mainMenu.cpp
-        resources/ExoFontEmbedded_utf8.cpp
-        resources/icon_256.c
-        resources/icon_256_gnome.c
+        # fonts and icons
+        resources/include/ExoFontEmbedded_utf8.cpp
+        resources/include/icon_256.c
+        resources/include/icon_256_gnome.c
+        # libs
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
+#        libs/include/json.hpp
+#        modules/GradientDescent.cpp
+#        modules/GradientDescent.h
 )
 endif ()
 
