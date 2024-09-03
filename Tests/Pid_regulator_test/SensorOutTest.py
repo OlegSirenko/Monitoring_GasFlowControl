@@ -36,7 +36,7 @@ try:
         heating_power = send_and_receive(s, current_temperature)
         if heating_power < 0:
             heating_power = 0
-        elif heating_power > 250:
+        elif heating_power > 256:
             heating_power = 256
         print(f'Current Temperature: {current_temperature:.2f} °C, PID Output (Heating Power): {heating_power:.2f}')
 
