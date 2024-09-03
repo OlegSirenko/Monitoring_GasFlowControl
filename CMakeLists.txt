@@ -57,7 +57,7 @@ add_executable(GasFlowControlMonitoringApp main.cpp
         # libs
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
-        libs/include/json.hpp
+#        libs/include/json.hpp
 #        modules/GradientDescent.cpp
 #        modules/GradientDescent.h
 )
