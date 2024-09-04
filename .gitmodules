@@ -5,6 +5,3 @@
 [submodule "Deploy/Installer_GasFlowControl"]
 	path = Deploy/Installer_GasFlowControl
 	url = git@github.com:OlegSirenko/Installer_GasFlowControl.git
-[submodule "libs/ImGuiNotify"]
-	path = libs/ImGuiNotify
-	url = git@github.com:OlegSirenko/ImGuiNotify.git
