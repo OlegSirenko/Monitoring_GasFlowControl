@@ -7,6 +7,8 @@
 #include <cmath>
 #include <implot/implot_internal.h>
 
+#include "include/ImGuiNotify.hpp"
+
 int PlotWindow::instance_count = 0;
 
 
@@ -48,25 +50,15 @@ void PlotWindow::Render(const double time_now_ms, const double current_data, std
         ImGui::SeparatorText("PID control");
 
         if(ImGui::Button(enable_pid_button_label.c_str())){
+            if(pid_enable) ImGui::InsertNotification({ImGuiToastType::Success, 5000, "PID is disabled now"});
+            else ImGui::InsertNotification({ImGuiToastType::Success, 5000, "PID is enabled now"});
+            ImGui::InsertNotification({ImGuiToastType::Warning, 5000, "Use PID regulation carefully!"});
             enable_pid_button_label = pid_enable ? "Enable PID configuration" : "Disable PID control" ;
             pid_enable = !pid_enable;
         }
 
         if(pid_enable){
-            ImGui::SameLine();
-            enable_autotune_button_label = autotune_enabled ? "Disable autotune" : "Enable autotune";
-            if(ImGui::Button(enable_autotune_button_label.c_str())){
-                autotune_enabled = !autotune_enabled;
-                std::cout<<"Button autotune clocked: "<<autotune_enabled<<std::endl;
-            }
-
-            ImGui::InputDouble("Set Value", &setvalue_, 1, 10);
-            ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
-            ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
-            ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
-            ImGui::SliderFloat("max average error", &slider_error, 50, 0.5, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
-
-            update_pid(setvalue_, current_data);
+            widget_pid_config(current_data);
         }
         ImGui::SeparatorText("Plot configaration");
         ImGui::SliderInt("Num values on plot", &max_data_on_plot, 100, 50000);
@@ -88,6 +80,16 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
 
     const double average_error = sum_errors / recent_errors.size();
 
+    if(ImGui::GetHoveredID() == ImGui::GetID("max average error")) {
+        if(!std::isgreater(slider_error,average_error/2)) {
+            ImGui::BeginTooltip();
+            ImGui::Text("Max average error is too small!");
+            ImGui::EndTooltip();
+        }
+
+
+    }
+
     if (autotune_enabled) {
         std::string output_autotune = "Started autotuning " +
                                       std::to_string(pid.Kp ) + " " +
@@ -107,7 +109,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
                               "\n Average Error == " + std::to_string(average_error);
             std::cout<<output_autotune<<std::endl;
             slider_kp = pid.Kp;
-            slider_ki = pid.Ki;
+            slider_ki = use_abs ? fabs(pid.Ki) : pid.Ki;
             slider_kd = pid.Kd;
         }
             std::cout << "After checking error: " << "average_error = " << average_error << ", slider_error = " << slider_error << ", autotune_enabled = " << autotune_enabled << std::endl;
@@ -127,4 +129,24 @@ double PlotWindow::GetPidOutput() const {
 }
 
 
+void PlotWindow::widget_pid_config(const double current_data_) {
+    ImGui::SameLine();
+    enable_autotune_button_label = autotune_enabled ? "Disable autotune" : "Enable autotune";
+    if(ImGui::Button(enable_autotune_button_label.c_str())){
+        autotune_enabled = !autotune_enabled;
+        std::cout<<"Button autotune clocked: "<<autotune_enabled<<std::endl;
+    }
+
+    ImGui::InputDouble("Set Value", &setvalue_, 1, 10, "%.6f", ImGuiInputTextFlags_EnterReturnsTrue);
+    ImGui::SliderFloat("Kp", &slider_kp, -1, 1);
+
+    ImGui::SliderFloat("Ki", &slider_ki, -1, 1);
+    ImGui::SameLine();
+    ImGui::Checkbox("Use only positive values", &use_abs);
+
+    ImGui::SliderFloat("Kd", &slider_kd, -1, 1);
+    ImGui::SliderFloat("max average error", &slider_error, 50, 0.5, "%.5f", ImGuiSliderFlags_NoRoundToFormat);
+
+    update_pid(setvalue_, current_data_);
+}
 
