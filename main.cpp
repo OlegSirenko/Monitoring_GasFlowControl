@@ -21,7 +21,8 @@
 #include <thread>
 #include "imgui_internal.h"
 #include "resources/include/icon_256_gnome.c"
-
+#include "resources/include/fa-regular-400.h"
+#include "resources/include/fa-solid-900.h"
 
 void handle_events(bool&, SDL_Window*);
 void update_plot_windows(const std::shared_ptr<tcp_server>& server,
@@ -121,25 +122,18 @@ int main(int, char**)
     ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
     ImGui_ImplOpenGL2_Init();
 
+    constexpr float baseFontSize = 17.0f; // Default font size
+    constexpr float iconFontSize = baseFontSize * 2.0f / 3.0f; // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
 
-    ImFont* main_font = io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, 17);
+    ImFont* main_font = io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, baseFontSize);
     io.Fonts->AddFontDefault();
-    float baseFontSize = 18.0f; // Default font size
-    float iconFontSize = baseFontSize * 2.0f / 3.0f; // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
-
-    if (std::ifstream fontAwesomeFile(FONT_ICON_FILE_NAME_FAS); !fontAwesomeFile.good())
-    {
-        // If it's not good, then we can't find the font and should abort
-        std::cerr << "Could not find the FontAwesome font file." << std::endl;
-        abort();
-    }
 
     static constexpr ImWchar iconsRanges[] = {ICON_MIN_FA, ICON_MAX_16_FA, 0};
     ImFontConfig iconsConfig;
     iconsConfig.MergeMode = true;
     iconsConfig.PixelSnapH = true;
     iconsConfig.GlyphMinAdvanceX = iconFontSize;
-    ImFont* notify_font =  io.Fonts->AddFontFromFileTTF(FONT_ICON_FILE_NAME_FAS, iconFontSize, &iconsConfig, iconsRanges);
+    ImFont* notify_font =  io.Fonts->AddFontFromMemoryCompressedTTF(fa_solid_900_compressed_data, fa_solid_900_compressed_size, iconFontSize, &iconsConfig, iconsRanges);
 
     constexpr auto clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
 
@@ -179,10 +173,11 @@ int main(int, char**)
             socket.connect(ep);
             boost::asio::ip::address addr = socket.local_endpoint().address();
             logs.emplace_back("Server started at: "+addr.to_string()+":12000");
+            ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
         } catch (std::exception& e){
             std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
-            ImGui::InsertNotification({ImGuiToastType::Error, 3000, "Could not deal with socket. Exception: %s",  e.what()});
-            ImGui::InsertNotification({ImGuiToastType::Info, 3000, "Server Started on localhost:12000 \n You still could connect to server!"});
+            ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});
+            ImGui::InsertNotification({ImGuiToastType::Info, 10000, "Server Started on localhost:12000 \n You still could connect to server!"});
             logs.emplace_back("Server started at: 127.0.0.1:12000");
         }
         io_context->run();

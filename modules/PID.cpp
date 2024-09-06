@@ -47,9 +47,7 @@ void PID::Init(const double Kp, const double Ki, const double Kd ) {
 ///=============================================================================
 void PID::UpdateError(const double cte ) {
   const double prev_cte = this->p_error;
-
-  const bool under_windup_limit = ( this->i_error + cte ) < Ki_WINDUP_LIMIT;
-
+  const bool under_windup_limit = fabs( this->i_error + cte ) < Ki_WINDUP_LIMIT;
   this->p_error = cte;
   this->i_error = ( under_windup_limit ) ? this->i_error+cte : 0;
   this->d_error = cte - prev_cte;

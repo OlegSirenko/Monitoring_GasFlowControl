@@ -86,8 +86,14 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
             ImGui::Text("Max average error is too small!");
             ImGui::EndTooltip();
         }
+    }
 
-
+    if(ImGui::GetHoveredID() == ImGui::GetID("Enable autotune")) {
+        if(!std::isgreater(slider_error,average_error/2)) {
+            ImGui::BeginTooltip();
+            ImGui::Text("Enabling autotune may broke the behaviour of your system! \nMax average error is too small!");
+            ImGui::EndTooltip();
+        }
     }
 
     if (autotune_enabled) {

@@ -26,7 +26,7 @@ void tcp_server::handle_accept(const tcp_connection::pointer &new_connection, co
         connection_count_++;
         connections_.push_back(new_connection);
         std::cout << "New connection from: " << new_connection->get_ip() <<":"<<new_connection->get_port()<< std::endl;
-        ImGui::InsertNotification({ImGuiToastType::Info, 3000, "New connection from: %s:%d", new_connection->get_ip().c_str(), new_connection->get_port()});
+        ImGui::InsertNotification({ImGuiToastType::Info, 10000, "New connection from: %s:%d", new_connection->get_ip().c_str(), new_connection->get_port()});
         std::cout << "Total connections count: " << connection_count_ << std::endl;
         new_connection->start();
 
