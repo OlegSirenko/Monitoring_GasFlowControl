@@ -11,6 +11,11 @@
 
 int PlotWindow::instance_count = 0;
 
+void create_tooltip_button(const std::string& text) {
+        ImGui::BeginTooltip();
+        ImGui::Text(text.c_str());
+        ImGui::EndTooltip();
+}
 
 void PlotWindow::Render(const double time_now_ms, const double current_data, std::string window_name) {
     pid_output_ = pid.GetValue();
@@ -50,12 +55,15 @@ void PlotWindow::Render(const double time_now_ms, const double current_data, std
         ImGui::SeparatorText("PID control");
 
         if(ImGui::Button(enable_pid_button_label.c_str())){
+
             if(pid_enable) ImGui::InsertNotification({ImGuiToastType::Success, 5000, "PID is disabled now"});
             else ImGui::InsertNotification({ImGuiToastType::Success, 5000, "PID is enabled now"});
             ImGui::InsertNotification({ImGuiToastType::Warning, 5000, "Use PID regulation carefully!"});
             enable_pid_button_label = pid_enable ? "Enable PID configuration" : "Disable PID control" ;
             pid_enable = !pid_enable;
         }
+        if(ImGui::IsItemHovered()) ImGui::SetTooltip("Switching on/off PID could destabilize client's behaviour!"
+                                                     "\n USE CAREFUL!", ImGuiWindowFlags_AlwaysAutoResize);
 
         if(pid_enable){
             widget_pid_config(current_data);
@@ -79,7 +87,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
     }
 
     const double average_error = sum_errors / recent_errors.size();
-
+    std::cout<<average_error<<std::endl;
     if(ImGui::GetHoveredID() == ImGui::GetID("max average error")) {
         if(!std::isgreater(slider_error,average_error/2)) {
             ImGui::BeginTooltip();
@@ -89,9 +97,9 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
     }
 
     if(ImGui::GetHoveredID() == ImGui::GetID("Enable autotune")) {
-        if(!std::isgreater(slider_error,average_error/2)) {
+        if(!std::isgreater(slider_error,fabs(average_error/2))) {
             ImGui::BeginTooltip();
-            ImGui::Text("Enabling autotune may broke the behaviour of your system! \nMax average error is too small!");
+            ImGui::Text("Max average error is too small!");
             ImGui::EndTooltip();
         }
     }
@@ -140,7 +148,7 @@ void PlotWindow::widget_pid_config(const double current_data_) {
     enable_autotune_button_label = autotune_enabled ? "Disable autotune" : "Enable autotune";
     if(ImGui::Button(enable_autotune_button_label.c_str())){
         autotune_enabled = !autotune_enabled;
-        std::cout<<"Button autotune clocked: "<<autotune_enabled<<std::endl;
+        std::cout<<"Button autotune clicked: "<<autotune_enabled<<std::endl;
     }
 
     ImGui::InputDouble("Set Value", &setvalue_, 1, 10, "%.6f", ImGuiInputTextFlags_EnterReturnsTrue);

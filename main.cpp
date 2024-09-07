@@ -29,9 +29,8 @@ void update_plot_windows(const std::shared_ptr<tcp_server>& server,
                          std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
                          int window_width, int window_height, int window_position_x,
                          int window_position_y, bool attach_window);
-
-
 void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  double current_time);
+std::string get_server_ip();
 
 void embraceTheDarkness();
 
@@ -163,23 +162,7 @@ int main(int, char**)
     // Start server
     std::thread server_thread([&io_context, &logs] {
         logs.emplace_back("Trying to get the IP address...");
-        try {
-            boost::asio::io_service netService;
-            boost::asio::ip::udp::resolver   resolver(netService);
-            boost::asio::ip::udp::resolver::query query(boost::asio::ip::udp::v4(), "google.com", "");
-            boost::asio::ip::udp::resolver::iterator endpoints = resolver.resolve(query);
-            boost::asio::ip::udp::endpoint ep = *endpoints;
-            boost::asio::ip::udp::socket socket(netService);
-            socket.connect(ep);
-            boost::asio::ip::address addr = socket.local_endpoint().address();
-            logs.emplace_back("Server started at: "+addr.to_string()+":12000");
-            ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
-        } catch (std::exception& e){
-            std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
-            ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});
-            ImGui::InsertNotification({ImGuiToastType::Info, 10000, "Server Started on localhost:12000 \n You still could connect to server!"});
-            logs.emplace_back("Server started at: 127.0.0.1:12000");
-        }
+        logs.emplace_back("Server started at: " + get_server_ip());
         io_context->run();
         logs.emplace_back("Server closed");
     });
@@ -307,4 +290,24 @@ void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_ma
     }
 }
 
-
+std::string get_server_ip() {
+    std::string ip;
+    try {
+        boost::asio::io_service netService;
+        boost::asio::ip::udp::resolver   resolver(netService);
+        boost::asio::ip::udp::resolver::query query(boost::asio::ip::udp::v4(), "google.com", "");
+        boost::asio::ip::udp::resolver::iterator endpoints = resolver.resolve(query);
+        boost::asio::ip::udp::endpoint ep = *endpoints;
+        boost::asio::ip::udp::socket socket(netService);
+        socket.connect(ep);
+        boost::asio::ip::address addr = socket.local_endpoint().address();
+        ip = addr.to_string();
+        ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
+    } catch (std::exception& e){
+        std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
+        ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});
+        ImGui::InsertNotification({ImGuiToastType::Info, 10000, "Server Started on localhost:12000 \n You still could connect to server!"});
+        ip = "127.0.0.1";
+    }
+    return ip+"12000";
+}
