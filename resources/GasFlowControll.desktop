@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Version=1.0.2
+Version=1.0
 Name=Gas Flow Control Monitor
 Comment=Monitoring for Gas Flow System
 Exec=GasFlowControlMonitoringApp
