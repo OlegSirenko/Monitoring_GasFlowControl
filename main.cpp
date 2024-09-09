@@ -309,5 +309,5 @@ std::string get_server_ip() {
         ImGui::InsertNotification({ImGuiToastType::Info, 10000, "Server Started on localhost:12000 \n You still could connect to server!"});
         ip = "127.0.0.1";
     }
-    return ip+"12000";
+    return ip+":12000";
 }
