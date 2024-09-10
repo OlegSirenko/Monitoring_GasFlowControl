@@ -8,25 +8,29 @@
 #include <SDL_opengl.h>
 #include <vector>
 #include <chrono>
+#include <fstream>
+
 #include "ControlPanel.h"
 #include "PlotWindow.h"
 #include "resources/include/ExoFontEmbedded_utf8.cpp"
+#include "resources/include/IconsFontAwesome6.h"
+#include "libs/include/ImGuiNotify.hpp"
 #include "mainMenu.h"
 #include "ServerModule.h"
 #include <boost/asio.hpp>
 #include <thread>
 #include "imgui_internal.h"
 #include "resources/include/icon_256_gnome.c"
-
+#include "resources/include/fa-regular-400.h"
+#include "resources/include/fa-solid-900.h"
 
 void handle_events(bool&, SDL_Window*);
 void update_plot_windows(const std::shared_ptr<tcp_server>& server,
                          std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,
                          int window_width, int window_height, int window_position_x,
                          int window_position_y, bool attach_window);
-
-
 void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_map<tcp_connection::pointer, std::unique_ptr<PlotWindow>>& plotWindowsMap,  double current_time);
+std::string get_server_ip();
 
 void embraceTheDarkness();
 
@@ -117,7 +121,18 @@ int main(int, char**)
     ImGui_ImplSDL2_InitForOpenGL(window, gl_context);
     ImGui_ImplOpenGL2_Init();
 
-    io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, 17);
+    constexpr float baseFontSize = 17.0f; // Default font size
+    constexpr float iconFontSize = baseFontSize * 2.0f / 3.0f; // FontAwesome fonts need to have their sizes reduced by 2.0f/3.0f in order to align correctly
+
+    ImFont* main_font = io.Fonts->AddFontFromMemoryCompressedTTF(ExoFont_compressed_data, ExoFont_compressed_size, baseFontSize);
+    io.Fonts->AddFontDefault();
+
+    static constexpr ImWchar iconsRanges[] = {ICON_MIN_FA, ICON_MAX_16_FA, 0};
+    ImFontConfig iconsConfig;
+    iconsConfig.MergeMode = true;
+    iconsConfig.PixelSnapH = true;
+    iconsConfig.GlyphMinAdvanceX = iconFontSize;
+    ImFont* notify_font =  io.Fonts->AddFontFromMemoryCompressedTTF(fa_solid_900_compressed_data, fa_solid_900_compressed_size, iconFontSize, &iconsConfig, iconsRanges);
 
     constexpr auto clear_color = ImVec4(0.0, 0.0f, 0.0f, 1.00f);
 
@@ -146,7 +161,8 @@ int main(int, char**)
 
     // Start server
     std::thread server_thread([&io_context, &logs] {
-        logs.emplace_back("Server started");
+        logs.emplace_back("Trying to get the IP address...");
+        logs.emplace_back("Server started at: " + get_server_ip());
         io_context->run();
         logs.emplace_back("Server closed");
     });
@@ -161,9 +177,9 @@ int main(int, char**)
 
         ImGui::DockSpaceOverViewport(0, ImGui::GetMainViewport());
 
-        //ImGui::ShowDemoWindow();
-
         const double current_time = std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+
+        ImGui::PushFont(main_font);
 
         mainMenu::Render();
 
@@ -177,10 +193,19 @@ int main(int, char**)
             render_windows(server, plotWindowsMap, current_time);
         }
         controlPanel->Render(connection_emitted, logs);
-
+        ImGui::PopFont();
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
 
+
+
+        // Notifications style setup
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowRounding, 0.f); // Disable round borders
+        ImGui::PushStyleVar(ImGuiStyleVar_WindowBorderSize, 0.f); // Disable borders
+        ImGui::PushFont(notify_font);
+        ImGui::RenderNotifications();
+        ImGui::PopStyleVar(2);
+        ImGui::PopFont();
 
         // Rendering
         ImGui::Render();
@@ -265,4 +290,24 @@ void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_ma
     }
 }
 
-
+std::string get_server_ip() {
+    std::string ip;
+    try {
+        boost::asio::io_service netService;
+        boost::asio::ip::udp::resolver   resolver(netService);
+        boost::asio::ip::udp::resolver::query query(boost::asio::ip::udp::v4(), "google.com", "");
+        boost::asio::ip::udp::resolver::iterator endpoints = resolver.resolve(query);
+        boost::asio::ip::udp::endpoint ep = *endpoints;
+        boost::asio::ip::udp::socket socket(netService);
+        socket.connect(ep);
+        boost::asio::ip::address addr = socket.local_endpoint().address();
+        ip = addr.to_string();
+        ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
+    } catch (std::exception& e){
+        std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
+        ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});
+        ImGui::InsertNotification({ImGuiToastType::Info, 10000, "Server Started on localhost:12000 \n You still could connect to server!"});
+        ip = "127.0.0.1";
+    }
+    return ip+":12000";
+}

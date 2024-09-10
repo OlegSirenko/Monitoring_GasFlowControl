@@ -17,7 +17,7 @@ server_address = ('localhost', 12000)  # replace with your server's IP and port
 
 # Temperature simulation parameters
 ambient_temperature = 24  # Ambient temperature in degrees Celsius
-current_temperature = 10 
+current_temperature = 10
 heating_power = 0.0
 
 # Create a TCP/IP socket

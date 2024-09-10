@@ -1,4 +1,5 @@
 #include "ServerModule.h"
+#include "include/ImGuiNotify.hpp"
 
 //------------------------- Server Methods ---------------------------------------------------------------------------//
 
@@ -25,11 +26,13 @@ void tcp_server::handle_accept(const tcp_connection::pointer &new_connection, co
         connection_count_++;
         connections_.push_back(new_connection);
         std::cout << "New connection from: " << new_connection->get_ip() <<":"<<new_connection->get_port()<< std::endl;
+        ImGui::InsertNotification({ImGuiToastType::Info, 10000, "New connection from: %s:%d", new_connection->get_ip().c_str(), new_connection->get_port()});
         std::cout << "Total connections count: " << connection_count_ << std::endl;
         new_connection->start();
 
         new_connection->set_close_callback([this, new_connection] {
             connection_count_--;
+            ImGui::InsertNotification({ImGuiToastType::Warning, 10000, "Connection closed %s:%d", new_connection->get_ip().c_str(), new_connection->get_port()});
             connections_.erase(std::remove(connections_.begin(), connections_.end(), new_connection), connections_.end());
             std::cout << "Connection closed. Total active connections: " << connection_count_ << std::endl;
         });

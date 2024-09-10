@@ -48,6 +48,7 @@ public:
 
 
 private:
+    void widget_pid_config(double);
     bool show_plot_window = true;
     std::vector<double> times;
     std::vector<double> client_output;
@@ -71,6 +72,7 @@ private:
 
     bool pid_enable; // flag to understand if the pid regulation is enabled; true if PID enabled -- false if disabled
     bool autotune_enabled; // flag to understand if the autotune is enabled.
+    bool use_abs = true;
     std::string enable_pid_button_label;
     std::string enable_autotune_button_label;
 
@@ -78,7 +80,7 @@ private:
 
     std::deque<double> recent_errors;
     double sum_errors;
-    const std::size_t max_errors_size = 10;
+    const std::size_t max_errors_size = 5;
     int max_data_on_plot = 5000;
 
     double pid_output_;
