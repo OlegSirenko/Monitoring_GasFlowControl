@@ -32,6 +32,7 @@ void tcp_server::handle_accept(const tcp_connection::pointer &new_connection, co
 
         new_connection->set_close_callback([this, new_connection] {
             connection_count_--;
+            ImGui::InsertNotification({ImGuiToastType::Warning, 10000, "Connection closed %s:%d", new_connection->get_ip().c_str(), new_connection->get_port()});
             connections_.erase(std::remove(connections_.begin(), connections_.end(), new_connection), connections_.end());
             std::cout << "Connection closed. Total active connections: " << connection_count_ << std::endl;
         });
