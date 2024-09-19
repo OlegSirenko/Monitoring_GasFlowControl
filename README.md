@@ -27,6 +27,11 @@ This project is currently in the preparation phase for its
 upcoming release. Stay tuned for more updates!
 
 This repository is first part of project: **Desktop application**.
+ 
+## Important!!!
+
+This application COULD BE used not only for Gas Flow Control System.
+The API of this app at the moment is very simple.
 
 ## References and Sources
 
@@ -35,6 +40,7 @@ This repository is first part of project: **Desktop application**.
 * For creating AppImage for Linux machines we used [LinuxDeploy utility](https://github.com/linuxdeploy/linuxdeploy)
 * For creating MSI installer we used [Wix Toolset v5.0.1](https://github.com/wixtoolset/wix)
 * For showing plots we used [ImPlot lib for ImGui](https://github.com/epezent/implot)
+* For showing notifications we used [ImGuiNotify](https://github.com/TyomaVader/ImGuiNotify)
 * For network communication we used [Boost](https://github.com/boostorg/boost)
 
 # How to install

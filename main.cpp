@@ -302,7 +302,7 @@ std::string get_server_ip() {
         socket.connect(ep);
         boost::asio::ip::address addr = socket.local_endpoint().address();
         ip = addr.to_string();
-        ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
+        ImGui::InsertNotification({ImGuiToastType::Success, 10000, "Server started at %s:12000", addr.to_string().c_str()});
     } catch (std::exception& e){
         std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
         ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});

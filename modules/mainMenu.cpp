@@ -95,28 +95,19 @@ void embraceTheDarkness()
 }
 
 
-static void ShowExampleMenuFile();
+static void ShowMenuFile();
+static void ShowEditMenu();
 
 void mainMenu::Render() {
     if (ImGui::BeginMainMenuBar())
     {
         if (ImGui::BeginMenu("File"))
         {
-            ShowExampleMenuFile();
+            ShowMenuFile();
             ImGui::EndMenu();
         }
         if (ImGui::BeginMenu("Edit")) {
-            if (ImGui::MenuItem("Undo", "CTRL+Z")) {
-            }
-            if (ImGui::MenuItem("Redo", "CTRL+Y", false, false)) {
-            } // Disabled item
-            ImGui::Separator();
-            if (ImGui::MenuItem("Cut", "CTRL+X")) {
-            }
-            if (ImGui::MenuItem("Copy", "CTRL+C")) {
-            }
-            if (ImGui::MenuItem("Paste", "CTRL+V")) {
-            }
+            ShowEditMenu();
             ImGui::EndMenu();
         }
         ImGui::EndMainMenuBar();
@@ -126,8 +117,15 @@ void mainMenu::Render() {
 
 // Note that shortcuts are currently provided for display only
 // (future version will add explicit flags to BeginMenu() to request processing shortcuts)
-static void ShowExampleMenuFile()
+static void ShowMenuFile()
 {
+    if (ImGui::MenuItem("Quit", "Alt+F4")) {
+        exit(0);
+    }
+}
+
+
+void ShowEditMenu() {
     ImGui::MenuItem("Change style", nullptr, false, false);
     static bool light = false;
     static bool dark = true;
@@ -144,9 +142,5 @@ static void ShowExampleMenuFile()
         embraceTheDarkness();
     }
     ImGui::Separator();
-    if (ImGui::MenuItem("Quit", "Alt+F4")) {
-        exit(0);
-    }
 }
-
 
