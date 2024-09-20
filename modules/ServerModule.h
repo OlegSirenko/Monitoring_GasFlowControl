@@ -27,7 +27,7 @@ public:
     void set_close_callback(const CloseCallback& callback);
     std::string get_latest_data();
     void send_data(const std::string&);
-
+    void update_sending_data(const std::string&);
 
 
 private:
@@ -42,7 +42,7 @@ private:
     tcp::socket socket_;
     std::string message_;
     char data_[128]{};
-
+    std::string latest_data_to_send_ = "0";
 
 };
 

@@ -77,7 +77,7 @@ void tcp_connection::start() {
 
 void tcp_connection::handle_write(const boost::system::error_code &error, size_t) const {
     if (!error){
-
+       //start_read();  // wait for new data from the client
     }
     else{
         // Handle the error
@@ -97,10 +97,13 @@ void tcp_connection::start_read() {
                                       boost::asio::placeholders::bytes_transferred));
 }
 
-void tcp_connection::handle_read(const boost::system::error_code &error, size_t bytes_transferred) {
+void tcp_connection::handle_read(const boost::system::error_code &error, const size_t bytes_transferred) {
     if (!error) {
         // Handle the data...
         data_[bytes_transferred] = '\0';
+        // Send the latest data after receiving data from the client
+        send_data(latest_data_to_send_);
+        // Continue reading from the client
         start_read();
     }
     else {
@@ -134,6 +137,11 @@ void tcp_connection::send_data(const std::string& data) {
                                          boost::bind(&tcp_connection::handle_write, shared_from_this(),
                                                        boost::asio::placeholders::error,
                                                        boost::asio::placeholders::bytes_transferred));
+}
+
+
+void tcp_connection::update_sending_data(const std::string &latest_data) {
+    latest_data_to_send_ = latest_data;
 }
 
 //--------------------------------------------------------------------------------------------------------------------//

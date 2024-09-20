@@ -1,5 +1,5 @@
 import socket
-
+import time
 
 def receive_initial_message(s):
     # Receive the initial datetime string from the server
@@ -39,6 +39,7 @@ try:
         elif heating_power > 256:
             heating_power = 256
         print(f'Current Temperature: {current_temperature:.2f} °C, PID Output (Heating Power): {heating_power:.2f}')
+        time.sleep(0.01)
 
 finally:
     s.close()
