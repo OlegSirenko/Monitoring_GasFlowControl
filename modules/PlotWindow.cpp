@@ -7,7 +7,6 @@
 #include <cmath>
 #include <implot/implot_internal.h>
 
-#include "include/ImGuiNotify.hpp"
 
 int PlotWindow::instance_count = 0;
 
@@ -25,8 +24,13 @@ void PlotWindow::Render(const double time_now_ms, const double current_data, std
     client_output.push_back(current_data_);
     pid_outs.push_back(pid_output_);
 
+    saved_input_data_.push_back(current_data_);
+    saved_time_data_.push_back(time_now_ms);
+    saved_pid_data_.push_back(pid_output_);
+
+
     if (client_output.size() > max_data_on_plot) {
-        size_t excess_elements = client_output.size() - max_data_on_plot;
+        const size_t excess_elements = client_output.size() - max_data_on_plot;
         client_output.erase(client_output.begin(), client_output.begin() + excess_elements);
         times.erase(times.begin(), times.begin() + excess_elements);
         pid_outs.erase(pid_outs.begin(), pid_outs.begin() + excess_elements);
@@ -63,12 +67,12 @@ void PlotWindow::Render(const double time_now_ms, const double current_data, std
             pid_enable = !pid_enable;
         }
         if(ImGui::IsItemHovered()) ImGui::SetTooltip("Switching on/off PID could destabilize client's behaviour!"
-                                                     "\n USE CAREFUL!", ImGuiWindowFlags_AlwaysAutoResize);
+                                                     "\n USE CAREFULLY!", ImGuiWindowFlags_AlwaysAutoResize);
 
         if(pid_enable){
             widget_pid_config(current_data);
         }
-        ImGui::SeparatorText("Plot configaration");
+        ImGui::SeparatorText("Plot configuration");
         ImGui::SliderInt("Num values on plot", &max_data_on_plot, 100, 50000);
 
     }
@@ -87,7 +91,7 @@ void PlotWindow::update_pid(const double set_point, const double input_data) {
     }
 
     const double average_error = sum_errors / recent_errors.size();
-    std::cout<<average_error<<std::endl;
+    //std::cout<<average_error<<std::endl;
     if(ImGui::GetHoveredID() == ImGui::GetID("max average error")) {
         if(!std::isgreater(slider_error,average_error/2)) {
             ImGui::BeginTooltip();

@@ -7,12 +7,29 @@
 
 #include "imgui.h"
 #include "implot/implot.h"
+#include "include/csvfile.h"
 #include <iostream>
 #include <vector>
 #include <chrono>
 #include <PID.h>
 #include <deque>
+#include <iomanip>
 #include <string>
+#include <filesystem> // For creating directories
+
+#include "include/ImGuiNotify.hpp"
+
+
+inline std::string format_time_milliseconds(const double milliseconds) {
+    const auto duration = std::chrono::milliseconds(static_cast<long long>(milliseconds));
+    const auto time_point = std::chrono::system_clock::time_point(duration);
+    const std::time_t time_t_format = std::chrono::system_clock::to_time_t(time_point);
+    const std::tm tm_format = *std::localtime(&time_t_format);
+    const auto ms = duration.count() % 1000;
+    std::ostringstream oss;
+    oss << std::put_time(&tm_format, "%H:%M:%S") << "." << std::setfill('0') << std::setw(3) << ms;
+    return oss.str();
+}
 
 
 class PlotWindow {
@@ -39,6 +56,25 @@ public:
     }
 
     ~PlotWindow(){
+        const std::string folder_path = "Plots/";
+        std::filesystem::create_directory(folder_path);
+
+        const auto t = std::time(nullptr);
+        const auto tm = *std::localtime(&t);
+
+        std::ostringstream oss;
+        oss << std::put_time(&tm, "%d-%m-%Y %H-%M-%S");
+        const auto datetime = oss.str();
+
+        std::cout << datetime << std::endl;
+
+        const std::string file_name = folder_path+"Client_" + std::to_string(instance_count) + " " + datetime + ".csv";
+        csvfile output_file(file_name, ",");
+        output_file << "Time" << "Input Data" << "PID Data" << endrow;
+        for (size_t i = 0; i < saved_time_data_.size(); ++i) {
+            output_file << format_time_milliseconds(saved_time_data_[i]) << saved_input_data_[i] << saved_pid_data_[i] << endrow;
+        }
+        std::cout<<"Saving all data for client_"<< instance_count << "..."<<std::endl;
         instance_count--;
     }
 
@@ -83,8 +119,12 @@ private:
     const std::size_t max_errors_size = 5;
     int max_data_on_plot = 5000;
 
-    double pid_output_;
-    double current_data_;
+    double pid_output_{};
+    double current_data_{};
+
+    std::vector<double> saved_input_data_;
+    std::vector<double> saved_pid_data_;
+    std::vector<double> saved_time_data_;
 
 };
 
