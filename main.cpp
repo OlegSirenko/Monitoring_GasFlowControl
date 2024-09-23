@@ -9,7 +9,6 @@
 #include <vector>
 #include <chrono>
 #include <fstream>
-
 #include "ControlPanel.h"
 #include "PlotWindow.h"
 #include "resources/include/ExoFontEmbedded_utf8.cpp"
@@ -21,8 +20,8 @@
 #include <thread>
 #include "imgui_internal.h"
 #include "resources/include/icon_256_gnome.c"
-#include "resources/include/fa-regular-400.h"
 #include "resources/include/fa-solid-900.h"
+
 
 void handle_events(bool&, SDL_Window*);
 void update_plot_windows(const std::shared_ptr<tcp_server>& server,
@@ -104,10 +103,8 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
-    io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
 
     embraceTheDarkness();
-
 
     // When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
     ImGuiStyle& style = ImGui::GetStyle();
@@ -141,8 +138,6 @@ int main(int, char**)
     bool connection_emitted = false;
 
     int window_height, window_width, window_position_x, window_position_y;
-
-    const auto start = std::chrono::system_clock::now();
 
     // Init server context and thread
     auto io_context = std::make_shared<boost::asio::io_context>();
@@ -183,6 +178,8 @@ int main(int, char**)
 
         mainMenu::Render();
 
+        mainMenu::ShowChosenPlot();
+
         connection_emitted = server->get_connections_count() > 0;
         controlPanel->num_connections = server->get_connections_count();
 
@@ -196,7 +193,6 @@ int main(int, char**)
         ImGui::PopFont();
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
-
 
 
         // Notifications style setup
@@ -285,7 +281,7 @@ void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_ma
             const double current_data_from_connection = std::stod(data);
             const std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
             plotWindow->Render(current_time, current_data_from_connection, plot_window_name);
-            connection->send_data(std::to_string(plotWindow->GetPidOutput()));
+            connection->update_sending_data(std::to_string(plotWindow->GetPidOutput()));
         }
     }
 }
@@ -302,7 +298,7 @@ std::string get_server_ip() {
         socket.connect(ep);
         boost::asio::ip::address addr = socket.local_endpoint().address();
         ip = addr.to_string();
-        ImGui::InsertNotification({ImGuiToastType::Success, 2000, "Server started at %s:12000", addr.to_string().c_str()});
+        ImGui::InsertNotification({ImGuiToastType::Success, 10000, "Server started at %s:12000", addr.to_string().c_str()});
     } catch (std::exception& e){
         std::cerr << "Could not deal with socket. Exception: " << e.what() << std::endl;
         ImGui::InsertNotification({ImGuiToastType::Error, 1000, "Could not deal with socket. Exception: %s",  e.what()});
