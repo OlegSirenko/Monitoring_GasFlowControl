@@ -1,11 +1,14 @@
 #pragma once
+#include <chrono>
 #include <string>
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include <sstream>
 #include <tuple>
 #include <utility>
 #include <vector>
+#include <algorithm>
 
 class csvfile;
 
@@ -19,6 +22,11 @@ class csvfile
     const std::string separator_;
     const std::string escape_seq_;
     const std::string special_chars_;
+public:
+    std::vector<double> time_data;
+    std::vector<double> input_data;
+    std::vector<double> pid_data;
+
 public:
     explicit csvfile(const std::string& filename, std::string  separator = ";")
         : fs_()
@@ -63,36 +71,60 @@ public:
         return write(escape(val));
     }
 
-    static std::tuple<std::vector<double>, std::vector<double>, std::vector<double>> ReadCSV(const std::string& file_path) {
-        std::vector<double> times;
-        std::vector<double> input_data;
-        std::vector<double> pid_output;
-
-        std::ifstream file(file_path);
-        if (!file.is_open()) {
-            std::cerr << "Failed to open file: " << file_path << std::endl;
-            return {times, input_data, pid_output};
-        }
-
+    static void read(const std::string& filename, std::vector<double>& time_data, std::vector<double>& input_data, std::vector<double>& pid_data) {
+        std::ifstream file(filename);
         std::string line;
+
+        // Check if the file is open
+        if (!file.is_open()) {
+            std::cerr << "Failed to open file: " << filename << std::endl;
+            return;
+        } else {
+            std::cout << "File opened successfully: " << filename << std::endl;
+        }
+
+        // Skip the header row
+        if (std::getline(file, line)) {
+            std::cout << "Header: " << line << std::endl;
+        } else {
+            std::cerr << "Failed to read header or file is empty." << std::endl;
+            return;
+        }
+
         while (std::getline(file, line)) {
-            std::stringstream line_stream(line);
-            std::string cell;
-            std::vector<double> row_data;
+            std::istringstream ss(line);
+            std::string time_str, input_str, pid_str;
 
-            while (std::getline(line_stream, cell, ',')) {
-                row_data.push_back(std::stod(cell));
-            }
+            if (std::getline(ss, time_str, ',') &&
+                std::getline(ss, input_str, ',') &&
+                std::getline(ss, pid_str, ',')) {
 
-            if (row_data.size() >= 3) { // Ensure there are at least 3 columns
-                times.push_back(row_data[0]);
-                input_data.push_back(row_data[1]);
-                pid_output.push_back(row_data[2]);
+                double input = std::stod(input_str);
+                double pid = std::stod(pid_str);
+
+                // Manually parse the time string
+                int hours, minutes, seconds, milliseconds;
+                char dot;
+
+                time_str.erase(std::remove(time_str.begin(), time_str.end(), '\"'), time_str.end());
+
+                std::sscanf(time_str.c_str(), "%d:%d:%d%c%d", &hours, &minutes, &seconds, &dot, &milliseconds);
+
+                std::cout<<"Original time: "<< time_str <<std::endl;
+
+                int time_in_milliseconds = (hours * 3600 + minutes * 60 + seconds) * 1000 + milliseconds;
+
+                std::cout << "Parsed time: " << time_in_milliseconds << " ms, input: " << input << ", pid: " << pid << std::endl;
+
+                time_data.push_back(time_in_milliseconds);
+                input_data.push_back(input);
+                pid_data.push_back(pid);
+            } else {
+                std::cerr << "Failed to parse line: " << line << std::endl;
             }
         }
-        file.close();
-        return {times, input_data, pid_output};
     }
+
 
     template<typename T>
     csvfile& operator << (const T& val)

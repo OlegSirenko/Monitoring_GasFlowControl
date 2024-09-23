@@ -1,7 +1,9 @@
+//#define ImDrawIdx unsigned int
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl2.h"
 #include "implot/implot.h"
+#include "implot/implot_demo.cpp"
 #include <memory>
 #include <cstdio>
 #include <SDL.h>
@@ -23,6 +25,7 @@
 #include "resources/include/icon_256_gnome.c"
 #include "resources/include/fa-regular-400.h"
 #include "resources/include/fa-solid-900.h"
+
 
 void handle_events(bool&, SDL_Window*);
 void update_plot_windows(const std::shared_ptr<tcp_server>& server,
@@ -104,7 +107,9 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
-    io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
+    //io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
+
+
 
     embraceTheDarkness();
 
@@ -183,6 +188,8 @@ int main(int, char**)
 
         mainMenu::Render();
 
+        mainMenu::ShowChosenPlot();
+
         connection_emitted = server->get_connections_count() > 0;
         controlPanel->num_connections = server->get_connections_count();
 
@@ -196,7 +203,6 @@ int main(int, char**)
         ImGui::PopFont();
         SDL_GetWindowSize(window, &window_width, &window_height);
         SDL_GetWindowPosition(window, &window_position_x, &window_position_y);
-
 
 
         // Notifications style setup
@@ -285,7 +291,7 @@ void render_windows(const std::shared_ptr<tcp_server>& server, std::unordered_ma
             const double current_data_from_connection = std::stod(data);
             const std::string plot_window_name = connection->get_ip() + ":" + std::to_string(connection->get_port());
             plotWindow->Render(current_time, current_data_from_connection, plot_window_name);
-            connection->send_data(std::to_string(plotWindow->GetPidOutput()));
+            connection->update_sending_data(std::to_string(plotWindow->GetPidOutput()));
         }
     }
 }

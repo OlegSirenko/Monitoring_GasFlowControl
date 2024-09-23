@@ -7,7 +7,7 @@
 #include "implot/implot.h"
 #include <iostream>
 #include <vector>
-#include <chrono>
+#include <filesystem>
 
 
 void embraceTheDarkness()
@@ -94,9 +94,29 @@ void embraceTheDarkness()
     style.TabRounding                       = 4;
 }
 
+std::vector<std::string> mainMenu::files_ = mainMenu::ListFilesInDirectory("Plots");
+std::string mainMenu::file_to_open;
+bool mainMenu::open_saved_ = false;
+std::vector<double> mainMenu::time_ = {};
+std::vector<double> mainMenu::input_ = {};
+std::vector<double> mainMenu::pid_ = {};
+
 
 static void ShowMenuFile();
 static void ShowEditMenu();
+
+std::vector<std::string> mainMenu::ListFilesInDirectory(const std::string& directory_path) {
+    std::vector<std::string> file_list;
+
+    for (const auto& entry : std::filesystem::directory_iterator(directory_path)) {
+        if (entry.is_regular_file()) {
+            file_list.push_back(entry.path().string());
+            std::cout<<"Found file: "<< entry.path().string() << std::endl;
+        }
+    }
+    return file_list;
+}
+
 
 void mainMenu::Render() {
     if (ImGui::BeginMainMenuBar())
@@ -117,15 +137,41 @@ void mainMenu::Render() {
 
 // Note that shortcuts are currently provided for display only
 // (future version will add explicit flags to BeginMenu() to request processing shortcuts)
-static void ShowMenuFile()
+void mainMenu::ShowMenuFile()
 {
+    if(ImGui::BeginMenu("Open recent", true)) {
+
+        for (const auto& file : files_) {
+            if(ImGui::MenuItem(file.c_str())) {
+                // clear vectors before adding new data from other file
+                time_.erase(time_.begin(), time_.end());
+                input_.erase(input_.begin(), input_.end());
+                pid_.erase(pid_.begin(), pid_.end());
+
+                std::filesystem::path file_path(file);
+                std::filesystem::path absolute_path = std::filesystem::absolute(file_path);
+                std::string absolute_path_str = absolute_path.string();
+
+                std::cout << "Opening file: " << absolute_path_str << std::endl;
+
+                csvfile::read(absolute_path_str, time_, input_, pid_);
+
+                std::cout << "Number of time data points: " << time_.size() << std::endl;
+
+                mainMenu::file_to_open = absolute_path_str;
+                open_saved_ = true;
+            }
+        }
+        ImGui::EndMenu();
+    }
     if (ImGui::MenuItem("Quit", "Alt+F4")) {
         exit(0);
     }
 }
 
 
-void ShowEditMenu() {
+
+void mainMenu::ShowEditMenu() {
     ImGui::MenuItem("Change style", nullptr, false, false);
     static bool light = false;
     static bool dark = true;
@@ -143,4 +189,26 @@ void ShowEditMenu() {
     }
     ImGui::Separator();
 }
+
+
+void mainMenu::ShowChosenPlot() {
+    const std::string file = file_to_open;
+    if (file.empty()) {
+        return;
+    }
+
+    if(open_saved_) {
+        ImGui::Begin(file.c_str(), &open_saved_);
+        if(ImPlot::BeginPlot("Plot")) {
+            ImPlot::PlotLine("Input Data", time_.data(), input_.data(), time_.size());
+            ImPlot::PlotLine("PID Data", time_.data(), pid_.data(), time_.size());
+            ImPlot::EndPlot();
+        }
+        ImGui::End();
+    }
+
+}
+
+
+
 

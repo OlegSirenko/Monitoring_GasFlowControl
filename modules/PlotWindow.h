@@ -63,12 +63,12 @@ public:
         const auto tm = *std::localtime(&t);
 
         std::ostringstream oss;
-        oss << std::put_time(&tm, "%d-%m-%Y %H-%M-%S");
+        oss << std::put_time(&tm, "%d-%m-%Y_%H-%M-%S");
         const auto datetime = oss.str();
 
         std::cout << datetime << std::endl;
 
-        const std::string file_name = folder_path+"Client_" + std::to_string(instance_count) + " " + datetime + ".csv";
+        const std::string file_name = folder_path+"Client_" + std::to_string(instance_count) + "_" + datetime + ".csv";
         csvfile output_file(file_name, ",");
         output_file << "Time" << "Input Data" << "PID Data" << endrow;
         for (size_t i = 0; i < saved_time_data_.size(); ++i) {
