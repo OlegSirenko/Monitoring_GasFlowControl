@@ -1,9 +1,7 @@
-//#define ImDrawIdx unsigned int
 #include "imgui.h"
 #include "imgui_impl_sdl2.h"
 #include "imgui_impl_opengl2.h"
 #include "implot/implot.h"
-#include "implot/implot_demo.cpp"
 #include <memory>
 #include <cstdio>
 #include <SDL.h>
@@ -11,7 +9,6 @@
 #include <vector>
 #include <chrono>
 #include <fstream>
-
 #include "ControlPanel.h"
 #include "PlotWindow.h"
 #include "resources/include/ExoFontEmbedded_utf8.cpp"
@@ -23,7 +20,6 @@
 #include <thread>
 #include "imgui_internal.h"
 #include "resources/include/icon_256_gnome.c"
-#include "resources/include/fa-regular-400.h"
 #include "resources/include/fa-solid-900.h"
 
 
@@ -107,12 +103,8 @@ int main(int, char**)
     io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
     io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;         // Enable Docking
     io.ConfigFlags |= ImGuiConfigFlags_ViewportsEnable;       // Enable Multi-Viewport / Platform Windows
-    //io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
-
-
 
     embraceTheDarkness();
-
 
     // When viewports are enabled we tweak WindowRounding/WindowBg so platform windows can look identical to regular ones.
     ImGuiStyle& style = ImGui::GetStyle();
@@ -146,8 +138,6 @@ int main(int, char**)
     bool connection_emitted = false;
 
     int window_height, window_width, window_position_x, window_position_y;
-
-    const auto start = std::chrono::system_clock::now();
 
     // Init server context and thread
     auto io_context = std::make_shared<boost::asio::io_context>();
