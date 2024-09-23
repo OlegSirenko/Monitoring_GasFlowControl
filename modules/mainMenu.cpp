@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <filesystem>
+#include <SDL.h>
 
 
 void embraceTheDarkness()
@@ -94,7 +95,7 @@ void embraceTheDarkness()
     style.TabRounding                       = 4;
 }
 
-std::vector<std::string> mainMenu::files_ = mainMenu::ListFilesInDirectory("Plots");
+std::vector<std::string> mainMenu::files_;
 std::string mainMenu::file_to_open;
 bool mainMenu::open_saved_ = false;
 std::vector<double> mainMenu::time_ = {};
@@ -107,11 +108,13 @@ static void ShowEditMenu();
 
 std::vector<std::string> mainMenu::ListFilesInDirectory(const std::string& directory_path) {
     std::vector<std::string> file_list;
+    if(const std::filesystem::path absolute_path = std::filesystem::absolute(directory_path); !exists(absolute_path)) {
+        create_directory(absolute_path);
+    }
 
     for (const auto& entry : std::filesystem::directory_iterator(directory_path)) {
         if (entry.is_regular_file()) {
             file_list.push_back(entry.path().string());
-            std::cout<<"Found file: "<< entry.path().string() << std::endl;
         }
     }
     return file_list;
@@ -140,7 +143,7 @@ void mainMenu::Render() {
 void mainMenu::ShowMenuFile()
 {
     if(ImGui::BeginMenu("Open recent", true)) {
-
+        files_ = ListFilesInDirectory("Plots/");
         for (const auto& file : files_) {
             if(ImGui::MenuItem(file.c_str())) {
                 // clear vectors before adding new data from other file
@@ -158,15 +161,15 @@ void mainMenu::ShowMenuFile()
 
                 std::cout << "Number of time data points: " << time_.size() << std::endl;
 
-                mainMenu::file_to_open = absolute_path_str;
+                file_to_open = absolute_path_str;
                 open_saved_ = true;
             }
         }
         ImGui::EndMenu();
     }
-    if (ImGui::MenuItem("Quit", "Alt+F4")) {
-        exit(0);
-    }
+    // if (ImGui::MenuItem("Quit", "Alt+F4")) {
+    //
+    // }
 }
 
 

@@ -19,7 +19,6 @@
 
 #include "include/ImGuiNotify.hpp"
 
-
 inline std::string format_time_milliseconds(const double milliseconds) {
     const auto duration = std::chrono::milliseconds(static_cast<long long>(milliseconds));
     const auto time_point = std::chrono::system_clock::time_point(duration);
