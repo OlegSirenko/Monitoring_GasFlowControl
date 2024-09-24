@@ -79,7 +79,7 @@ int main(int, char**)
     SDL_GL_SetAttribute(SDL_GL_CONTEXT_MINOR_VERSION, 2);
     constexpr auto window_flags = static_cast<SDL_WindowFlags>(
         SDL_WINDOW_OPENGL | SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
-    SDL_Window *window = SDL_CreateWindow("Monitoring for Gas FLow control system", SDL_WINDOWPOS_CENTERED,
+    SDL_Window *window = SDL_CreateWindow("Monitor", SDL_WINDOWPOS_CENTERED,
                                           SDL_WINDOWPOS_CENTERED, 1280, 720, window_flags);
 
 

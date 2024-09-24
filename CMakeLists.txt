@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.27)
-project(GasFlowControlMonitoringApp)
+project(Monitor)
 
 set(CMAKE_CXX_STANDARD 17)
 if(UNIX)
@@ -23,7 +23,7 @@ add_subdirectory(libs/imgui)
 include_directories(modules)
 
 if (WIN32)
-    add_executable(GasFlowControlMonitoringApp WIN32 main.cpp
+    add_executable(Monitor WIN32 main.cpp
             # modules
             modules/PlotWindow.cpp
             modules/ControlPanel.cpp
@@ -45,7 +45,7 @@ if (WIN32)
 endif ()
 
 if (UNIX)
-add_executable(GasFlowControlMonitoringApp main.cpp
+add_executable(Monitor main.cpp
         # modules
         modules/PlotWindow.cpp
         modules/ControlPanel.cpp
@@ -70,22 +70,22 @@ endif ()
 
 #if(WIN32)
 #    set(CMAKE_EXE_LINKER_FLAGS " -static")
-#    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi)
+#    target_link_libraries(Monitor PUBLIC ws2_32 wsock32 dwmapi)
 #endif()
 
 if (WIN32)
     set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} /MT")
     add_definitions(-D_WIN32_WINNT=0x0601)
-    set_target_properties(GasFlowControlMonitoringApp PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(GasFlowControlMonitoringApp PUBLIC ws2_32 wsock32 dwmapi)
+    set_target_properties(Monitor PROPERTIES LINK_FLAGS "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(Monitor PUBLIC ws2_32 wsock32 dwmapi)
 endif()
 
 
 
-target_link_libraries(GasFlowControlMonitoringApp PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
+target_link_libraries(Monitor PUBLIC imgui imgui-sdl2 imgui-sdlrenderer2 imgui-opengl2 ${SDL2_LIBRARIES})
 
 if(WIN32)
-#    target_link_options(GasFlowControlMonitoringApp PRIVATE -mwindows)
+#    target_link_options(Monitor PRIVATE -mwindows)
 endif()
 
 
