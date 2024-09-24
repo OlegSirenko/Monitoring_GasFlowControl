@@ -31,6 +31,24 @@ inline std::string format_time_milliseconds(const double milliseconds) {
 }
 
 
+inline std::filesystem::path getDocumentsFolder() {
+#ifdef _WIN32
+    const char* userProfile = getenv("USERPROFILE");
+    if (userProfile) {
+        return std::filesystem::path(userProfile) / "Documents";
+    } else {
+        throw std::runtime_error("Failed to get the USERPROFILE environment variable.");
+    }
+#else
+    if (const char* homeDir = getenv("HOME")) {
+        return std::filesystem::path(homeDir) / "Documents";
+    } else {
+        throw std::runtime_error("Failed to get the HOME environment variable.");
+    }
+#endif
+}
+
+
 class PlotWindow {
 public:
     PlotWindow(int& window_width, int& window_height, int& window_position_x, int& window_position_y, bool& attach_window):
@@ -55,7 +73,7 @@ public:
     }
 
     ~PlotWindow(){
-        const std::string folder_path = "Plots/";
+        const std::string folder_path = getDocumentsFolder().string() + "/Monitor_Saved_Plots/";
         std::filesystem::create_directory(folder_path);
 
         const auto t = std::time(nullptr);
