@@ -162,5 +162,5 @@ jobs:
         with:
           name: AppImage
           path: |
-            ${{ github.workspace }}/Deploy/AppImage/Gas_Flow_Control_Monitor-x86_64.AppImage
+            ${{ github.workspace }}/Deploy/AppImage/Monitor-x86_64.AppImage
         if: matrix.c_compiler == 'gcc'
