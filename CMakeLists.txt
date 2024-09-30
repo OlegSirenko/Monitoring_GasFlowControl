@@ -57,12 +57,11 @@ add_executable(Monitor main.cpp
         resources/include/icon_256.c
         resources/include/icon_256_gnome.c
         resources/include/IconsFontAwesome6.h
-
         # libs
         libs/implot/implot.cpp
         libs/implot/implot_items.cpp
         libs/include/ImGuiNotify.hpp
-        #        libs/include/json.hpp
+#        libs/include/json.hpp
 #        modules/GradientDescent.cpp
 #        modules/GradientDescent.h
 )

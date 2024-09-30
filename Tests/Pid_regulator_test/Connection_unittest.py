@@ -46,7 +46,7 @@ try:
 
     # Check if the sent value is the same as the received value
     assert 0 == response, f"Test failed: Sent {0}, but received {response}"
-    print("Test passed: Sent value is the same as received value.")
+    print("Test passed: Sent value is the same as expected (0) value.")
 finally:
     s.close()
     server_process.terminate()
