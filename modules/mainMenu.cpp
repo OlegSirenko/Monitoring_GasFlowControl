@@ -117,9 +117,8 @@ std::filesystem::path getDocumentsFolder() {
 #else
     if (const char* homeDir = getenv("HOME")) {
         return std::filesystem::path(homeDir) / "Documents";
-    } else {
-        throw std::runtime_error("Failed to get the HOME environment variable.");
     }
+    throw std::runtime_error("Failed to get the HOME environment variable.");
 #endif
 }
 

@@ -154,7 +154,7 @@ jobs:
         if: runner.os == 'Windows'
 
       - name: Build AppImage
-        run: cd ${{ github.workspace }}/Deploy/AppImage/ && chmod +x linuxdeploy-x86_64.AppImage &&./run.sh
+        run: cd ${{ github.workspace }}/Deploy/AppImage/ && chmod a+x linuxdeploy-x86_64.AppImage && chmod a+x linuxdeploy-plugin-native_packages-x86_64.AppImage && chmod a+x linuxdeploy-plugin-checkrt.sh && ./run.sh
         if: matrix.c_compiler == 'gcc'
 
       - name: Upload AppImage
@@ -163,4 +163,5 @@ jobs:
           name: AppImage
           path: |
             ${{ github.workspace }}/Deploy/AppImage/Monitor-x86_64.AppImage
+            ${{ github.workspace }}/Deploy/AppImage/Monitor_2.0.deb
         if: matrix.c_compiler == 'gcc'
