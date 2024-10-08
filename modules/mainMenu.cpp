@@ -106,10 +106,29 @@ std::vector<double> mainMenu::pid_ = {};
 static void ShowMenuFile();
 static void ShowEditMenu();
 
+std::filesystem::path getDocumentsFolder() {
+#ifdef _WIN32
+    const char* userProfile = getenv("USERPROFILE");
+    if (userProfile) {
+        return std::filesystem::path(userProfile) / "Documents";
+    } else {
+        throw std::runtime_error("Failed to get the USERPROFILE environment variable.");
+    }
+#else
+    if (const char* homeDir = getenv("HOME")) {
+        return std::filesystem::path(homeDir) / "Documents";
+    } else {
+        throw std::runtime_error("Failed to get the HOME environment variable.");
+    }
+#endif
+}
+
+
 std::vector<std::string> mainMenu::ListFilesInDirectory(const std::string& directory_path) {
     std::vector<std::string> file_list;
     if(const std::filesystem::path absolute_path = std::filesystem::absolute(directory_path); !exists(absolute_path)) {
         create_directory(absolute_path);
+        std::cout<<"Created directory "<<absolute_path.string()<<std::endl;
     }
 
     for (const auto& entry : std::filesystem::directory_iterator(directory_path)) {
@@ -143,7 +162,7 @@ void mainMenu::Render() {
 void mainMenu::ShowMenuFile()
 {
     if(ImGui::BeginMenu("Open recent", true)) {
-        files_ = ListFilesInDirectory("Plots/");
+        files_ = ListFilesInDirectory(getDocumentsFolder().string() + "/Monitor_Saved_Plots/");
         for (const auto& file : files_) {
             if(ImGui::MenuItem(file.c_str())) {
                 // clear vectors before adding new data from other file
@@ -202,7 +221,8 @@ void mainMenu::ShowChosenPlot() {
 
     if(open_saved_) {
         ImGui::Begin(file.c_str(), &open_saved_);
-        if(ImPlot::BeginPlot("Plot")) {
+
+        if(ImPlot::BeginPlot("Saved data")) {
             ImPlot::PlotLine("Input Data", time_.data(), input_.data(), time_.size());
             ImPlot::PlotLine("PID Data", time_.data(), pid_.data(), time_.size());
             ImPlot::EndPlot();

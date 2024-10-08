@@ -55,7 +55,7 @@ public:
     }
 
     ~PlotWindow(){
-        const std::string folder_path = "Plots/";
+        const std::string folder_path = getDocumentsFolder().string() + "/Monitor_Saved_Plots/";
         std::filesystem::create_directory(folder_path);
 
         const auto t = std::time(nullptr);
@@ -83,6 +83,7 @@ public:
 
 
 private:
+    static std::filesystem::path getDocumentsFolder();
     void widget_pid_config(double);
     bool show_plot_window = true;
     std::vector<double> times;
