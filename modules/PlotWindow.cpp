@@ -173,15 +173,14 @@ std::filesystem::path PlotWindow::getDocumentsFolder() {
 #ifdef _WIN32
     const char* userProfile = getenv("USERPROFILE");
     if (userProfile) {
-        return std::filesystem::path(userProfile) / "Documents";
+        return std::filesystem::path(userProfile) \ "Documents";
     } else {
         throw std::runtime_error("Failed to get the USERPROFILE environment variable.");
     }
 #else
     if (const char* homeDir = getenv("HOME")) {
         return std::filesystem::path(homeDir) / "Documents";
-    } else {
-        throw std::runtime_error("Failed to get the HOME environment variable.");
     }
+    throw std::runtime_error("Failed to get the HOME environment variable.");
 #endif
 }
