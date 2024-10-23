@@ -110,11 +110,7 @@ public:
 
                 std::sscanf(time_str.c_str(), "%d:%d:%d%c%d", &hours, &minutes, &seconds, &dot, &milliseconds);
 
-                std::cout<<"Original time: "<< time_str <<std::endl;
-
                 int time_in_milliseconds = (hours * 3600 + minutes * 60 + seconds) * 1000 + milliseconds;
-
-                std::cout << "Parsed time: " << time_in_milliseconds << " ms, input: " << input << ", pid: " << pid << std::endl;
 
                 time_data.push_back(time_in_milliseconds);
                 input_data.push_back(input);

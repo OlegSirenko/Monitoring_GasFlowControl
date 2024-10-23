@@ -6,5 +6,5 @@ Comment=Monitor
 Exec=Monitor
 Icon=new_icon
 GenericName=Monitor
-Categories=Utility
+Categories=Science
 Terminal=false
