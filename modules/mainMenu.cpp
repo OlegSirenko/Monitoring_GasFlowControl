@@ -185,9 +185,6 @@ void mainMenu::ShowMenuFile()
         }
         ImGui::EndMenu();
     }
-    // if (ImGui::MenuItem("Quit", "Alt+F4")) {
-    //
-    // }
 }
 
 
